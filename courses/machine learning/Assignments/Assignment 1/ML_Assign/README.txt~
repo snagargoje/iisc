@@ -1,0 +1,8 @@
+These archive contains all the Matlab Source codes for Assignment 1
+
+	- p2bc is a function which will generate results of Problem 2b and 2c (by giving respective parameters)
+	- p2d is a function which will generate results of Problem 2d
+	- p3 is a script for Problem 3
+	- p5 will generate the tables of training and testing errors required in Problem 5c
+	- digit_classify solves Problem 5d
+

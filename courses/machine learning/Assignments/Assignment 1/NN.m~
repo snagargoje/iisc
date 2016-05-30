@@ -1,0 +1,10 @@
+function result = NN(X,Y,k,x)
+   d = dist(X,x);
+   s = size(d);
+   kmin = 1:k
+   for j = k+1:s
+    if d(j) > max(d[1:k
+   end
+   [c,i] = min(d);
+   result = Y(i);
+end

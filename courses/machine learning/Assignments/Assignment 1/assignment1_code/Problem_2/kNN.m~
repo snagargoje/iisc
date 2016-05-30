@@ -1,0 +1,26 @@
+function pred = kNN(X_train,y_train,k,x_test) 
+%The function performs k-nearest neighbour classification.
+% X_train - Input training data matrix (size m*n where m is 		  the number of datapoints and n is the dimension of 		  each datapoint)
+% y_train - Input training data labels corresponding to X_train
+% k       - Number of neighbours to consider
+% x_test  - Test instance
+
+s = size(X_train);
+m = s(1);
+n = s(2);
+sx = size(x_test);
+nx = sx(2);
+if nx ~= 1
+    x_test = x_test';
+end
+distance = dist(X_train,x_test);
+max_distance = max(distance)+1;
+pred_sum = 0;
+for j = 1:k
+    [d i] = min(distance);
+    pred_sum = pred_sum + i;
+    distance(i) = max_distance;
+end
+pred = y_train(i);
+end
+

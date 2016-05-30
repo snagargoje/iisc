@@ -1,0 +1,234 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.75 [en] (X11; U; SunOS 5.6 sun4u) [Netscape]">
+<link rel="stylesheet" href="../STYLE/netscape.css" type="text/css">
+<title>E0269 Probabilistic Graphical Models, Jan-Apr 2011</title> 
+</head>
+<body text="#000000" bgcolor="ghostwhite" class="cvtext">
+
+
+<TABLE cellSpacing=0 cellPadding=10 align=left border=0>
+  <TBODY>
+  
+  <TR>
+    <TD vAlign=top align=left width="100" bgColor=#cccccc background="../BG/blueripple.jpg">
+
+    <a href="#home" class="sidebar-item">Class Home</a></br>
+    <a href="#news" class="sidebar-item">News</a></br>
+    <a href="#syllabus" class="sidebar-item">Syllabus</a></br>
+    <a href="#lecture" class="sidebar-item">Lectures</a></br>
+    <a href="#resource" class="sidebar-item">Resources</a></br>
+   </TD>
+    <TD vAlign=top align=left>
+
+<!-- Body starts here -->
+
+<blockquote>
+
+<a name="home"><h3>E0 269: Probabilistic Graphical Models (Jan-Apr 2011)</h3></a>
+
+<div class="smallsep"></div>
+
+<b>Instructor:</b> Indrajit Bhattacharya 
+<p>
+<b>Schedule:</b> T,Th 11:30-1:00  CSA  - 117 
+<p>
+<b>Pre-requisite:</b> <ul><li>Introduction to Probability and Statistics <li>Consent of Instructor</ul>
+<p>
+<b>Text/Reading:</b> <ul><li>"Probabilistic Graphical Models: Principles and Techniques", Daphne Koller and Nir Friedman, <li> Relevant papers </ul>
+
+<b>Grading Policy:</b> Class Assignments, Midterm, Final Exam / Course Project, Class Participation
+
+<p>
+<div class="smallsep"></div>
+<p>
+
+<a name="news"><h4>News</h4></a>
+
+<blockquote>
+<font color="red">April 14: New project report deadline: 19/4 Tuesday </font> <br>
+<font color="red">April 14: Final Lecture 14/4 2-4pm </font> <br>
+<font color="blue">April 5: Handout on Junction Tree Algorithm</font> <br>
+<font color="blue">Mar 31: Handout on HMMs</font> <br>
+<font color="red">Mar 24: Final Project Report due April 15</font> <br>
+<font color="blue">Mar 24: Handout on EM and Mixture Models</font> <br>
+<font color="blue">Mar 22: Exam 2 graded</font> <br>
+<font color="blue">Mar 17: Handout on Parameter Estimation</font> <br>
+<font color="blue">Mar 15: Project Proposals due this week</font> <br>
+<font color="blue">Feb 10: Handout on Sum Product</font> <br>
+<font color="blue">Feb 10: Exam 1 graded</font> <br>
+<font color="blue">Feb 10: Handout on Variable Elimination</font> <br>
+<font color="blue">Jan 25: Handout on Undirected Graphical Models</font> <br>
+<font color="blue">Jan 20: First Mid Term Exam on Feb 1</font> <br>
+<font color="blue">Jan 20: Handout on Directed Graphical Models</font> <br>
+<font color="blue">Jan 6: First class</font> <br>
+</blockquote>
+
+<p>
+<div class="smallsep"></div>
+<p>
+
+<a name="syllabus"><h4>Tentative Syllabus</h4></a>
+
+<blockquote>
+<i>Graph types:</i> conditional independence; directed, undirected, and factor models; algorithms for conditional independence, d-separation, Markov properties on graphs, factorization, Hammersley-Clifford theorem. 
+<br>
+<i>Static Models:</i> linear Gaussian models, mixture models, factor analysis, Markov Random Fields, Gibbs distributions, static conditional random fields (CRFs), multivariate Gaussians as graphical models, Exponential family, generalized linear models
+<br>
+<i>Dynamic Models:</i> Hidden Markov Models, Kalman filtering and linear-Gaussian HMMs 
+<br>
+<i>Exact Inference:</i> The elimination family of algorithms. Relation to dynamic programming, belief propagation, Junction trees, optimal triangulations. NP hardness results. 
+<br>
+<i>Approximate Inference:</i> 
+	Loopy belief propagation (BP), expectation propagation (EP), 
+	Sampling (Markov Chain Monte Carlo, Metropolis Hastings, Gibbs)
+	Particle filtering
+<br>  
+<i>Structure Learning:</i> Chow Liu algorithm
+<br>
+<i>Latent Dirichlet Allocation:</i> Exchangeability, de Finetti Theorem, Inference using collapsed Gibbs sampling
+</blockquote>
+<p>
+
+<p>
+<div class="smallsep"></div>
+<p>
+
+<a name="lecture"><h4>Lecture Schedule</h4></a>
+
+<blockquote>
+<font color="blue">Thu 06/1:</font> Class Introduction and Logistics<br>
+<font color="blue">Tue 11/1:</font> Introduction to Graphical Models<br> 
+<ul>
+<li> <a href="http://www.cs.berkeley.edu/~jordan/papers/statsci.ps">Graphical Models</a>, M. I. Jordan. Statistical Science (Special Issue on Bayesian Statistics), 19, 140-155, 2004
+<li><a href="http://www.cs.ubc.ca/~murphyk/Bayes/bnintro.html">A Brief Introduction to Graphical Models and Bayesian Networks</a>, Kevin Murphy, 1998.
+</ul>
+<font color="blue">Thu 13/1:</font> Directed Graphical Models: Factorization<br> 
+<font color="blue">Tue 18/1:</font> Directed Graphical Models: Conditional Independence<br> 
+<font color="blue">Thu 20/1:</font> Undirected Graphical Models: Conditional Independence<br> 
+<font color="blue">Tue 25/1:</font> Undirected Graphical Models: Factorization<br> 
+<font color="blue">Thu 27/1:</font> Wrapping up GM Semantics; Intro to Inference<br> 
+<font color="blue">Tue 1/2:</font> Midterm 1<br> 
+<font color="blue">Thu 3/2:</font> Variable Elimination: Warming up<br> 
+<font color="blue">Tue 8/2:</font> Variable Elimination Analysis<br> 
+<font color="blue">Thu 10/2:</font> Variable Elimination Summary; Exam Discussion<br> 
+<font color="blue">Tue 15/2:</font> Sum Product Algorithm<br> 
+<font color="blue">Thu 17/2:</font> Sum Product and Factor Graphs<br> 
+<ul>
+<li> <a href="http://www.psi.toronto.edu/pubs/2001/frey2001factor.pdf">Factor Graphs and the Sum-Product Algorithm</a>, Kschischang et al, 2001
+</ul>
+<font color="blue">Tue 22/2:</font> MAP Inference and Max Product<br> 
+<font color="blue">Thu 24/2:</font> Review: Density Estimation and Regression<br> 
+<font color="blue">Tue 1/3:</font> Review: Classification and Generative Models<br> 
+<font color="blue">Thu 3/3:</font> Review: Discriminative Models<br> 
+<font color="blue">Tue 8/3:</font> No Class<br> 
+<font color="blue">Thu 10/3:</font> Second Mid Term Exam<br> 
+<font color="blue">Tue 15/3:</font> Parameter Estimation in Completely Observed Graphical Models<br> 
+<ul>
+<li> <a href="http://learning.eng.cam.ac.uk/zoubin/papers/graphical-models02.pdf">Graphical Models: Parameter Learning</a>, Zoubin Ghahramani
+</ul>
+<font color="blue">Thu 17/3:</font> Mixture Models, Latent Variables, EM<br> 
+<ul>
+<li> <a href="http://ssli.ee.washington.edu/people/bilmes/mypubs/bilmes1997-em.pdf">A Gentle Tutorial of the EM algorithm and its application to Parameter Estimation for Gaussian Mixture and Hidden Markov Models</a>, Jeff Bilmes, 1997
+</ul>
+<font color="blue">Tue 22/3:</font> Exam Discussion, EM Analysis<br> 
+<font color="blue">Thu 24/3:</font> Parameter Estimation in Partially Observed Graphical Models<br> 
+<font color="blue">Tue 29/3:</font> Hidden Markov Model<br> 
+<ul>
+<li> <a href="http://www.cs.ubc.ca/~murphyk/Bayes/rabiner.pdf">A Tutorial on Hidden Markov Models and. Selected Applications in Speech Recognition</a>, Lawrence Rabiner, 1989
+</ul>
+<font color="blue">Thu 31/3:</font> Junction Tree Algorithms<br> 
+<font color="blue">Tue 5/4:</font> Sampling Algorithms for Inference<br> 
+<font color="blue">Thu 7/4:</font> Sampling Algorithms for Inference<br> 
+<ul>
+<li> <a href="http://www.cs.toronto.edu/~radford/ftp/review.pdf">Probabilistic Inference Using Markov Chain Monte Carlo Methods</a>, Radford Neal, 1993
+<li> <a href="http://www.eecs.harvard.edu/~avi/CS282/Readings/MCMCforML.pdf">An Introduction to MCMC for Machine Learning</a>, Christophe Andrieu, Nando de Freitas, Arnaud Doucet, Michael I. Jordan, 2003
+</ul>
+<font color="blue">Tue 12/4:</font> Topic Models<br> 
+<font color="blue">Thu 14/4:</font> Topic Models<br> 
+<ul>
+<li> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.84.1137&rep=rep1&type=pdf">Probabilistic latent semantic analysis</a>, T. Hofmann, 1999
+<li> <a href="http://www.eecs.harvard.edu/~avi/CS282/Readings/MCMCforML.pdf">Latent Dirichlet Allocation</a>, D. Blei, A. Ng, M. Jordan, 2003
+<li> <a href="http://psiexp.ss.uci.edu/research/papers/SteyversGriffithsLSABookFormatted.pdf">Probabilistic topic models</a>, Steyvers, M. & Griffiths, T, 2007
+<li> <a href="http://www.cs.princeton.edu/~blei/papers/BleiLafferty2009.pdf">Topic Models</a>, D. Blei and J. Lafferty, 2009
+</ul>
+
+</blockquote>
+
+<p>
+<div class="smallsep"></div>
+<p>
+<a name="lecture"><h4>Additional Reading</h4></a>
+
+<blockquote>
+<ul>
+<li> Principal Component Analysis, Factor Analysis, Kalman Filtering as Graphical Models
+	<ul>
+	<li><a href="http://www2.mta.ac.il/~gideon/courses/machine_learning_seminar/papers/ppca.pdf">Probabilistic Principal Component Analysis</a>, Michael Tipping and Christopher Bishop, 1999.
+	<li> <a href="http://www.cs.berkeley.edu/~jordan/courses/281A-fall04/lectures/lec-10-28.ps">Multivariate Gaussian, Factor Analysis, and EM Algorithm</a>, Michael Jordan, 2004
+	<li> <a href="http://www.cs.berkeley.edu/~jordan/courses/281A-fall04/lectures/lec-11-2.pdf"> Factor Analysis and Kalman Filtering</a>, Michael Jordan, 2004
+	<li> <a href="http://www.cs.berkeley.edu/~jordan/courses/281A-fall04/lectures/lec-11-4.pdf">State-space Models</a>, Michael Jordan, 2004
+	</ul>
+<li> Structure Learning
+	<ul>
+	<li><a href="http://ieeexplore.ieee.org/iel5/18/22639/01054142.pdf">Approximating Discrete Probability Distributions with Dependence Trees</a>, Chow and Liu, 1968
+	<li> <a href="http://www.cs.huji.ac.il/~nir/Papers/FrG3Full.pdf">Learning Bayesian networks with local structure</a>, Nir Friedman and Moises Goldszmidt, 1999
+	<li> <a href="http://www.springerlink.com/content/nq13817217667435/">Being Bayesian about network structure. A Bayesian approach to structure discovery in Bayesian networks</a>, Nir Friedman and Daphne Koller, Machine Learning, 2003
+	<li> <a href="http://w3.cs.huji.ac.il/~nir/Papers/Fr2.pdf">The Bayesian Structural EM Algorithm</a>, Nir Friedman, 1998
+	</ul> 
+<li> Inventing Hidden Variables
+	<ul>
+	<li> <a href="http://www.cs.utexas.edu/~ml/papers/banner-ml-98.pdf">Theory Refinement for Bayesian Networks with Hidden Variables</a>, Sowmya Ramachandran and Ray Mooney, 1998	
+	</ul>
+<li> Loopy Belief Propagation and Generalized Belief Propagation
+	<ul>
+	<li> <a href="http://www.cs.ubc.ca/~murphyk/Papers/loopy_uai99.pdf">Loopy Belief Propagation for Approximate Inference: An. Empirical Study</a>, Murphy, Weiss, Jordan, 1999
+	<li> <a href="http://www.merl.com/papers/docs/TR2001-22.pdf">Understanding Belief Propagation and Its Generalizations</a>, Yedidia, Freeman, Weiss, 2001
+	<li> <a href="http://www.eecs.berkeley.edu/~wainwrig/Papers/WaiJaaWil2003_trp.pdf">Tree-Based Reparameterization Framework for Analysis of Sum-Product and Related Algorithms</a>, Wainwright, Jaakkola, Willsky, 2003
+	<li> <a href="http://www.merl.com/publications/TR2004-040/">Constructing Free Energy Approximations and Generalized Belief Propagation Algorithms</a>, Yedidia, Freeman, Weiss, 2005
+	</ul>
+
+<li> Variational Inference for Graphical Models
+	<ul>
+	<li> <a href="http://www.eecs.berkeley.edu/~wainwrig/icml08/tutorial_icml08.html">Tutorial on Graphical models and variational methods</a>, Martin Wainwright, 2008
+	<li> <a href="http://dx.doi.org/10.1561/2200000001">Graphical models, exponential families, and variational inference</a>, Wainwright and Jordan, 2003
+	<li> <a href="https://lcib.rutgers.edu/~james/variational_methods.pdf">Tutorial on variational approximation methods</a>, Tommi Jaakkola, 2000
+	</ul>
+</ul>
+</blockquote>
+
+<p>
+<div class="smallsep"></div>
+<p>
+
+<a name="resource"><h4>Graphical Model Resources</h4></a>
+
+<ul>
+<li><a href="http://drona.csa.iisc.ernet.in/~indrajit/HTML/pgm.html">Various Graphical Model Courses</a>
+<li><a href="http://www.cs.ubc.ca/~murphyk/Bayes/bnintro.html">Kevin Murphy's page</a>
+<li><a href="http://www.cs.ubc.ca/~murphyk/Bayes/bnsoft.html">Software and Implementations</a>
+</ul>
+
+
+<div class="footer">
+Last modified: 
+<script language="javascript">
+document.write (document.lastModified);
+</script>
+</div>
+
+<!-- Body ends here -->
+      
+    </TD>
+  </TR>
+ </TBODY>
+
+</TABLE>
+
+</body>
+</html>
+
+
+

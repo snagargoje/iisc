@@ -1,0 +1,9 @@
+[l m n] = size(fold_train);
+lambda = [0.01 0.1 1.0 10.0 100.0];
+error_test = zeros(l,5);
+error_train = zeros(l,5);
+for i=1:l
+    for j=1:5
+        w = linear_ridge_learner(fo
+    end
+end

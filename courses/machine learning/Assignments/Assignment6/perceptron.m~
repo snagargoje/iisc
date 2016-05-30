@@ -1,0 +1,35 @@
+w = zeros(1,2);
+T = 1000;
+x = zeros(2,1);
+u = [1/sqrt(2) -1/sqrt(2)];
+loss = 0;
+c_loss = zeros(2,1000);
+y_pred = zeros(2,1000);
+ubound = zeros(2,1000);
+for d = 1:2
+    loss = 0;
+    R = -inf;
+    gamma = inf;
+    
+    for t = 1 : T
+        x = get_instance(d,t);
+        y_pred(d,t) = sign(w*x');
+        y_true = get_label(d,t);
+        R = max(R,x*x');
+        gamma = min(gamma,y_true*(u*x'));
+        ubound(d,t) = R*R*(u*u')/(gamma*gamma);
+        if y_pred(d,t) ~= y_true
+            w = w + y_true*x;
+            loss = loss + 1 ;
+        end
+        c_loss(d,t) = loss/t;
+    end
+    
+end
+
+    hold on;
+    plot(1:1000,c_loss(1,:),'r');
+    plot(1:1000,c_loss(2,:),'b');    
+    %h1 = figure();
+    plot(1:1000,ubound(1,:),'r+');
+    %plot(1:1000,ubound(2,:),'b-');    

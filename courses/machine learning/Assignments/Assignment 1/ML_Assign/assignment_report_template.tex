@@ -1,0 +1,664 @@
+\documentclass[twoside,10pt,a4paper]{article}
+
+%================================ PREAMBLE ==================================
+
+%--------- Packages -----------
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{hyperref}
+%\usepackage{algorithm,algorithmic}
+
+%----------Spacing-------------
+\setlength{\oddsidemargin}{0.25 in}
+\setlength{\evensidemargin}{-0.25 in}
+\setlength{\topmargin}{-0.6 in}
+\setlength{\textwidth}{6.5 in}
+\setlength{\textheight}{9.4 in}
+\setlength{\headsep}{0.75 in}
+\setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+
+%----------Header--------------
+\newcommand{\assignmentreport}[4]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf E0 270 Machine Learning} \hfill {\it Due:} #2 }
+       \vspace{6mm}
+       \hbox to 6.28in { \hfill {\Large Assignment #1 - Report} \hfill }
+       \vspace{6mm}
+       \hbox to 6.28in {{\it #3} \hfill {\it #4} }
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{Assignment #2 :\it #3,\it#4}{Assignment #2: \it #3,\it#4}
+   \vspace*{4mm}
+}
+
+%--------Environments----------
+\theoremstyle{definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newenvironment{pf}{{\noindent\sc Proof. }}{\qed}
+\newenvironment{map}{\[\begin{array}{cccc}} {\end{array}\]}
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\newtheorem{exmp}{Example}
+\newtheorem*{prob}{Problem}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+
+%---------Definitions----------
+\newcommand{\Fig}[1]{Figure~\ref{#1}}
+\newcommand{\Sec}[1]{Section~\ref{#1}}
+\newcommand{\Tab}[1]{Table~\ref{#1}}
+\newcommand{\Tabs}[2]{Tables~\ref{#1}--\ref{#2}}
+\newcommand{\Eqn}[1]{Eq.~(\ref{#1})}
+\newcommand{\Eqs}[2]{Eqs.~(\ref{#1}-\ref{#2})}
+\newcommand{\Lem}[1]{Lemma~\ref{#1}}
+\newcommand{\Thm}[1]{Theorem~\ref{#1}}
+\newcommand{\Cor}[1]{Corollary~\ref{#1}}
+\newcommand{\App}[1]{Appendix~\ref{#1}}
+\newcommand{\Def}[1]{Definition~\ref{#1}}
+%
+\renewcommand{\>}{{\rightarrow}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\N}{{\mathbb N}}
+\renewcommand{\P}{{\mathbf P}}
+\newcommand{\E}{{\mathbf E}}
+\newcommand{\Var}{{\mathbf{Var}}}
+\newcommand{\I}{{\mathbf I}}
+\newcommand{\1}{{\mathbf 1}}
+\newcommand{\0}{{\mathbf 0}}
+\renewcommand{\H}{{\mathcal H}}
+\newcommand{\F}{{\mathcal F}}
+\newcommand{\G}{{\mathcal G}}
+\renewcommand{\L}{{\mathcal L}}
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\X}{{\mathcal X}}
+\newcommand{\Y}{{\mathcal Y}}
+\newcommand{\sign}{\textup{\textrm{sign}}}
+\newcommand{\er}{\textup{\textrm{er}}}
+\newcommand{\abs}{\textup{\textrm{abs}}}
+\newcommand{\sq}{\textup{\textrm{sq}}}
+\newcommand{\zo}{\textup{\textrm{0-1}}}
+\newcommand{\hinge}{\textup{\textrm{hinge}}}
+\newcommand{\ramp}{\textup{\textrm{ramp}}}
+\newcommand{\mar}{\textup{\textrm{margin}}}
+\newcommand{\lin}{\textup{\textrm{lin}}}
+\newcommand{\poly}{\textup{\textrm{poly}}}
+\newcommand{\majority}{\textup{\textrm{majority}}}
+\newcommand{\maj}{\textup{\textrm{maj}}}
+\newcommand{\co}{\textup{\textrm{co}}}
+\newcommand{\agg}{\textup{\textrm{agg}}}
+\newcommand{\bad}{\textup{\textrm{bad}}}
+\newcommand{\EX}{\textup{\textrm{\textit{EX}}}}
+\newcommand{\GD}{\textup{\textrm{{GD}}}}
+\newcommand{\EG}{\textup{\textrm{{EG}}}}
+\newcommand{\algorithm}{\textup{\textrm{{algorithm}}}}
+\newcommand{\VCdim}{\textup{\textrm{{VCdim}}}}
+\newcommand{\VCentropy}{\textup{\textrm{{VC-entropy}}}}
+\newcommand{\Pdim}{\textup{\textrm{{Pdim}}}}
+\newcommand{\fat}{\textup{\textrm{{fat}}}}
+\newcommand{\x}{{\mathbf x}}
+\newcommand{\w}{{\mathbf w}}
+\newcommand{\p}{{\mathbf p}}
+\newcommand{\q}{{\mathbf q}}
+\renewcommand{\r}{{\mathbf r}}
+\renewcommand{\u}{{\mathbf u}}
+\renewcommand{\b}{{\mathbf b}}
+\newcommand{\bloss}{{\boldsymbol \ell}}
+\newcommand{\balpha}{{\boldsymbol \alpha}}
+\newcommand{\bxi}{{\boldsymbol \xi}}
+\newcommand{\bpsi}{{\boldsymbol \psi}}
+\newcommand{\btau}{{\boldsymbol \tau}}
+
+%=============================== END PREAMBLE ===============================
+
+%============================ BEGIN DOCUMENT ================================
+
+\begin{document}
+
+%Use the following format: \assignmentreport{Assignment number}{Due date}{Your name}{SR Number}
+
+\assignmentreport{1}{Jan 24, 2012}{ Patel Kevin Niranjanbhai }{ 04-04-00-10-41-11-1-08262 }
+
+%-----------------------
+
+\section{Solution: Problem 1}
+
+Let \textit{$h_{\theta}$(x)} be the hypothesis learnt by the classifier. Then let \textit{$err(x)$} be defined as follows:
+
+\hspace{100pt}
+\textit{err(x)} =
+\left\{
+	\begin{array}{ll}
+		m & \mbox{if } \textit{$h_{\theta}$(x) = 1 and y = -1} \\
+		n & \mbox{if } \textit{$h_{\theta}$(x) = -1 and y = 1} \\
+		0 & \mbox{otherwise }  
+	\end{array}
+\right.
+
+Then \\
+\hspace{100pt} 
+            E[\textit{ err(x)}] \textit{ = m.P( $h_{\theta}$(x) = 1 and y = -1) + n.P( $h_{\theta}$(x) = -1 and y = 1)}
+
+\pagebreak
+\section{Solution: Problem 2}
+a) Refer to attached code. \\ 
+b) Learning Curves for k = 5 \\
+\begin{center}
+ \includegraphics[scale=0.6,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2b.jpg}
+ % p2b.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\end{center}
+~\\
+c) Learning Curves for k = 1 
+\begin{center}
+ \includegraphics[scale=0.6,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2c.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\end{center}
+As is clear from the graph, k = 1 is not a good parameter. Intuitively, this is true, since labelling a point based on just one neighbour is not fair enough. However the train error is 0, but its just because every point is nearest to itself.\\
+\linebreak
+d) Errors as function of k \\
+\begin{center}
+ \includegraphics[scale=0.6,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2d.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\end{center}
+This plot shows that a large value of k is not going to help that much either. Intuitively, this also holds true. For instance, if we take k large enough, we are "neighbours" of every citizen of India, but that information is not useful to label us in anyway.\\ ~\\ ~\\
+e)
+\begin{center}
+Decision Boundary for k = 1 \\
+ \includegraphics[scale=0.35,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2e_k1_1.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\includegraphics[scale=0.35,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2e_k1_2.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\end{center}
+
+\begin{center}
+Decision Boundary for k = 49 \\
+ \includegraphics[scale=0.35,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2e_k49_1.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\includegraphics[scale=0.35,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2e_k49_2.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\end{center}
+
+\begin{center}
+Decision Boundary for k = 499 \\
+ \includegraphics[scale=0.35,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2e_k499_1.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\includegraphics[scale=0.35,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2e_k499_2.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\end{center}
+So, as is observed, the boundary was most complex in case of k = 1, and most smooth in case of k=499. However, this smoothness shows a strong bias, which may result in misclassification of new datapoints. Thus ideally, the value of k should be chosen somewhere midway.\\
+\pagebreak
+\section{Solution: Problem 3}
+Learning Curves for Handwritten Digit Recognition using k Nearest Neighbours (with k = 5)
+\begin{center}
+ \includegraphics[scale=0.75,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_3/p3_learn_curves.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\end{center}
+The following test images were misclassified by the model trained on full training data.
+\begin{center}
+\includegraphics[scale=0.6,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_3/p3_class_74.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+ \includegraphics[scale=0.6,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_3/p3_class_9.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\includegraphics[scale=0.6,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_3/p3_class_92.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\includegraphics[scale=0.6,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_3/p3_class_75.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\end{center}
+\pagebreak
+\section{Solution: Problem 4}
+a) 
+\begin{center}
+Decision Tree 1\\
+\includegraphics[scale=0.6,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_4/tree1.png}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\linebreak
+Decision Tree 2\\
+\hspace{10pt}\includegraphics[scale=0.6,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_4/tree2.png}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\end{center}
+\pagebreak
+b)
+
+Initial entropy of the system = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+) = 1.\\
+
+Lets consider the various partitions that can be created at the first node. \\
+
+Consider the partition made by checking x_1 <= \frac{1}{4}.\\
+
+This leads to 6 datapoints on the left side and 18 points on the right side.\\
+
+So \\
+m_L = 6 \\
+m_R = 18.\\
+m_L^+ = 3 \\
+m_R^+ = 9.\\
+
+Now
+p_L^+ = \frac{m_L^+}{m_L} = \frac{3}{6} = \frac{1}{2}
+
+So
+entropy( left\_side) N_L = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+) = 1\\
+
+Similarly
+p_R^+ = \frac{m_R^+}{m_R} = \frac{9}{18} = \frac{1}{2} \\
+
+So
+entropy( right\_side) N_R = -p_R^+log(p_R^+) - (1 - p_R^+)log(1 - p_R^+) = 1\\
+
+Now, total entropy N = $\frac{ m_L }{ m } N_L + \frac{m_R}{m} N_R = 1 * \frac{6}{24} + 1 * \frac{18}{24} = 1$\\ ~\\
+
+Therefore, change in entropy = 0\\
+
+Now consider the partition made by checking x_1 <= \frac{1}{2}.\\
+
+This leads to 13 datapoints on the left side and 11 points on the right side.\\
+
+So \\
+m_L = 13 \\
+m_R = 11.\\
+m_L^+ = 6 \\
+m_R^+ = 6.\\
+
+Now
+p_L^+ = \frac{m_L^+}{m_L} = \frac{6}{13} \\
+
+So
+entropy( left\_side) N_L = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+) = 0.9957\\
+
+Similarly
+p_R^+ = \frac{m_R^+}{m_R} = \frac{6}{11} \\
+
+So
+entropy( right\_side) N_R = -p_R^+log(p_R^+) - (1 - p_R^+)log(1 - p_R^+) = 0.9940\\
+
+Now, total entropy N = $\frac{ m_L }{ m } N_L + \frac{m_R}{m} N_R = 0.9957 * \frac{13}{24} + 0.9940 * \frac{11}{24} = 0.9949$\\ ~\\
+
+Therefore, change in entropy = 0.0050\\
+
+Now consider the partition made by checking x_1 <= \frac{3}{4}.\\
+
+This leads to 20 datapoints on the left side and 4 points on the right side.\\
+
+So \\
+m_L = 20 \\
+m_R = 4.\\
+m_L^+ = 8 \\
+m_R^+ = 4.\\
+
+Now
+p_L^+ = \frac{m_L^+}{m_L} = \frac{8}{20} \\
+
+So
+entropy( left\_side) N_L = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+) = 0.9709\\
+
+Similarly
+p_R^+ = \frac{m_R^+}{m_R} = \frac{4}{4} \\
+
+So
+entropy( right\_side) N_R = -p_R^+log(p_R^+) - (1 - p_R^+)log(1 - p_R^+) = 0\\
+
+Now, total entropy N = $\frac{ m_L }{ m } N_L + \frac{m_R}{m} N_R = 0.9709 * \frac{20}{24} + 0 * \frac{4}{24} = 0.8091$\\
+
+Therefore, change in entropy = 0.1908\\
+
+Now calculating the entropies for split points along x_2.
+
+Consider the partition made by checking x_2 <= \frac{1}{4}.\\
+
+So \\
+m_L = 8 \\
+m_R = 16.\\
+m_L^+ = 3 \\
+m_R^+ = 9.\\
+
+Now
+p_L^+ = \frac{m_L^+}{m_L} = \frac{3}{8} \\
+
+So
+entropy( left\_side) N_L = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+) = 0.9544\\
+
+Similarly
+p_R^+ = \frac{m_R^+}{m_R} = \frac{9}{16} \\
+
+So
+entropy( right\_side) N_R = -p_R^+log(p_R^+) - (1 - p_R^+)log(1 - p_R^+) = 0.9886\\
+
+Now, total entropy N = $\frac{ m_L }{ m } N_L + \frac{m_R}{m} N_R = 0.9544 * \frac{8}{24} + 0.9886 * \frac{16}{24} = 0.9773$\\ ~\\
+
+Therefore, change in entropy = 0.0227\\
+
+Now consider the partition made by checking x_2 <= \frac{1}{2}.\\
+
+So \\
+m_L = 12 \\
+m_R = 12.\\
+m_L^+ = 4 \\
+m_R^+ = 8.\\
+
+Now
+p_L^+ = \frac{m_L^+}{m_L} = \frac{4}{12} \\
+
+So
+entropy( left\_side) N_L = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+) = 0.9183\\
+
+Similarly
+p_R^+ = \frac{m_R^+}{m_R} = \frac{8}{12} \\
+
+So
+entropy( right\_side) N_R = -p_R^+log(p_R^+) - (1 - p_R^+)log(1 - p_R^+) = 0.9183\\
+
+Now, total entropy N = $\frac{ m_L }{ m } N_L + \frac{m_R}{m} N_R = 0.9183 * \frac{12}{24} + 0.9183 * \frac{12}{24} = 0.9183$\\
+
+Therefore, change in entropy = 0.0817\\
+
+Finally considering the partition made by checking x_2 <= \frac{3}{4}.\\
+
+So \\
+m_L = 8 \\
+m_R = 16.\\
+m_L^+ = 5 \\
+m_R^+ = 7.\\
+
+Now
+p_L^+ = \frac{m_L^+}{m_L} = \frac{5}{8} \\
+
+So
+entropy( left\_side) N_L = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+) = 0.9544\\
+
+Similarly
+p_R^+ = \frac{m_R^+}{m_R} = \frac{7}{16} \\
+
+So
+entropy( right\_side) N_R = -p_R^+log(p_R^+) - (1 - p_R^+)log(1 - p_R^+) = 0.9887\\
+
+Now, total entropy N = $\frac{ m_L }{ m } N_L + \frac{m_R}{m} N_R = 0.9544 * \frac{8}{24} + 0.9887 * \frac{16}{24} = 0.9773$\\
+
+Therefore, change in entropy = 0.0227\\
+
+Since, change in entropy is maximum at the split point $\frac{1}{2}$ along x_1,\\
+$The root node should be x_1 <= \frac{1}{2}$\\
+
+\linebreak
+c) Now lets rework the previous problem, but using Gini Index instead of Entropy as a measure of impurity.
+
+Initially the gini\_index of system = p^+ (1 - p^+) = \frac{1}{2} . \frac{1}{2} = \frac{1}{4}.\\
+
+Lets consider the various partitions that can be created at the first node.\\
+
+Consider the partition made by checking x_1 <= \frac{1}{4}.\\
+
+This leads to 6 datapoints on the left side and 18 points on the right side.\\
+
+So \\
+m_L = 6 \\
+m_R = 18.\\
+m_L^+ = 3 \\
+m_R^+ = 9.\\
+
+Now
+p_L^+ = \frac{m_L^+}{m_L} = \frac{3}{6} = \frac{1}{2}
+
+So
+gini\_index( left\_side) N_L = p_L^+ (1 - p_L^+) = 0.25\\
+
+Similarly
+p_R^+ = \frac{m_R^+}{m_R} = \frac{9}{18} = \frac{1}{2} \\
+
+So
+gini\_index( right\_side) N_R = p_R^+ (1 - p_R^+) = 0.25\\
+
+Now, total gini\_index N = $\frac{ m_L }{ m } N_L + \frac{m_R}{m} N_R = 0.25 * \frac{6}{24} + 0.25 * \frac{18}{24} = 0.25$\\ ~\\
+
+Therefore change in gini\_index = 0.\\
+
+Now consider the partition made by checking x_1 <= \frac{1}{2}.\\
+
+This leads to 13 datapoints on the left side and 11 points on the right side.\\
+
+So \\
+m_L = 13 \\
+m_R = 11.\\
+m_L^+ = 6 \\
+m_R^+ = 6.\\
+
+Now
+p_L^+ = \frac{m_L^+}{m_L} = \frac{6}{13} \\
+
+So
+gini\_index( left\_side) N_L = p_L^+ (1 - p_L^+) = 0.2485\\
+
+Similarly
+p_R^+ = \frac{m_R^+}{m_R} = \frac{6}{11} \\
+
+So
+gini\_index( right\_side) N_R = p_R^+ (1 - p_R^+) = 0.2479\\
+
+Now, total gini\_index N = $\frac{ m_L }{ m } N_L + \frac{m_R}{m} N_R = 0.25 * \frac{13}{24} + 0.2485 * \frac{11}{24} = 0.2482$\\ ~\\
+
+Therefore change in gini\_index = 0.0018.\\
+
+Now consider the partition made by checking x_1 <= \frac{3}{4}.\\
+
+This leads to 20 datapoints on the left side and 4 points on the right side.\\
+
+So \\
+m_L = 20 \\
+m_R = 4.\\
+m_L^+ = 8 \\
+m_R^+ = 4.\\
+
+Now
+p_L^+ = \frac{m_L^+}{m_L} = \frac{8}{20} \\
+
+So
+gini\_index( left\_side) N_L = p_L^+ (1 - p_L^+) = 0.24\\
+
+Similarly
+p_R^+ = \frac{m_R^+}{m_R} = \frac{4}{4} \\
+
+So
+gini\_index( right\_side) N_R = p_R^+ (1 - p_R^+) = 0\\
+
+Now, total gini\_index N = $\frac{ m_L }{ m } N_L + \frac{m_R}{m} N_R = 0.24 * \frac{20}{24} + 0 * \frac{4}{24} = 0.2$\\
+
+Therefore change in gini\_index = 0.05\\
+
+Now calculating the entropies for split points along x_2.
+
+Consider the partition made by checking x_2 <= \frac{1}{4}.\\
+
+So \\
+m_L = 8 \\
+m_R = 16.\\
+m_L^+ = 3 \\
+m_R^+ = 9.\\
+
+Now
+p_L^+ = \frac{m_L^+}{m_L} = \frac{3}{8} \\
+
+So
+gini\_index( left\_side) N_L = p_L^+ (1 - p_L^+) = 0.2344\\
+
+Similarly
+p_R^+ = \frac{m_R^+}{m_R} = \frac{9}{16} \\
+
+So
+gini\_index( right\_side) N_R = p_R^+ (1 - p_R^+) = 0.2461\\
+
+Now, total gini\_index N = $\frac{ m_L }{ m } N_L + \frac{m_R}{m} N_R = 0.2344 * \frac{8}{24} + 0.2461 * \frac{16}{24} = 0.2422$\\ ~\\
+
+Therefore change in gini\_index = 0.0078\\
+
+Now consider the partition made by checking x_2 <= \frac{1}{2}.\\
+
+So \\
+m_L = 12 \\
+m_R = 12.\\
+m_L^+ = 4 \\
+m_R^+ = 8.\\
+
+Now
+p_L^+ = \frac{m_L^+}{m_L} = \frac{4}{12} \\
+
+So
+gini\_index( left\_side) N_L = p_L^+ (1 - p_L^+) = 0.2222\\
+
+Similarly
+p_R^+ = \frac{m_R^+}{m_R} = \frac{8}{12} \\
+
+So
+gini\_index( right\_side) N_R = p_R^+ (1 - p_R^+) = 0.2222\\
+
+Now, total gini\_index N = $\frac{ m_L }{ m } N_L + \frac{m_R}{m} N_R = 0.2222 * \frac{12}{24} + 0.2222 * \frac{12}{24} = 0.2222$\\
+
+Therefore change in gini\_index = 0.0278.\\
+
+Finally considering the partition made by checking x_2 <= \frac{3}{4}.\\
+
+So \\
+m_L = 8 \\
+m_R = 16.\\
+m_L^+ = 5 \\
+m_R^+ = 7.\\
+
+Now
+p_L^+ = \frac{m_L^+}{m_L} = \frac{5}{8} \\
+
+So
+gini\_index( left\_side) N_L = p_L^+ (1 - p_L^+) = 0.2344\\
+
+Similarly
+p_R^+ = \frac{m_R^+}{m_R} = \frac{7}{16} \\
+
+So
+gini\_index( right\_side) N_R = p_R^+ (1 - p_R^+) = 0.2461\\
+
+Now, total gini\_index N = $\frac{ m_L }{ m } N_L + \frac{m_R}{m} N_R = 0.2344 * \frac{8}{24} + 0.2461 * \frac{16}{24} = 0.2422$\\
+
+Therefore change in gini\_index = 0.0078.\\
+
+Since, change in gini\_index is maximum at the split point $\frac{1}{2}$ along x_1,\\
+$The root node should be x_1 <= \frac{1}{2}$\\
+
+
+\pagebreak
+\section{Solution: Problem 5}
+a) Refer to attached code. \\
+b) Refer to attached code. \\
+c) The following table shows classification error (as calculated by classification\_error.m) on the training set.
+\begin{center}
+Train data classification error\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+& & & \\
+Kernel & C = 0.01 & C = 1 & C = 100 \\
+& & & \\
+\hline
+Linear & 0.155 & 0.154 & 0.154 \\
+\hline
+Poly ( deg = 2 ) & 0.154 & 0.154  & 0.154 \\ 
+\hline
+Poly ( deg = 3 ) & 0.151 & 0.153 & 0.153 \\
+\hline
+RBF ($\sigma$^2 = 1 ) & 0.115 & 0.099 & 0.052 \\
+\hline
+RBF ($\sigma$^2 = 4 ) & 0.167 & 0.148 & 0.126 \\
+\hline
+\end{tabular}
+\end{center}
+~\\
+The following table shows classification error (as calculated by classification\_error.m) on the test set.
+\begin{center}
+Test data classification error\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+& & & \\
+Kernel & C = 0.01 & C = 1 & C = 100 \\
+ & & & \\
+\hline
+Linear & 0.165 & 0.166 & 0.166 \\
+\hline
+Poly ( deg = 2 ) & 0.168 & 0.167  & 0.167 \\ 
+\hline
+Poly ( deg = 3 ) & 0.166 & 0.165 & 0.165 \\
+\hline
+RBF ($\sigma$^2 = 1 ) & 0.129 & 0.127 & 0.197 \\
+\hline
+RBF ($\sigma$^2 = 4 ) & 0.186 & 0.170 & 0.143 \\
+\hline
+\end{tabular}
+\end{center}
+
+As is obvious from the above data, the best classifiers for each kernel were \\ ~\\
+i) Linear kernel with C = 0.01. \\
+ii) Polynomial kernel of degree = 3 with C = 1.\\
+iii RBF kernel with C = 1 and $\sigma$^2 = 1. \\
+
+The decision boundaries for these configurations follow:
+~\\
+\begin{center}
+Decision Boundary for Linear Kernel with C = 0.01 \\
+\includegraphics[scale=0.35,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_5/dec_linear_c_0_01.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\includegraphics[scale=0.35,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_5/dec_linear_c_0_01_2.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+~\\~\\~\\~\\~\\
+\end{center}
+\begin{center}
+Decision Boundary for Polynomial Kernel of degree = 3 with C = 1 \\
+\includegraphics[scale=0.35,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_5/dec_poly_c_1_d_3_1.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\includegraphics[scale=0.35,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_5/dec_poly_c_1_d_3_2.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+~\\~\\~\\
+\end{center}
+\begin{center}
+Decision Boundary for RBF Kernel with C = 0.01 and $\sigma$^2 = 1\\
+\includegraphics[scale=0.35,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_5/dec_rbf_c_1_d_1_1.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\includegraphics[scale=0.35,keepaspectratio=true]{../../../../../home/cse11/kevin.patel/HW1/Problem_5/dec_rbf_c_1_d_1_2.jpg}
+ % p2c.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+~\\~\\~\\
+Note: The above boundaries were made with resolution = 0.3. This was done to get the results a bit faster.
+\end{center}
+
+From the results obtained, it seems like there's no golden bullet which can aid in determining the optimal parameters in a real world situation. However, we can determine relatively good choices, by using techniques like cross validation.\\
+
+\pagebreak
+d) Learning Curves for Handwritten Digit Classification using SVMs (with RBF kernel whose $\sigma$^2 = 1) \\
+$\begin{center}
+ \includegraphics[scale=0.6,keepaspectratio=true]{./HW1/Problem_5/dec_digit_classification.jpg}
+ % dec_digit_classification.jpg: 561x420 pixel, 72dpi, 19.79x14.82 cm, bb=0 0 561 420
+\end{center}
+
+Clearly, these results are better than those of 5NN. This suggests that SVMs are better at classification than k Nearest Neighbours (though my results seems to be too good to be true, may be some implementation error).
+\pagebreak
+$
+\section{Solution: Problem 6}
+
+This can be done by modifying the geometric margins. Intuitively, this can be done by associating " negative weights" to margins, where these weights will be a function of the distance as well as the error cost associated. So, the SVM algorithm will then try to maximize the weighted margins, thereby giving a classifier where different types of errors are treated differently. 
+
+\end{document}
+
+%=========================== END DOCUMENT ==============================

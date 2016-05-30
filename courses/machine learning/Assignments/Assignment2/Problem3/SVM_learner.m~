@@ -1,0 +1,31 @@
+function[model]  = SVM_learner(traindata,trainlabels,kernel,d,C)
+    [m n] = size(traindata);
+    
+    %compute the Kernel
+    K = computeKernel(traindata,traindata,kernel,d);
+    
+    %compute the Hessian Matrix
+    H = [K -K; -K K];
+    alphas = zeros(2*m,1);
+    
+    %compute f
+    f1 = C - trainlabels ;
+    f2 = C + trainlabels ;
+    f = [f1 ; f2] ;
+    
+    %put lower and upper bounds
+    lb = zeros(2*m,1);
+    ub = C*ones(2*m,1);
+    
+    %put equality constraints
+    Aeq = [ones(m,1) ; (-1)*ones(m,1)];
+    Beq = zeros(2*m,1);
+    
+    %set options
+    options = optimset('quadprog');
+    options.MaxIter = 200;
+    options.Algorithm = 'interior-point-convex' ;
+
+   %call quadp
+    
+end

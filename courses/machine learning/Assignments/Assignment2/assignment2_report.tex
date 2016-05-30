@@ -1,0 +1,518 @@
+\documentclass[twoside,10pt,a4paper]{article}
+
+%================================ PREAMBLE ==================================
+
+%--------- Packages -----------
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{hyperref}
+%\usepackage{algorithm,algorithmic}
+
+%----------Spacing-------------
+\setlength{\oddsidemargin}{0.25 in}
+\setlength{\evensidemargin}{-0.25 in}
+\setlength{\topmargin}{-0.6 in}
+\setlength{\textwidth}{6.5 in}
+\setlength{\textheight}{9.4 in}
+\setlength{\headsep}{0.75 in}
+\setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+
+%----------Header--------------
+\newcommand{\assignmentreport}[4]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf E0 270 Machine Learning} \hfill {\it Due:} #2 }
+       \vspace{6mm}
+       \hbox to 6.28in { \hfill {\Large Assignment #1 - Report} \hfill }
+       \vspace{6mm}
+       \hbox to 6.28in {{\it #3} \hfill {\it #4} }
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{Assignment #2 :\it #3,\it#4}{Assignment #2: \it #3,\it#4}
+   \vspace*{4mm}
+}
+
+%--------Environments----------
+\theoremstyle{definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newenvironment{pf}{{\noindent\sc Proof. }}{\qed}
+\newenvironment{map}{\[\begin{array}{cccc}} {\end{array}\]}
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\newtheorem{exmp}{Example}
+\newtheorem*{prob}{Problem}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+
+%---------Definitions----------
+\newcommand{\Fig}[1]{Figure~\ref{#1}}
+\newcommand{\Sec}[1]{Section~\ref{#1}}
+\newcommand{\Tab}[1]{Table~\ref{#1}}
+\newcommand{\Tabs}[2]{Tables~\ref{#1}--\ref{#2}}
+\newcommand{\Eqn}[1]{Eq.~(\ref{#1})}
+\newcommand{\Eqs}[2]{Eqs.~(\ref{#1}-\ref{#2})}
+\newcommand{\Lem}[1]{Lemma~\ref{#1}}
+\newcommand{\Thm}[1]{Theorem~\ref{#1}}
+\newcommand{\Cor}[1]{Corollary~\ref{#1}}
+\newcommand{\App}[1]{Appendix~\ref{#1}}
+\newcommand{\Def}[1]{Definition~\ref{#1}}
+%
+\renewcommand{\>}{{\rightarrow}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\N}{{\mathbb N}}
+\renewcommand{\P}{{\mathbf P}}
+\newcommand{\E}{{\mathbf E}}
+\newcommand{\Var}{{\mathbf{Var}}}
+\newcommand{\I}{{\mathbf I}}
+\newcommand{\1}{{\mathbf 1}}
+\newcommand{\0}{{\mathbf 0}}
+\renewcommand{\H}{{\mathcal H}}
+\newcommand{\F}{{\mathcal F}}
+\newcommand{\G}{{\mathcal G}}
+\renewcommand{\L}{{\mathcal L}}
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\X}{{\mathcal X}}
+\newcommand{\Y}{{\mathcal Y}}
+\newcommand{\sign}{\textup{\textrm{sign}}}
+\newcommand{\er}{\textup{\textrm{er}}}
+\newcommand{\abs}{\textup{\textrm{abs}}}
+\newcommand{\sq}{\textup{\textrm{sq}}}
+\newcommand{\zo}{\textup{\textrm{0-1}}}
+\newcommand{\hinge}{\textup{\textrm{hinge}}}
+\newcommand{\ramp}{\textup{\textrm{ramp}}}
+\newcommand{\mar}{\textup{\textrm{margin}}}
+\newcommand{\lin}{\textup{\textrm{lin}}}
+\newcommand{\poly}{\textup{\textrm{poly}}}
+\newcommand{\majority}{\textup{\textrm{majority}}}
+\newcommand{\maj}{\textup{\textrm{maj}}}
+\newcommand{\co}{\textup{\textrm{co}}}
+\newcommand{\agg}{\textup{\textrm{agg}}}
+\newcommand{\bad}{\textup{\textrm{bad}}}
+\newcommand{\EX}{\textup{\textrm{\textit{EX}}}}
+\newcommand{\GD}{\textup{\textrm{{GD}}}}
+\newcommand{\EG}{\textup{\textrm{{EG}}}}
+\newcommand{\algorithm}{\textup{\textrm{{algorithm}}}}
+\newcommand{\VCdim}{\textup{\textrm{{VCdim}}}}
+\newcommand{\VCentropy}{\textup{\textrm{{VC-entropy}}}}
+\newcommand{\Pdim}{\textup{\textrm{{Pdim}}}}
+\newcommand{\fat}{\textup{\textrm{{fat}}}}
+\newcommand{\x}{{\mathbf x}}
+\newcommand{\w}{{\mathbf w}}
+\newcommand{\p}{{\mathbf p}}
+\newcommand{\q}{{\mathbf q}}
+\renewcommand{\r}{{\mathbf r}}
+\renewcommand{\u}{{\mathbf u}}
+\renewcommand{\b}{{\mathbf b}}
+\newcommand{\bloss}{{\boldsymbol \ell}}
+\newcommand{\balpha}{{\boldsymbol \alpha}}
+\newcommand{\bxi}{{\boldsymbol \xi}}
+\newcommand{\bpsi}{{\boldsymbol \psi}}
+\newcommand{\btau}{{\boldsymbol \tau}}
+
+%=============================== END PREAMBLE ===============================
+
+%============================ BEGIN DOCUMENT ================================
+
+\begin{document}
+
+%Use the following format: \assignmentreport{Assignment number}{Due date}{Your name}{SR Number}
+
+\assignmentreport{2}{Feb 7, 2012}{sachin nagargoje}{04-04-00-10-41-11-1-08449}
+
+%-----------------------
+
+\section{Solution: Problem 1}
+
+Let $f\colon \chi \mapsto \mathbb{R} $ be any arbitrary real-valued function that is used for labeling new instances from $\chi$.
+then, \\
+ 
+Since $y = g(x) + \eta $
+ 
+
+\begin{center}
+ 
+
+
+$ E_{(x,y)\thicksim D} [ (f(x)-y)^2 ] = E[ (f(x)-(g(x)+\eta))^2 ] $
+\end{center}
+
+Let $k = f(x) - g(x)$, then \\
+\begin{center}
+$ E [ (k - \eta)^2 ]  = E[ k^2 + \eta^2 - 2 k \eta]$ \\
+$ = E[ k^2] + E[\eta^2 ] - 2 E[k ] E [\eta] $ \\
+\end{center}
+
+Since $\eta$ follows Standard Normal Distribution ,\\ 
+\begin{center}
+$ E[\eta] = 0 $ \\
+$ var(\eta) = 1 $ \\
+\end{center}
+So, \\
+\begin{center}
+$ E[\eta ^2] = var(\eta) + E[\eta]^2 $\\
+$ = 1 + 0 $\\
+$ = 1 $ \\
+\end{center}
+
+Thus , \\
+\begin{center}
+$ E[ (k - \eta)^2 ]= E[ k^2] + 1 - 0 $ \\
+$ = E[ k^2] + 1$ \\
+\end{center}
+
+Since, $E[ k^2]$ is expectation of a positive quantity, \\
+\begin{center}
+$ E[ k^2] \ge 0$ 
+\end{center}
+and, \\
+\begin{center}
+$ E[ (g(x)-y)^2 ]  = E[ (g(x)-g(x) -\eta )^2 ]  $ \\
+$ = E[ \eta^2 ]  $\\
+$ = 1 $ \\
+\end{center}
+
+So we got ,\\
+error with $g(x)$ as classifier = 1.\\
+and error with any arbitrary function $f(x)$ as classifier = $1 + E[k^2]$,\\
+where $k = f(x) - g(x) $ \\
+and also $E[k^2]$ is positive quantity.\\
+Thus we conclude that, \\
+
+\begin{center}
+$ E_{(x,y)\thicksim D} [ (g(x)-y)^2 ] \le E_{(x,y)\thicksim D} [ (f(x)-y)^2 ]  \forall f\colon \chi \mapsto \mathbb{R}$ \\
+\end{center}
+
+
+%END OF SECTION 1
+
+
+\section{Solution: Problem 2}
+
+Part (a) \\
+
+Refer to Code 1 \\
+
+Part (b) \\
+
+Refer to Code 2 \\
+
+Part (c) \\
+
+On running the code on given data, following error were found : \\
+
+Training Error : 101.3872 \\
+Test Error : 26.8586 \\
+
+Part (d) \\
+Refer to code 3\\
+Test Error \\
+
+\begin{center}
+\begin{tabular}{|c| c| c | c | c | c|}
+\hline
+  Folds & $\lambda = 0.01$ & $\lambda = 0.1$ & $\lambda = 1.0 $ & $\lambda = 10.0$& $\lambda = 100.0$\\
+\hline
+
+1 & 85.7615  & 85.7628  & 85.7780  & 86.0910 &  92.4212 \\
+\hline
+2 & 113.9051 & 113.9046 & 113.9033 & 114.1163 & 121.1080 \\
+\hline
+3 & 106.7523 & 106.7523 & 106.7560 & 107.0459 & 115.0829 \\
+\hline
+4 & 99.7846  & 99.7746  & 99.6801  & 99.1158 & 103.6544 \\
+\hline
+5 & 102.3173 & 102.3238 & 102.3902 & 103.1771&  112.0226 \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{100pt}
+Train Error \\
+\begin{center}
+\begin{tabular}{|c| c| c | c | c | c|}
+\hline
+  Folds & $\lambda = 0.01$ & $\lambda = 0.1$ & $\lambda = 1.0 $ & $\lambda = 10.0$& $\lambda = 100.0$\\
+\hline
+
+1 &  105.3216 & 105.3216 & 105.3245 & 105.5627 & 112.5263 \\
+2 &  98.2991  & 98.2991  & 98.3021 &  98.5515 & 105.6139 \\
+3 & 100.0530 & 100.0530 & 100.0561 & 100.3096 & 107.3352 \\
+4 & 101.8518 & 101.8518 & 101.8551 & 102.1285 & 109.6258 \\
+5 & 101.2350 & 101.2350 & 101.2378 & 101.4685 & 108.1266 \\
+\hline
+\end{tabular}
+\end{center}
+
+Average Train Error
+
+\begin{center}
+\begin{tabular}{| c| c | c | c | c|}
+\hline
+   $\lambda = 0.01$ & $\lambda = 0.1$ & $\lambda = 1.0 $ & $\lambda = 10.0$& $\lambda = 100.0$\\
+\hline
+ 101.3521 & 101.3521 & 101.3551 & 101.6042 & 108.6456 \\
+\hline
+\end{tabular}
+\end{center}
+
+Average Test Error
+\begin{center}
+\begin{tabular}{| c| c | c | c | c|}
+\hline
+   $\lambda = 0.01$ & $\lambda = 0.1$ & $\lambda = 1.0 $ & $\lambda = 10.0$& $\lambda = 100.0$\\
+\hline
+  101.7041 & 101.7036 & 101.7015 & 101.9092 & 108.8578 \\
+\hline
+\end{tabular}
+\end{center}
+As we can observe here, $\lambda = 1.0 $ gives minimum average cross validation error. \\
+Using this value of $\lambda$ with complete train data, we got following errors : \\
+Test Error :    26.7510 \\
+Train Error :   101.3891 \\
+
+Test Error using Complete Data
+\begin{center}
+\begin{tabular}{| c| c | c | c | c|}
+\hline
+   $\lambda = 0.01$ & $\lambda = 0.1$ & $\lambda = 1.0 $ & $\lambda = 10.0$& $\lambda = 100.0$\\
+\hline
+26.8575 & 26.8476 &  26.7510 &  26.0140 &  26.8059 \\
+\hline
+\end{tabular}
+\end{center}
+Train Error using Complete Data
+\begin{center}
+\begin{tabular}{| c| c | c | c | c|}
+\hline
+   $\lambda = 0.01$ & $\lambda = 0.1$ & $\lambda = 1.0 $ & $\lambda = 10.0$& $\lambda = 100.0$\\
+\hline
+101.3872 &  101.3872 &  101.3891 & 101.5543 & 107.1628 \\
+\hline
+\end{tabular}
+\end{center}
+
+As we can see here,cross-validation selects $\lambda = 1.0$ which gives minimum average test error, but this value of $\lambda$
+does not give minimum error when run on the test set using complete training data. \\
+
+Comparing to linear least square regression model , we see that training and test errors are almost same.\\
+
+%\vspace{100pt}
+Part (e) \\
+Refer to Code 5 and 6
+
+Test Error \\
+
+\begin{center}
+\begin{tabular}{|c| c| c | c | c | c|}
+\hline
+  Folds & $\lambda = 0.01$ & $\lambda = 0.1$ & $\lambda = 1.0 $ & $\lambda = 10.0$& $\lambda = 100.0$\\
+\hline
+
+
+1 & 53.3263 &  53.3083 &  53.2558 &  54.8039  & 62.0508 \\
+\hline
+2 & 76.6655 &  76.6489 &  76.6283 &  78.6544  & 87.9578 \\
+\hline
+3 & 70.9982 &  71.0392 &  71.4627 &  74.5822 &  84.7555 \\
+\hline
+4 & 61.0854 &  61.0556 &  60.9238 &  62.4248 &  69.5314 \\
+\hline
+5 & 65.4179 & 65.4269 &  65.5327  & 66.5064 &  71.8632 \\
+\hline
+\end{tabular}
+\end{center}
+
+Train Error
+
+\begin{center}
+\begin{tabular}{|c| c| c | c | c | c|}
+\hline
+  Folds & $\lambda = 0.01$ & $\lambda = 0.1$ & $\lambda = 1.0 $ & $\lambda = 10.0$& $\lambda = 100.0$\\
+\hline
+
+
+1 &   68.0576 &  68.0590 &  68.1586 &  70.0791 &  77.8143 \\
+\hline
+2 &   62.2223 &  62.2236 &  62.3253 &  64.2349 &  71.7455 \\
+\hline
+3 &   63.6660 &  63.6671 &  63.7477 &  65.4025 &  72.6768 \\
+\hline
+4 &   66.0990 &  66.1004 &  66.2049 &  68.1582 & 75.8957 \\
+\hline
+5 &   65.0791 &  65.0801 &  65.1611 &  66.9815 & 75.2170 \\
+
+\hline
+\end{tabular}
+\end{center}
+
+
+Average Train Error
+
+\begin{center}
+\begin{tabular}{| c| c | c | c | c|}
+\hline
+   $\lambda = 0.01$ & $\lambda = 0.1$ & $\lambda = 1.0 $ & $\lambda = 10.0$& $\lambda = 100.0$\\
+\hline
+  65.0248 &  65.0261 &  65.1195 &  66.9712  & 74.6699 \\
+\hline
+\end{tabular}
+\end{center}
+
+Average Test Error
+\begin{center}
+\begin{tabular}{| c| c | c | c | c|}
+\hline
+   $\lambda = 0.01$ & $\lambda = 0.1$ & $\lambda = 1.0 $ & $\lambda = 10.0$& $\lambda = 100.0$\\
+\hline
+   65.4987 &  65.4958 &  65.5607 &  67.3943  & 75.2317 \\
+\hline
+\end{tabular}
+\end{center}
+
+As we can observe here, $\lambda = 0.10 $ gives minimum average cross validation error. \\
+Using this value of $\lambda$ with complete train data, we got following errors : \\
+Test Error :    16.1780 \\
+Train Error :   65.0730 \\
+
+Test Error using Complete Data
+\begin{center}
+\begin{tabular}{| c| c | c | c | c|}
+\hline
+   $\lambda = 0.01$ & $\lambda = 0.1$ & $\lambda = 1.0 $ & $\lambda = 10.0$& $\lambda = 100.0$\\
+\hline
+ 16.2563 &  16.1780 &  15.5365 &  13.6111 &  14.0447 \\
+
+\hline
+\end{tabular}
+\end{center}
+Train Error using Complete Data
+\begin{center}
+\begin{tabular}{| c| c | c | c | c|}
+\hline
+   $\lambda = 0.01$ & $\lambda = 0.1$ & $\lambda = 1.0 $ & $\lambda = 10.0$& $\lambda = 100.0$\\
+\hline
+ 65.0722 & 65.0730 &  65.1357 &  66.6520 & 73.5195 \\
+
+\hline
+\end{tabular}
+\end{center}
+
+As we can see here,cross-validation selects $\lambda = 0.10$ which gives minimum average test error, but this value of $\lambda$
+does not give minimum error when run on the test set using complete training data. \\
+
+Comparing to linear least square regression model , we see that training and test errors are considerably smaller in this case.
+
+\section{Solution: Problem 3}
+Part (a) \\
+Refer to Code 8\\
+
+Part (b) \\
+not attempted \\
+
+Part (c) \\
+not attempted \\
+
+\section{Solution: Problem 4}
+Refer to code 10\\
+\begin{center}
+\begin{tabular}{| c| c | c| c |}
+\hline
+  &   k = 1  & k = 9 &  k = 99 \\
+\hline
+Training Error & 0 & 0.0291 & 0.0968  \\
+\hline
+Test Error & 0.0792 & 0.1081 & 0.2361 \\
+
+\hline
+\end{tabular}
+\end{center}
+
+Here $ k = 1 $ has lowest test error.
+Misclassified images are as follows :
+
+1. 3 instead of 2
+
+\begin{center}
+\scalebox{1.5}{\includegraphics{./Problem4/2_as_3}}
+\end{center}
+
+2. 9 instead of 0
+
+\begin{center}
+\scalebox{1.5}{\includegraphics{./Problem4/0_as_9}}
+\end{center}
+
+\vspace{120pt}
+3. 0 instead of 2
+
+\begin{center}
+\scalebox{1.5}{\includegraphics{./Problem4/2__as_0}}
+\end{center}
+
+4. 5 instead of 3
+
+\begin{center}
+\scalebox{1.5}{\includegraphics{./Problem4/3_as_5}}
+\end{center}
+
+5. 7 instead of 3
+
+\begin{center}
+\scalebox{1.5}{\includegraphics{./Problem4/3_as_7}}
+\end{center}
+
+6. 8 instead of 3
+
+\begin{center}
+\scalebox{1.5}{\includegraphics{./Problem4/3_as_8}}
+\end{center}
+
+7. 2 instead of 6
+
+\begin{center}
+\scalebox{1.5}{\includegraphics{./Problem4/6__as_2}}
+\end{center}
+
+8. 7 instead of 4
+
+\begin{center}
+\scalebox{1.5}{\includegraphics{./Problem4/4_as_7}}
+\end{center}
+
+9. 4 instead of 5
+
+\begin{center}
+\scalebox{1.5}{\includegraphics{./Problem4/5_as_4}}
+\end{center}
+
+10. 2 instead of 6
+
+\begin{center}
+\scalebox{1.5}{\includegraphics{./Problem4/6_as_2}}
+\end{center}
+
+\end{document}ocument}
+
+%=========================== END DOCUMENT ==============================
+

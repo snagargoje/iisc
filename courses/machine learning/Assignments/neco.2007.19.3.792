@@ -1,0 +1,712 @@
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <!-- MSIE6 -->
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html>
+            <head>
+                
+                <title>MIT Press Journals - Neural Computation - Abstract</title>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                
+
+
+<meta name="robots" content="noarchive,nofollow" />
+
+
+
+<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link><meta name="dc.Title" content="Support Vector Ordinal Regression"></meta><meta name="dc.Creator" content=" Wei Chu"></meta><meta name="dc.Creator" content=" S. Sathiya Keerthi"></meta><meta name="dc.Description" content="In this letter, we propose two new support vector approaches for ordinal regression, which optimize multiple thresholds to define parallel discriminant hyperplanes for the ordinal scales. Both approaches guarantee that the thresholds are properly ordered at the optimal solution. The size of these optimization problems is linear in the number of training samples. The sequential minimal optimization algorithm is adapted for the resulting optimization problems; it is extremely easy to implement and scales efficiently as a quadratic function of the number of examples. The results of numerical experiments on some benchmark and real-world data sets, including applications of ordinal regression to information retrieval, verify the usefulness of these approaches."></meta><meta name="dc.Publisher" content=" MIT Press  238 Main St., Suite 500, Cambridge, MA 02142-1046 USA journals-info@mit.edu  "></meta><meta name="dc.Date" scheme="WTN8601" content="2007-02-13"></meta><meta name="dc.Type" content="letter"></meta><meta name="dc.Format" content="text/HTML"></meta><meta name="dc.Identifier" scheme="publisher-id" content="neco.2007.19.3.792"></meta><meta name="dc.Identifier" scheme="doi" content="10.1162/neco.2007.19.3.792"></meta><meta name="dc.Source" content="http://dx.doi.org/10.1162/neco.2007.19.3.792"></meta><meta name="dc.Language" content="en"></meta><meta name="dc.Coverage" content=" 238 Main St., Suite 500, Cambridge, MA 02142-1046 USA journals-info@mit.edu "></meta><meta name="dc.Rights" content="© 2007 Massachusetts Institute of Technology"></meta>
+
+
+
+
+
+<meta name="MSSmartTagsPreventParsing" content="true"/>
+
+<link rel="meta" type="application/atom+xml" href="http://dx.doi.org/10.1162%2Fneco.2007.19.3.792"/>
+<link rel="meta" type="application/rdf+json" href="http://dx.doi.org/10.1162%2Fneco.2007.19.3.792"/>
+<link rel="meta" type="application/unixref+xml" href="http://dx.doi.org/10.1162%2Fneco.2007.19.3.792"/>
+
+                <link href="/templates/jsp/style.css" rel="stylesheet" type="text/css" />
+<link href="/templates/jsp/_midtier/style.css" rel="stylesheet" type="text/css" />
+<link href="/templates/jsp/_midtier/_mit/style.css" rel="stylesheet" type="text/css" />
+
+                <script type="text/javascript" src="/templates/jsp/script.js"></script>
+<script type="text/javascript" src="/templates/jsp/_midtier/script.js"></script>
+
+                <link rel="SHORTCUT ICON" href="/templates/jsp/_midtier/_mit/favicon.ico" />
+                
+
+
+                
+<link rel="alternate" type="application/rss+xml" title="RSS - eTOC alert for Neural Computation" href="http://www.mitpressjournals.org/action/showFeed?ui=0&amp;mi=3fsp8u&amp;ai=sl&amp;jc=neco&amp;type=etoc&amp;feed=rss" />
+<link rel="alternate" type="application/rss+xml" title="RSS - Cited articles" href="http://www.mitpressjournals.org/action/showFeed?ui=0&amp;mi=3fsp8u&amp;ai=bc8&amp;doi=10.1162%2Fneco.2007.19.3.792&amp;type=citrack&amp;feed=rss" />
+
+                
+            </head>
+            <body>
+                
+
+
+
+
+
+
+
+
+
+
+
+                <map id="bannerMap" name="bannerMap">
+                    <area alt="Activate" shape="rect" coords="430,18,605,40" href="/page/activation.jsp"/>
+                    <area alt="Activate" shape="rect" coords="0,0,420,100" href="/"/>
+                    <area alt="Activate" shape="rect" coords="420,20,750,100" href="/"/>
+
+                </map>
+
+                <table border="0" cellpadding="0" width="100%" cellspacing="0" summary=""><tr><td align="center">
+                <table id="main-layout" cellspacing="0" cellpadding="0" summary="">
+                    <tr>
+                    <td colspan="2">
+                        <table cellspacing="0" width="750" summary="">
+                    <tr id="header-contact">
+                        <td colspan="3">
+                        <!-- placeholder id=null, description=Header - Mobile Button -->
+                            <a href="/page/contact_info">
+                                <img src="/templates/jsp/_midtier/_mit/images/contact.gif" alt="contact" />
+                            </a>&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            
+
+
+
+
+
+
+
+
+<table class="identitiesBar" width="750" cellpadding="0" cellspacing="0" border="0" summary="">
+ <tr>
+  
+    <td align="left">
+      Hello. <a href="/action/showLogin"> Sign in </a> to personalize your visit.  New user? <a href="/action/registration">Register now</a>.
+      <span class="identitiesName"></span>
+    </td>
+   
+     <td align="right">
+      
+      
+      
+      &nbsp;
+     </td>
+
+ </tr>
+</table>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="header-banner">
+                            <img src="/templates/jsp/_midtier/_mit/images/banner.jpg" alt="" usemap="#bannerMap" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="header-links">
+                            
+
+
+
+
+
+<form action="/action/doSearch" method="get"><table style="padding-top:0px; padding-left:0px" cellspacing="1" cellpadding="0" border="0" summary="">
+        <tr>
+
+            
+            <td class="tab">
+                 <a href="/"><img src="/templates/jsp/_midtier/_mit/images/home_off.gif" alt="Home&nbsp;&nbsp;" /></a>
+            </td>
+
+            
+            <td class="tab">
+                <a href="/action/showPreferences"><img src="/templates/jsp/_midtier/_mit/images/myonlineaccount_off.gif" alt="My Online Account&nbsp;&nbsp;" /></a>
+            </td>
+
+            
+            <td class="tab">
+                <a href="/page/librarians.jsp"><img src="/templates/jsp/_midtier/_mit/images/forlibrarians_off.gif" alt="For Librarians&nbsp;&nbsp;" /></a>
+            </td>
+
+            <td class="tab">
+                <a href="/help?context=main" onclick="popupHelp(this.href); return false;"><img src="/templates/jsp/_midtier/_mit/images/help_off.gif" alt="Help&nbsp;&nbsp;" /></a>
+            </td>
+
+            <td><table style="margin:0px; padding:0px" cellspacing="0" cellpadding="0" border="0" summary="">
+                <tr>
+                   <td>
+                    <label for="headerLinksSearchText"><a href="/action/doSearch" onclick="document.forms[0].submit(); return false;"><img src="/templates/jsp/_midtier/_mit/images/search_button_part1.jpg" alt="Search" /></a></label>
+                    </td>
+                <td id="searchBox"><input type="text" name="searchText" id="headerLinksSearchText"/></td>
+                <td style="padding-right:0px; ">
+                    <a href="/action/doSearch" onclick="document.forms[0].submit(); return false;"><img src="/templates/jsp/_midtier/_mit/images/search_button_part3.jpg" alt="Do Search" /></a>
+                </td>
+
+                </tr>
+                </table>
+            </td>
+
+        </tr>
+    </table></form>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="bottom" style="padding-right:10px;">
+                            
+
+
+
+
+<div id="cartinfo">
+    
+</div>
+                        </td>
+                    </tr>
+
+                   </table></td>
+                   </tr>
+                    <tr>
+                        
+                        <td id="content-middle">
+    
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!-- // hide it from old browsers
+
+var anyDbId = -1;
+var sideParts = {
+  citation: "<tr><td class=\"black9pt\" width=\"15\" valign=\"top\">&nbsp;&bull;&nbsp;<\/td><td class=\"black9pt\" valign=\"top\"><a href=\"javascript:newWindow('{$linkoutUrl}')\">{$display}<\/a><\/td><\/tr>",
+  citingIsi: "<tr><td class=\"black9pt\" width=\"15\" valign=\"top\">&nbsp;&bull;&nbsp;<\/td><td class=\"black9pt\" valign=\"top\">Search for citing articles in:<br/>&nbsp;<a href=\"javascript:newWindow('/servlet/linkout?suffix=s0&dbid=128&doi={$doi}&url={$urlEnc}')\">ISI Web of Science<\/a> ({$citNum} or more)<\/a><\/td><\/tr>",
+  citingCrossref: "<tr><td class=\"black9pt\" width=\"15\" valign=\"top\">&nbsp;&bull;&nbsp;<\/td><td class=\"black9pt\" valign=\"top\"><a href=\"{$url}\">Citing articles in CrossRef<\/a><\/td><\/tr>",
+  quicksearch: "<option value=\"{$value}\">{$display}<\/option>",
+  related: ", <a href=\"javascript:newWindow('{$linkoutUrl}')\">{$display}<\/a>"
+};
+
+function genSide(part, dbid, linkoutUrl, display, doi, url, citNum, value) {
+  if (dbid != anyDbId && (34359738367 & dbid) == 0) return;
+	var content = sideParts[part];
+	if (linkoutUrl) { content = content.replace(/{\$linkoutUrl}/g, linkoutUrl); }
+	if (display) { content = content.replace(/{\$display}/g, display); }
+	if (doi) { content = content.replace(/{\$doi}/g, doi); }
+	if (url) {
+	  content = content.replace(/{\$url}/g, url);
+	  content = content.replace(/{\$urlEnc}/g, encodeURIComponent(encodeURIComponent(url)));
+  }
+	if (citNum) { content = content.replace(/{\$citNum}/g, citNum); }
+	if (value) { content = content.replace(/{\$value}/g, value); }
+	document.write(content);
+}
+
+function hasSfxLinks() {
+	return false;
+}
+
+
+function genSfxLinks(id, url, doi) { }
+
+var sfxRefDisplay = {
+	64:"ADS",
+	32:"CAS",
+	8192:"CIS",
+	256:"CSA",
+	16:"CrossRef",
+	128:"ISI",
+	4096:"JSTOR",
+	8:"Medline"
+};
+function genRefLink(dbid, id, key, textOfLink) {
+	if (34359738367 & dbid != 0) {
+	    if (typeof textOfLink === "undefined") {
+            if (sfxRefDisplay[dbid].substring(0,1) == "[") {
+                textOfLink = sfxRefDisplay[dbid];
+            } else {
+                textOfLink = "["+sfxRefDisplay[dbid]+"]";
+            }
+            // ToDo: move '[' and ']' to sfxRefDisplay (UPDATE: finish changing sfxRefDisplays and remove this branch)
+        }
+	    else textOfLink = unescape(textOfLink);
+		document.write("<a class='ref' href=\"javascript:popRefLink("+dbid+",'"+id+"','"+key+"')\">"+textOfLink+"<\/a>");
+	}
+}
+function popRefLink(dbid, id, key) {
+	var redirect = "/servlet/linkout?suffix=" + id + "&dbid=" + dbid + "&doi=10.1162%2Fneco.2007.19.3.792&key=" + key;
+	return newWindow(redirect);
+}
+function popRefFull(rid, citart, ptype, area) {
+	return popRefImplFull(rid, citart, ptype, area, 600, 500);
+}
+function popRefImplFull(rid, citart, ptype, area, width, height) {
+	var doi = "10.1162%2Fneco.2007.19.3.792";
+	if (! ptype) { ptype = ""; }
+	var pt = rid.charAt(0) + "neco2007193792" + ptype;
+	return popupFull(rid, doi, pt, area, width, height);
+}
+function popRef(rid, citart, ptype, area) {
+	return popRefImpl(rid, citart, ptype, area, 600, 500);
+}
+function popRef2(rid, citart, ptype, area) {
+	return popRefImpl(rid, citart, ptype, area, 400, 100);
+}
+function popRefImpl(rid, citart, ptype, area, width, height) {
+	var doi = "10.1162%2Fneco.2007.19.3.792";
+	if (! citart) { citart = "citart1"; }
+	if (! ptype) { ptype = ""; }
+	var pt = rid.charAt(0) + "neco2007193792" + ptype;
+	return popupRef(citart, rid, doi, pt, area, width, height);
+}
+
+
+
+function genCitingIsi() { 
+}
+
+function genCitingCrossref() {
+}
+
+var citLinkDisplay = {
+
+	0:"SYSTEM",
+	4:"SYSTEM",
+	20:"SYSTEM",
+	64:"ADS",
+	32:"CAS",
+	8192:"CIS",
+	256:"CSA",
+	16:"CrossRef",
+	128:"ISI",
+	4096:"JSTOR",
+	8:"MEDLINE"
+};
+var feeBasedMask = 4480;
+
+function genCitLink(dbid, suffix, key) {
+  if (dbid != anyDbId && (feeBasedMask & dbid) != 0 && (34359738367 & dbid) == 0) return;
+
+	var param = "/servlet/linkout?suffix=" + suffix + "&dbid=" + dbid + "&doi=10.1162%2Fneco.2007.19.3.792&key=" + key;
+	var display = citLinkDisplay[dbid];
+	var img = "/templates/jsp/_midtier/_mit/images/" + display + "_btn.gif";
+
+
+
+	document.write("<a class='ref' href='javascript:newWindow(\"" + param + "\")'>");
+	document.write("<" + "img src='"+img+"' width='85' height='20' align='BOTTOM' alt='"+display+" Abstract' border='0'/>");
+	document.write("<\/a>");
+}
+// stop hiding -->
+</script>
+
+
+
+
+
+<table summary="" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+  <td>
+    <div class="breadcrumb">
+      <a href="/">Home</a> &gt;&gt;
+      <a href="/loi/neco">List of Issues</a> &gt;&gt;
+      <a href="/toc/neco/19/3">Table of Contents</a> &gt;&gt;
+      Abstract
+    </div>
+    <div class="articleNavigation">
+        
+
+
+
+
+<!-- Previous and Next Articles -->
+
+
+
+
+
+
+        
+        
+        
+        
+
+        <a href="/doi/abs/10.1162/neco.2007.19.3.780">&lt;&lt; previous article</a>
+    
+ |
+
+        
+        
+        
+        
+        <a href="/doi/abs/10.1162/neco.2007.19.3.816">next article &gt;&gt;</a>
+
+    
+
+    </div>
+  </td>
+  <td rowspan="2" valign="top" style="padding-left:1em; padding-top:1em;">
+    
+
+
+
+
+
+
+<div class="quickTools">
+  <div class="menuHeading">
+    Quick Tools
+  </div>
+  <ul>
+    <li>
+      <a href="/action/showMailPage?href=%2Fdoi%2Fabs%2F10.1162%2Fneco.2007.19.3.792&amp;title=Support+Vector+Ordinal+Regression&amp;doi=10.1162%2Fneco.2007.19.3.792">
+        
+        
+        Email to a Colleague
+      </a>
+    </li>
+    <li>
+      <a href="/personalize/addFavoriteArticle?doi=10.1162%2Fneco.2007.19.3.792">Add Article to Favorites</a>
+    </li>
+    <li>
+      <a href="/action/addCitationAlert?doi=10.1162%2Fneco.2007.19.3.792">Alert Me</a><br/><small>When new articles cite this article</small>
+    </li>
+		
+    
+    <li>
+		<a href="http://www.mitpressjournals.org/action/showFeed?ui=0&mi=3fsp8u&ai=sl&jc=neco&type=etoc&feed=rss"><img src="/templates/jsp/images/rss14x14pad.gif" alt="" align="absbottom" border="0" />RSS (TOC Alert)</a>
+    </li>
+    
+    <li>
+		<a href="http://www.mitpressjournals.org/action/showFeed?ui=0&mi=3fsp8u&ai=bc8&doi=10.1162%2Fneco.2007.19.3.792&type=citrack&feed=rss"><img src="/templates/jsp/images/rss14x14pad.gif" alt="" align="absbottom" border="0" />RSS (Citation Alert)</a>
+	</li>
+    <li>
+      <small>Download to</small> <a href="/action/showCitFormats?doi=10.1162%2Fneco.2007.19.3.792">Citation Manager</a>
+    </li>
+    
+  
+    <li>
+      <a href="/action/showMostReadArticles?journalCode=neco">Most Downloaded Articles</a>
+    </li>
+  
+  
+    <li>
+      <a href="/action/showMostCitedArticles?journalCode=neco">Most Cited Articles</a>
+    </li>
+  
+    <li>
+      <a href="/action/doSearch?target=related&amp;doi=10.1162%2Fneco.2007.19.3.792">View Related Articles</a>
+    </li>
+  
+    <li>
+       <a href="https://s100.copyright.com/AppDispatchServlet?author=Wei+Chu+et+al.&contentID=neco.2007.19.3.792&endPage=815&issueNum=3&numPages=24&orderBeanReset=true&publication=neco&publicationDate=03%2F01%2F2007&publisherName=mitpress&startPage=792&title=Support+Vector+Ordinal+Regression&volumeNum=19" target="_blank"><img src="/templates/jsp/_midtier/_mit/images/rightsLink_linkout.gif" /> </a>
+    </li>
+  
+    <li>
+        
+        <a target="_blank" href="http://mitpress.mit.edu/journals/order/default.asp?issn=0899-7667"><img alt="Order" src="/templates/jsp/_midtier/_mit/images/order.gif"/></a>
+    </li>
+  </ul>
+
+</div>
+
+<br /><div class="quickSearch"><div class="menuHeading">
+          Quick Search
+        </div><form method="post" action="" onSubmit="onAuthorSearchClick(this); return false;" name="frmQuickSearch"><input type="hidden" name="type" value="simple"/><input type="hidden" name="action" value="search"/><input type="hidden" name="nh" value="10"/><input type="hidden" name="displaySummary" value="false"/><div class="form_legend">In</div><fieldset><div><label for="dbnameSynergy">MIT Press Journals</label><input name="dbname" id="dbnameSynergy" type="radio" value="mit" checked="checked"/></div><div><label for="dbnamecrossref">CrossRef</label><input name="dbname" id="dbnamecrossref" type="radio" value="crossref"/></div></fieldset><!-- quicksearch authors --><div class="form_legend">By author</div><fieldset><div><label for="iauthor_1"> Wei Chu</label><input class="input_boxes" value="Chu, Wei" id="iauthor_1" name="sauthcbx" type="checkbox"/></div><div><label for="iauthor_2"> S. Sathiya Keerthi</label><input class="input_boxes" value="Keerthi, S. Sathiya" id="iauthor_2" name="sauthcbx" type="checkbox"/><input type="HIDDEN" name="checkboxNum" value="2"/></div></fieldset><!-- /quicksearch authors --><!-- quicksearch keywords --><!-- /quicksearch keywords --><input type="hidden" name="result" value="true"/><input type="hidden" name="type" value="simple"/><span><input type="image" border="0" src="/templates/jsp/_midtier/_mit/images/searchButton.gif" align="right" alt="Search"/></span></form></div>
+
+
+
+  </td>
+</tr>
+<tr><td>
+<table summary="" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td width="160" valign="top" id="journalLeftside">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- JOURNAL COVER IMAGE -->
+
+
+
+<div class="cover_image">
+<a href="#" onclick="popupCoverImage('/action/showLargeCover?issue=1002383');return false;">
+<img title="Click to view a larger image." src="/na101/home/literatum/publisher/mit/journals/covergifs/neco/2007/neco.2007.19.issue-3/cover.jpg" alt="Click to view a larger image." />
+</a>
+  
+</div>
+
+
+<div>
+  
+<p>Monthly
+<br />
+<span class="normal">288 pp. per issue
+<br />
+6 x 9, illustrated
+<br />
+ Founded: 1989
+<br />
+ ISSN 0899-7667
+<br />
+ E-ISSN 1530-888X
+<br />
+ 2010 Impact Factor: 2.290</span></p>
+<div class="insideJournal">
+<div class="menuHeading">Inside the Journal</div>
+<ul>
+<li><a href="/page/about/neco">About NECO</a>
+<br />
+</li>
+<li><a href="/page/editorial/neco">Editorial Info</a>
+<br />
+</li>
+<li><a href="/page/aandi/neco">Abstracting and Indexing</a>
+<br />
+</li>
+<li><a href="/page/schedule">Release Schedule</a>
+<br />
+</li>
+<li><a href="/page/advertising">Advertising Info</a>
+<br />
+</li>
+<li><a href="/page/sub/neco">Submission Guidelines</a>
+<br />
+</li>
+<li><a href="/action/showMostReadArticles?journalCode=neco">Most Downloaded Articles</a> </li>
+<li><a href="/action/showMostCitedArticles?journalCode=neco">Most Cited Articles</a> </li>
+<li><a href="/userimages/ContentEditor/1254430050324/author.pdf">Author Reprints</a>
+<br />
+</li>
+<li><a href="/userimages/ContentEditor/1281450974111/NECO.pdf">Author Publication Agreement </a>
+<br />
+</li>
+<li><a href="/page/authorinfo">Author Rights &amp; Permissions FAQ</a>
+<br />
+</li>
+<li><a href="http://neuralcomp.allentrack.net/" target="_blank">Peer Review site</a>
+<br />
+</li>
+</ul>
+
+<br />
+</div>
+
+</div>
+</td>
+<td valign="top" style="padding:0.5em 1em">
+<!-- when referer is not from literatum (referer is null or not equals to the default host), display note on abstarct page -->
+
+
+  
+
+
+
+
+
+
+
+<div class="institutionBanner" > </div>
+
+
+
+<!-- Start title of page and review -->
+<h1 class="journalTitle"><a href="/toc/neco/19/3">
+           <img src="/na101/home/literatum/publisher/mit/journals/covergifs/neco/title.gif" alt="Neural Computation" />
+</a></h1>
+March 2007, Vol. 19, No. 3, Pages 792-815<br/>
+
+      
+      <div>Posted Online February 13, 2007.</div>
+
+
+
+
+
+
+    <div class="">
+        (doi:10.1162/neco.2007.19.3.792)
+    </div>
+
+
+<div>© 2007 Massachusetts Institute of Technology</div>
+
+    
+<!-- Start full text content -->
+ <div class="htmlContent"><!-- copyright_info:© 2007 Massachusetts Institute of Technology--><!-- abstract content --><h1 class="arttitle">Support Vector Ordinal Regression</h1><div class="artAuthors"><strong>Wei Chu<p class="fulltext nospace">Center for Computational Learning Systems, Columbia University, New York, NY 10115, U.S.A., <a class="email" href="mailto:chuwei@ccls.columbia.edu">chuwei@ccls.columbia.edu</a></p>S. Sathiya Keerthi<p class="fulltext nospace">Yahoo! Research, Media Studios North, Burbank, CA 91504, U.S.A., <a class="email" href="mailto:selvarak@yahoo-inc.com">selvarak@yahoo-inc.com</a></p></strong></div><!-- /abstract content --><!-- fulltext content --><!-- /fulltext content --></div>
+
+ 
+<div class="article_link">
+
+  <table align="center" cellspacing="10" summary="">
+    <tr>
+      
+      
+      
+      
+      
+      
+      
+
+      <td align="center" nowrap="nowrap"><a href="/doi/pdf/10.1162/neco.2007.19.3.792" class="header4" target="_blank">
+        PDF
+        <span class="fileSize">(931.485 KB)</span>
+      </a></td>
+      
+      
+      
+      <td>|</td>
+      <td align="center" nowrap="nowrap"><a href="/doi/pdfplus/10.1162/neco.2007.19.3.792" class="header4" target="_blank">
+        PDF Plus
+        <span class="fileSize">(313.224 KB)</span>
+      </a></td>
+      
+      
+
+
+      
+        
+        
+
+        
+
+
+        
+
+        
+
+      
+      
+
+      
+      
+
+      
+      
+      
+      
+        
+      
+      
+      
+    </tr>
+  </table>
+
+</div>
+
+<!-- copyright_info:© 2007 Massachusetts Institute of Technology--><!-- abstract content --><div class="abstractSection"> <p class="first last">In this letter, we propose two new support vector approaches for ordinal regression, which optimize multiple thresholds to define parallel discriminant hyperplanes for the ordinal scales. Both approaches guarantee that the thresholds are properly ordered at the optimal solution. The size of these optimization problems is linear in the number of training samples. The sequential minimal optimization algorithm is adapted for the resulting optimization problems; it is extremely easy to implement and scales efficiently as a quadratic function of the number of examples. The results of numerical experiments on some benchmark and real-world data sets, including applications of ordinal regression to information retrieval, verify the usefulness of these approaches.</p> </div><!-- /abstract content --><!-- fulltext content --><div class="citedBySection"><a name="citedBySection"></a><h2>Cited by</h2><div class="citedByEntry"><a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(carrizosa%2C+emilio)">Emilio Carrizosa</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(martin%5C-barragan%2C+belen)">Belen Martin-Barragan</a>.  (2011) Maximizing upgrading and downgrading margins for ordinal regression. <i><span class="NLM_source">Mathematical Methods of Operations Research</span></i><br />Online publication date: 20-Sep-2011.<br /><!--noindex--><a class="ref" href="http://dx.doi.org/10.1007/s00186-011-0368-z" target="_blank" title="Opens new window"> CrossRef </a><!--/noindex--></div><div class="citedByEntry"><a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(dobrska%2C+maria)">Maria Dobrska</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(wang%2C+hui)">Hui Wang</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(blackburn%2C+william)">William Blackburn</a>.  (2011) Ordinal regression with continuous pairwise preferences. <i><span class="NLM_source">International Journal of Machine Learning and Cybernetics</span></i><br />Online publication date: 29-Jul-2011.<br /><!--noindex--><a class="ref" href="http://dx.doi.org/10.1007/s13042-011-0036-x" target="_blank" title="Opens new window"> CrossRef </a><!--/noindex--></div><div class="citedByEntry"><a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(waegeman%2C+willem)">Willem Waegeman</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(de+baets%2C+bernard)">Bernard De Baets</a>.  (2011) On the ERA ranking representability of pairwise bipartite ranking functions. <i><span class="NLM_source">Artificial Intelligence</span></i> <b>175</b>:7-8, 1223-1250<br />Online publication date: 1-May-2011.<br /><!--noindex--><a class="ref" href="http://dx.doi.org/10.1016/j.artint.2010.11.006" target="_blank" title="Opens new window"> CrossRef </a><!--/noindex--></div><div class="citedByEntry"><a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(verwaeren%2C+jan)">Jan Verwaeren</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(waegeman%2C+willem)">Willem Waegeman</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(de+baets%2C+bernard)">Bernard De Baets</a>.  (2010) Learning partial ordinal class memberships with kernel-based proportional odds models. <i><span class="NLM_source">Computational Statistics &amp; Data Analysis</span></i><br />Online publication date: 24-Dec-2010.<br /><!--noindex--><a class="ref" href="http://dx.doi.org/10.1016/j.csda.2010.12.007" target="_blank" title="Opens new window"> CrossRef </a><!--/noindex--></div><div class="citedByEntry"><a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Agarwal%2C+Shivani)">Shivani Agarwal</a>.  (2010) Learning to rank on graphs. <i><span class="NLM_source">Machine Learning</span></i> <b>81</b>:3, 333-357<br />Online publication date: 1-Dec-2010.<br /><!--noindex--><a class="ref" href="http://dx.doi.org/10.1007/s10994-010-5185-8" target="_blank" title="Opens new window"> CrossRef </a><!--/noindex--></div><div class="citedByEntry"><a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(waegeman%2C+willem)">Willem Waegeman</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(de+baets%2C+bernard)">Bernard De Baets</a>.  (2010) A transitivity analysis of bipartite rankings in pairwise multi-class classification. <i><span class="NLM_source">Information Sciences</span></i> <b>180</b>:21, 4099-4117<br />Online publication date: 1-Nov-2010.<br /><!--noindex--><a class="ref" href="http://dx.doi.org/10.1016/j.ins.2010.06.036" target="_blank" title="Opens new window"> CrossRef </a><!--/noindex--></div><div class="citedByEntry"><a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(pahikkala%2C+tapio)">Tapio Pahikkala</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(waegeman%2C+willem)">Willem Waegeman</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(tsivtsivadze%2C+evgeni)">Evgeni Tsivtsivadze</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(salakoski%2C+tapio)">Tapio Salakoski</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(de+baets%2C+bernard)">Bernard De Baets</a>.  (2010) Learning intransitive reciprocal relations with kernel methods. <i><span class="NLM_source">European Journal of Operational Research</span></i> <b>206</b>:3, 676-685<br />Online publication date: 1-Nov-2010.<br /><!--noindex--><a class="ref" href="http://dx.doi.org/10.1016/j.ejor.2010.03.018" target="_blank" title="Opens new window"> CrossRef </a><!--/noindex--></div><div class="citedByEntry"><a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Devlaminck%2C+Dieter)">Dieter Devlaminck</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Waegeman%2C+Willem)">Willem Waegeman</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Wyns%2C+Bart)">Bart Wyns</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Otte%2C+Georges)">Georges Otte</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Santens%2C+Patrick)">Patrick Santens</a>.  (2010) On the role of cost-sensitive learning in multi-class brain-computer interfaces. <i><span class="NLM_source">Biomedizinische Technik/Biomedical Engineering</span></i> <b>55</b>:3, 163-172<br />Online publication date: 1-Jun-2010.<br /><!--noindex--><a class="ref" href="http://dx.doi.org/10.1515/BMT.2010.015" target="_blank" title="Opens new window"> CrossRef </a><!--/noindex--></div><div class="citedByEntry"><a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(HE%2C+Hai%5C-jiang)">Hai-jiang HE</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(HE%2C+Wen%5C-de)">Wen-de HE</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(LIU%2C+Hua%5C-fu)">Hua-fu LIU</a>.  (2010) Towards semi-supervised ordinal regression with nearest neighbor. <i><span class="NLM_source">Journal of Computer Applications</span></i> <b>30</b>:4, 1022-1025<br />Online publication date: 30-Apr-2010.<br /><!--noindex--><a class="ref" href="http://dx.doi.org/10.3724/SP.J.1087.2010.01022" target="_blank" title="Opens new window"> CrossRef </a><!--/noindex--></div><div class="citedByEntry"><a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Aiolli%2C+Fabio)">Fabio Aiolli</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Cardin%2C+Riccardo)">Riccardo Cardin</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Sebastiani%2C+Fabrizio)">Fabrizio Sebastiani</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Sperduti%2C+Alessandro)">Alessandro Sperduti</a>.  (2009) Preferential text classification: learning algorithms and evaluation measures. <i><span class="NLM_source">Information Retrieval</span></i> <b>12</b>:5, 559-580<br />Online publication date: 1-Oct-2009.<br /><!--noindex--><a class="ref" href="http://dx.doi.org/10.1007/s10791-008-9071-y" target="_blank" title="Opens new window"> CrossRef </a><!--/noindex--></div><div class="citedByEntry"><a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Bin+Zhao)">Bin Zhao</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Fei+Wang)">Fei Wang</a>, <a href="/action/doSearch?action=runSearch&amp;type=advanced&amp;result=true&amp;prevSearch=%2Bauthorsfield%3A(Changshui+Zhang)">Changshui Zhang</a>.  (2009) Block-Quantized Support Vector Ordinal Regression. <i><span class="NLM_source">IEEE Transactions on Neural Networks</span></i> <b>20</b>:5, 882-890<br />Online publication date: 1-May-2009.<br /><!--noindex--><a class="ref" href="http://dx.doi.org/10.1109/TNN.2009.2017533" target="_blank" title="Opens new window"> CrossRef </a><!--/noindex--></div></div><!-- /fulltext content --><p class="fulltext"></p><i></i>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<span id="hide"><a href="/doi/pdf/10.1046/9999-9999.99999"><!-- Spider trap link --></a></span>
+
+
+
+
+
+
+                        </td>
+                        
+                    </tr>
+                    <tr><td height="40"/></tr>
+                    <tr id="main-layout-footer">
+                        <td colspan="3">
+                            <a href="/">MIT Press Journals</a>&nbsp;|&nbsp;
+                            <a href="http://www.mitpressjournals.org/page/order">Subscribe</a>&nbsp;|&nbsp;
+                            <a href="/page/contact_info">Contact Us</a>&nbsp;|&nbsp;
+                            <a href="/action/doSearch?searchType=simple">Search</a>&nbsp;|&nbsp;
+                            <a href="/page/privacy.jsp">Privacy Statement</a>&nbsp;|&nbsp;
+                            <a href="/page/terms.jsp">Terms and Conditions</a>
+                            <br/>
+                            <br/>
+                            &copy; 2012 The MIT Press
+                        </td>
+                    </tr>
+                    <tr><td colspan="3" align="center">Technology Partner - <a href="http://www.atypon.com/" target="_blank">Atypon Systems, Inc.</a></td></tr>
+                    <tr><td colspan="3" align="center">&nbsp;
+                            <a href="http://www.crossref.org/" target="_blank"><img src="/templates/jsp/images/CRMemberLogo.gif" alt="CrossRef member" width="90" height="33" border="0" /></a>
+                            <a href="http://www.projectcounter.org/" target="_blank"><img src="/templates/jsp/images/CounterLogo.jpg" alt="COUNTER member" width="94" height="33" border="0" /></a>
+                        </td>
+                    </tr>
+                </table>
+                </td></tr></table>
+
+
+
+    
+
+    
+        <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount','UA-4268393-1']);_gaq.push(['_trackPageview']);</script>
+        <script type="text/javascript" async="true" src="http://www.google-analytics.com/ga.js"></script>
+    
+
+    
+
+            </body>
+        </html>
+    
+
+
+  

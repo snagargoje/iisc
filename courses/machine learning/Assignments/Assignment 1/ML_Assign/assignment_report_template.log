@@ -1,0 +1,2991 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.8.7)  25 JAN 2012 04:13
+entering extended mode
+ %&-line parsing enabled.
+**assignment_report_template.tex
+(./assignment_report_template.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen103
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks16
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks17
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks18
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks20
+\thm@bodyfont=\toks21
+\thm@headfont=\toks22
+\thm@notefont=\toks23
+\thm@headpunct=\toks24
+\thm@preskip=\skip47
+\thm@postskip=\skip48
+\thm@headsep=\skip49
+\dth@everypar=\toks25
+)
+(/usr/share/texmf-texlive/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks26
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
+\Gread@gobject=\count99
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2009/10/09 v6.79a Hypertext links for LaTeX
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/hycolor.sty
+Package: hycolor 2009/10/02 v1.5 Code for color options of hyperref/bookmark (H
+O)
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty
+Package: xcolor-patch 2009/10/02 xcolor patch
+))
+\@linkdim=\dimen114
+\Hy@linkcounter=\count100
+\Hy@pagecounter=\count101
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)
+(/usr/share/texmf-texlive/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
+t (HO)
+))
+Package hyperref Info: Hyper figures OFF on input line 2975.
+Package hyperref Info: Link nesting OFF on input line 2980.
+Package hyperref Info: Hyper index ON on input line 2983.
+Package hyperref Info: Plain pages OFF on input line 2990.
+Package hyperref Info: Backreferencing OFF on input line 2995.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3191.
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 3428.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bitset.sty
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/intcalc.sty
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bigintcalc.sty
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2009/09/23 v0.6 LuaTeX support for pdfTeX utility functions
+ (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO
+)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)))
+\Fld@menulength=\count102
+\Field@Width=\dimen115
+\Fld@charsize=\dimen116
+\Field@toks=\toks27
+Package hyperref Info: Hyper figures OFF on input line 4377.
+Package hyperref Info: Link nesting OFF on input line 4382.
+Package hyperref Info: Hyper index ON on input line 4385.
+Package hyperref Info: backreferencing OFF on input line 4392.
+Package hyperref Info: Link coloring OFF on input line 4397.
+Package hyperref Info: Link coloring with OCG OFF on input line 4402.
+Package hyperref Info: PDF/A mode OFF on input line 4407.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+)
+\Hy@abspage=\count103
+\c@Item=\count104
+\c@Hfootnote=\count105
+)
+*hyperref using default driver hpdftex*
+(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
+\Fld@listcount=\count106
+)
+\c@thm=\count107
+\c@exmp=\count108
+
+No file assignment_report_template.aux.
+\openout1 = `assignment_report_template.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+(/usr/share/texmf/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count109
+\scratchdimen=\dimen117
+\scratchbox=\box28
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count112
+\MPscratchDim=\dimen118
+\MPnumerator=\count113
+\everyMPtoPDFconversion=\toks29
+)
+Package hyperref Info: Link coloring OFF on input line 137.
+ (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+\c@section@level=\count114
+)
+LaTeX Info: Redefining \ref on input line 137.
+LaTeX Info: Redefining \pageref on input line 137.
+\@outlinefile=\write3
+\openout3 = `assignment_report_template.out'.
+
+\AtBeginShipoutBox=\box29
+LaTeX Font Info:    Try loading font information for U+msa on input line 147.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 147.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 147.
+
+(/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.151 \left
+           \{
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.158 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 165--167
+
+ []
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2b.jp
+g' not found on input line 168.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_2/p2b.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 .../cse11/kevin.patel/HW1/Problem_2/p2b.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2c.jp
+g' not found on input line 174.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_2/p2c.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174 .../cse11/kevin.patel/HW1/Problem_2/p2c.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--180
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--180
+
+ []
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2d.jp
+g' not found on input line 181.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_2/p2d.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.181 .../cse11/kevin.patel/HW1/Problem_2/p2d.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
+
+ []
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2e_k1
+_1.jpg' not found on input line 188.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_2/p2e_k1_1.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.188 ...1/kevin.patel/HW1/Problem_2/p2e_k1_1.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2e_k1
+_2.jpg' not found on input line 190.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_2/p2e_k1_2.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.190 ...1/kevin.patel/HW1/Problem_2/p2e_k1_2.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2e_k4
+9_1.jpg' not found on input line 196.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_2/p2e_k49_1.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.196 .../kevin.patel/HW1/Problem_2/p2e_k49_1.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2e_k4
+9_2.jpg' not found on input line 198.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_2/p2e_k49_2.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.198 .../kevin.patel/HW1/Problem_2/p2e_k49_2.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2e_k4
+99_1.jpg' not found on input line 204.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_2/p2e_k499_1.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.204 ...kevin.patel/HW1/Problem_2/p2e_k499_1.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_2/p2e_k4
+99_2.jpg' not found on input line 206.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_2/p2e_k499_2.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.206 ...kevin.patel/HW1/Problem_2/p2e_k499_2.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[2]
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_3/p3_lea
+rn_curves.jpg' not found on input line 214.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_3/p3_learn_curves.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.214 ....patel/HW1/Problem_3/p3_learn_curves.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_3/p3_cla
+ss_74.jpg' not found on input line 219.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_3/p3_class_74.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.219 ...evin.patel/HW1/Problem_3/p3_class_74.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_3/p3_cla
+ss_9.jpg' not found on input line 221.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_3/p3_class_9.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.221 ...kevin.patel/HW1/Problem_3/p3_class_9.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_3/p3_cla
+ss_92.jpg' not found on input line 223.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_3/p3_class_92.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.223 ...evin.patel/HW1/Problem_3/p3_class_92.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_3/p3_cla
+ss_75.jpg' not found on input line 225.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_3/p3_class_75.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225 ...evin.patel/HW1/Problem_3/p3_class_75.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[3]
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_4/tree1.
+png' not found on input line 233.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_4/tree1.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.233 ...se11/kevin.patel/HW1/Problem_4/tree1.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_4/tree2.
+png' not found on input line 237.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_4/tree2.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.237 ...se11/kevin.patel/HW1/Problem_4/tree2.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[4]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.243 Initial entropy of the system = -p_
+                                         L^+log(p_L^+) - (1 - p_L^+)log(1 - ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.244 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.247 Consider the partition made by checking x_
+                                                1 <= \frac{1}{4}.\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.248 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.252 m_
+        L = 6 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.256 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--256
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.258 p_
+        L^+ = \frac{m_L^+}{m_L} = \frac{3}{6} = \frac{1}{2}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.259 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.261 entropy( left\_side) N_
+                             L = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.262 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.264 p_
+        R^+ = \frac{m_R^+}{m_R} = \frac{9}{18} = \frac{1}{2} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.265 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--265
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.267 entropy( right\_side) N_
+                              R = -p_R^+log(p_R^+) - (1 - p_R^+)log(1 - p_R^...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.268 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.273 ...onsider the partition made by checking x_
+                                                  1 <= \frac{1}{2}.\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.274 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.278 m_
+        L = 13 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.282 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--282
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.284 p_
+        L^+ = \frac{m_L^+}{m_L} = \frac{6}{13} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.285 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--285
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.287 entropy( left\_side) N_
+                             L = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.288 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--288
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.290 p_
+        R^+ = \frac{m_R^+}{m_R} = \frac{6}{11} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.291 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--291
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.293 entropy( right\_side) N_
+                              R = -p_R^+log(p_R^+) - (1 - p_R^+)log(1 - p_R^...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.294 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.299 ...onsider the partition made by checking x_
+                                                  1 <= \frac{3}{4}.\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.300 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 299--300
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.304 m_
+        L = 20 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.308 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--308
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.310 p_
+        L^+ = \frac{m_L^+}{m_L} = \frac{8}{20} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.311 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--311
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.313 entropy( left\_side) N_
+                             L = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.314 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.316 p_
+        R^+ = \frac{m_R^+}{m_R} = \frac{4}{4} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.317 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--317
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.319 entropy( right\_side) N_
+                              R = -p_R^+log(p_R^+) - (1 - p_R^+)log(1 - p_R^...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.320 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--320
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.325 ...g the entropies for split points along x_
+                                                  2.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.326 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.327 Consider the partition made by checking x_
+                                                2 <= \frac{1}{4}.\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.328 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.330 m_
+        L = 8 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.334 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--334
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.336 p_
+        L^+ = \frac{m_L^+}{m_L} = \frac{3}{8} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.337 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--337
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.339 entropy( left\_side) N_
+                             L = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.340 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--340
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.342 p_
+        R^+ = \frac{m_R^+}{m_R} = \frac{9}{16} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.343 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--343
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.345 entropy( right\_side) N_
+                              R = -p_R^+log(p_R^+) - (1 - p_R^+)log(1 - p_R^...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.346 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.351 ...onsider the partition made by checking x_
+                                                  2 <= \frac{1}{2}.\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.352 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.354 m_
+        L = 12 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.358 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--358
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.360 p_
+        L^+ = \frac{m_L^+}{m_L} = \frac{4}{12} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.361 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--361
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.363 entropy( left\_side) N_
+                             L = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.364 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--364
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.366 p_
+        R^+ = \frac{m_R^+}{m_R} = \frac{8}{12} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.367 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--367
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.369 entropy( right\_side) N_
+                              R = -p_R^+log(p_R^+) - (1 - p_R^+)log(1 - p_R^...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.370 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.375 ...idering the partition made by checking x_
+                                                  2 <= \frac{3}{4}.\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.376 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.378 m_
+        L = 8 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.382 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--382
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.384 p_
+        L^+ = \frac{m_L^+}{m_L} = \frac{5}{8} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.385 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--385
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.387 entropy( left\_side) N_
+                             L = -p_L^+log(p_L^+) - (1 - p_L^+)log(1 - p_L^+...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.388 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--388
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.390 p_
+        R^+ = \frac{m_R^+}{m_R} = \frac{7}{16} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.391 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.393 entropy( right\_side) N_
+                              R = -p_R^+log(p_R^+) - (1 - p_R^+)log(1 - p_R^...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.394 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--394
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.399 ...at the split point $\frac{1}{2}$ along x_
+                                                  1,\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.400 $The root node should be x_
+                                 1 <= \frac{1}{2}$\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--401
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[7]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.403 c
+       ) Now lets rework the previous problem, but using Gini Index instead ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.405 Initially the gini\_index of system = p^
+                                              + (1 - p^+) = \frac{1}{2} . \f...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.406 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.409 Consider the partition made by checking x_
+                                                1 <= \frac{1}{4}.\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.410 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.414 m_
+        L = 6 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.418 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--418
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.420 p_
+        L^+ = \frac{m_L^+}{m_L} = \frac{3}{6} = \frac{1}{2}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.421 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.423 gini\_index( left\_side) N_
+                                 L = p_L^+ (1 - p_L^+) = 0.25\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.424 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--424
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.426 p_
+        R^+ = \frac{m_R^+}{m_R} = \frac{9}{18} = \frac{1}{2} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.427 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--427
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.429 gini\_index( right\_side) N_
+                                  R = p_R^+ (1 - p_R^+) = 0.25\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.430 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 428--430
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.435 ...onsider the partition made by checking x_
+                                                  1 <= \frac{1}{2}.\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.436 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.440 m_
+        L = 13 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.444 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--444
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.446 p_
+        L^+ = \frac{m_L^+}{m_L} = \frac{6}{13} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.447 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--447
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.449 gini\_index( left\_side) N_
+                                 L = p_L^+ (1 - p_L^+) = 0.2485\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.450 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 448--450
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.452 p_
+        R^+ = \frac{m_R^+}{m_R} = \frac{6}{11} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.453 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--453
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[8]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.455 gini\_index( right\_side) N_
+                                  R = p_R^+ (1 - p_R^+) = 0.2479\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.456 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.461 ...onsider the partition made by checking x_
+                                                  1 <= \frac{3}{4}.\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.462 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.466 m_
+        L = 20 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.470 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--470
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.472 p_
+        L^+ = \frac{m_L^+}{m_L} = \frac{8}{20} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.473 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 471--473
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.475 gini\_index( left\_side) N_
+                                 L = p_L^+ (1 - p_L^+) = 0.24\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.476 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--476
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.478 p_
+        R^+ = \frac{m_R^+}{m_R} = \frac{4}{4} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.479 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--479
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.481 gini\_index( right\_side) N_
+                                  R = p_R^+ (1 - p_R^+) = 0\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.482 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--482
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.487 ...g the entropies for split points along x_
+                                                  2.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.488 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.489 Consider the partition made by checking x_
+                                                2 <= \frac{1}{4}.\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.490 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.492 m_
+        L = 8 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.496 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--496
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.498 p_
+        L^+ = \frac{m_L^+}{m_L} = \frac{3}{8} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.499 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--499
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.501 gini\_index( left\_side) N_
+                                 L = p_L^+ (1 - p_L^+) = 0.2344\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.502 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--502
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.504 p_
+        R^+ = \frac{m_R^+}{m_R} = \frac{9}{16} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.505 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--505
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[9]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.507 gini\_index( right\_side) N_
+                                  R = p_R^+ (1 - p_R^+) = 0.2461\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.508 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 506--508
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--512
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.513 ...onsider the partition made by checking x_
+                                                  2 <= \frac{1}{2}.\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.514 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 513--514
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.516 m_
+        L = 12 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.520 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--520
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.522 p_
+        L^+ = \frac{m_L^+}{m_L} = \frac{4}{12} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.523 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 521--523
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.525 gini\_index( left\_side) N_
+                                 L = p_L^+ (1 - p_L^+) = 0.2222\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.526 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 524--526
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.528 p_
+        R^+ = \frac{m_R^+}{m_R} = \frac{8}{12} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.529 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 527--529
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.531 gini\_index( right\_side) N_
+                                  R = p_R^+ (1 - p_R^+) = 0.2222\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.532 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--532
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--534
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 535--536
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.537 ...idering the partition made by checking x_
+                                                  2 <= \frac{3}{4}.\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.538 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--538
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.540 m_
+        L = 8 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.544 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--544
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.546 p_
+        L^+ = \frac{m_L^+}{m_L} = \frac{5}{8} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.547 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--547
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.549 gini\_index( left\_side) N_
+                                 L = p_L^+ (1 - p_L^+) = 0.2344\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.550 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 548--550
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.552 p_
+        R^+ = \frac{m_R^+}{m_R} = \frac{7}{16} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.553 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 551--553
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.555 gini\_index( right\_side) N_
+                                  R = p_R^+ (1 - p_R^+) = 0.2461\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.556 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 554--556
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.561 ...at the split point $\frac{1}{2}$ along x_
+                                                  1,\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.562 $The root node should be x_
+                                 1 <= \frac{1}{2}$\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 561--563
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[11]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.584 RBF ($\sigma$^
+                    2 = 1 ) & 0.115 & 0.099 & 0.052 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
+l.584 RBF ($\sigma$^2 = 1 ) &
+                              0.115 & 0.099 & 0.052 \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.584 RBF ($\sigma$^2 = 1 ) &
+                              0.115 & 0.099 & 0.052 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.584 RBF ($\sigma$^2 = 1 ) &
+                              0.115 & 0.099 & 0.052 \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.586 RBF ($\sigma$^
+                    2 = 4 ) & 0.167 & 0.148 & 0.126 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
+l.586 RBF ($\sigma$^2 = 4 ) &
+                              0.167 & 0.148 & 0.126 \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.586 RBF ($\sigma$^2 = 4 ) &
+                              0.167 & 0.148 & 0.126 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.586 RBF ($\sigma$^2 = 4 ) &
+                              0.167 & 0.148 & 0.126 \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.606 RBF ($\sigma$^
+                    2 = 1 ) & 0.129 & 0.127 & 0.197 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
+l.606 RBF ($\sigma$^2 = 1 ) &
+                              0.129 & 0.127 & 0.197 \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.606 RBF ($\sigma$^2 = 1 ) &
+                              0.129 & 0.127 & 0.197 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.606 RBF ($\sigma$^2 = 1 ) &
+                              0.129 & 0.127 & 0.197 \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.608 RBF ($\sigma$^
+                    2 = 4 ) & 0.186 & 0.170 & 0.143 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
+l.608 RBF ($\sigma$^2 = 4 ) &
+                              0.186 & 0.170 & 0.143 \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.608 RBF ($\sigma$^2 = 4 ) &
+                              0.186 & 0.170 & 0.143 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.608 RBF ($\sigma$^2 = 4 ) &
+                              0.186 & 0.170 & 0.143 \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.616 iii RBF kernel with C = 1 and $\sigma$^
+                                             2 = 1. \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.617 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--617
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--617
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 618--620
+
+ []
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_5/dec_li
+near_c_0_01.jpg' not found on input line 622.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_5/dec_linear_c_0_01.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.622 ...atel/HW1/Problem_5/dec_linear_c_0_01.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_5/dec_li
+near_c_0_01_2.jpg' not found on input line 624.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_5/dec_linear_c_0_01_2.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.624 ...el/HW1/Problem_5/dec_linear_c_0_01_2.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_5/dec_po
+ly_c_1_d_3_1.jpg' not found on input line 630.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_5/dec_poly_c_1_d_3_1.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.630 ...tel/HW1/Problem_5/dec_poly_c_1_d_3_1.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_5/dec_po
+ly_c_1_d_3_2.jpg' not found on input line 632.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_5/dec_poly_c_1_d_3_2.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.632 ...tel/HW1/Problem_5/dec_poly_c_1_d_3_2.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.637 ...or RBF Kernel with C = 0.01 and $\sigma$^
+                                                  2 = 1\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.637 ...Kernel with C = 0.01 and $\sigma$^2 = 1\\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.637 ...Kernel with C = 0.01 and $\sigma$^2 = 1\\
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.637 ...Kernel with C = 0.01 and $\sigma$^2 = 1\\
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.637 ...Kernel with C = 0.01 and $\sigma$^2 = 1\\
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_5/dec_rb
+f_c_1_d_1_1.jpg' not found on input line 638.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_5/dec_rbf_c_1_d_1_1.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.638 ...atel/HW1/Problem_5/dec_rbf_c_1_d_1_1.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../../../../../home/cse11/kevin.patel/HW1/Problem_5/dec_rb
+f_c_1_d_1_2.jpg' not found on input line 640.
+
+
+! Package pdftex.def Error: File `../../../../../home/cse11/kevin.patel/HW1/Pro
+blem_5/dec_rbf_c_1_d_1_2.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.640 ...atel/HW1/Problem_5/dec_rbf_c_1_d_1_2.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[13]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.649 ...ing SVMs (with RBF kernel whose $\sigma$^
+                                                  2 = 1) \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--650
+
+ []
+
+
+LaTeX Warning: File `./HW1/Problem_5/dec_digit_classification.jpg' not found on
+ input line 651.
+
+
+! Package pdftex.def Error: File `./HW1/Problem_5/dec_digit_classification.jpg'
+ not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.651 ...1/Problem_5/dec_digit_classification.jpg}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.658 \section
+              {Solution: Problem 6}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[14]
+Overfull \vbox (6.94444pt too high) has occurred while \output is active []
+
+
+[15] (./assignment_report_template.aux) ) 
+Here is how much of TeX's memory you used:
+ 5243 strings out of 495061
+ 72699 string characters out of 1182622
+ 149750 words of memory out of 3000000
+ 8293 multiletter control sequences out of 15000+50000
+ 8135 words of font info for 33 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 38i,13n,36p,411b,364s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/
+public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cme
+x10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmr5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on assignment_report_template.pdf (15 pages, 188864 bytes).
+PDF statistics:
+ 136 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

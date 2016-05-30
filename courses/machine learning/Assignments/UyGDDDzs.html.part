@@ -1,0 +1,1813 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <title>Trees for Regression and Classification - videolectures.net</title>
+
+  
+  
+  <link rel="shortcut icon" HREF="http://media.videolectures.net/rel.1330267567/custom/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="http://media.videolectures.net/rel.1330267567/custom/vln-touch-icon-precomposed.png">
+
+
+  <link rel="stylesheet" href="http://media.videolectures.net/rel.1330267567/common/css/styles.css" type="text/css" media="screen" />
+  
+  <link rel="stylesheet" href="http://media.videolectures.net/rel.1330267567/custom/vln.css" type="text/css">
+  <LINK rel="stylesheet" href="http://media.videolectures.net/rel.1330267567/custom/projects/pascal/style.css" type="text/css">
+  
+  
+	<link rel="stylesheet" href="http://media.videolectures.net/rel.1330267567/tabs/ui.tabs.css" type="text/css" media="print, projection, screen">
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" href="http://media.videolectures.net/rel.1330267567/tabs/ui.tabs-ie.css" type="text/css" media="projection, screen">
+	<![endif]-->
+
+  
+<link rel="stylesheet" type="text/css" href="http://media.videolectures.net/rel.1330267567/rating.css">
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  
+    <script type="text/javascript" src="http://media.videolectures.net/rel.1330267567/script.js"></script>
+  
+<script type="text/javascript" src="http://media.videolectures.net/rel.1330267567/jquery.rating.js"></script>
+<script type="text/javascript" src='http://media.videolectures.net/rel.1330267567/flowplayer/flowplayer.js'></script>
+
+  
+  <!--[if lt IE 8]>
+  <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
+  <![endif]-->
+  
+<meta name="title" content="Trees for Regression and Classification" />
+<link rel="image_src" href="/mlss05us_nowak_trc/thumb.jpg" />
+<meta name="description" content="Tree models are widely used for regression and classification problems, with interpretability and ease of implementation being among their chief attributes. Despite the widespread use tree models, a comprehensive theoretical analysis of their performance has only begun to emerge in recent years.   This lecture provides an overview of tree modeling theory and methods, with an emphasis on risk bounds, oracle inequalities, approximation theory, and rates of convergence, in a variety of contexts. Special attention is devoted to decision trees and wavelet-based regression methods, two of the most well-known examples of tree models. The choice of loss function (squared error, absolute error, 0/1 error) plays a pivotal role in both theory and methods.   In particular, optimal tree selection rules vary dramatically depending on the loss function employed. Despite these differences, suitable tree-based models coupled with appropriate selection rules can provide fast algorithms and near-minimax optimal performance in a very broad range of regression and classification problems. Examples from image reconstruction and pattern classification will demonstrate the effectiveness of trees in practice." />
+
+
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="translucent"> 
+</head>
+
+<body id='lecture_page'>
+<div id='container'>
+
+  <div id="page_header_bg" class="pg_block">
+  <div id="header">
+    <div id='branding'>
+      
+    </div>      
+    <div id='user-tools'>
+      
+      <span id="jq_userctl">
+          
+        <span class='login-logout'>
+        <a href="/site/accounts/login/?next=/mlss05us_nowak_trc/" rel='nofollow'>Log in</a>  |
+        <a href="/site/accounts/register/" rel='nofollow'>Register</a> |
+        </span>
+        
+        
+          <a href="/" rel='nofollow' id="lang_sel">
+          
+            
+              
+                <img src='http://media.videolectures.net/rel.1330267567/flags/eu.gif' border='1' alt='All languages'>
+              
+            
+          
+          </a>
+          &nbsp;
+        
+      </span>
+      
+  
+  <div id="signInRegister">
+  
+    <div id="register"><a href="/site/accounts/register/" rel='nofollow'>New User<br>Register</a></div>
+    <div id="signIn"><a href="/site/accounts/login/?next=/mlss05us_nowak_trc/" rel='nofollow'>Sign in</a></div>
+  
+  </div>
+
+      
+    </div>
+    <div style='clear:both;'></div>
+  </div>
+  </div>
+
+  
+  <div id='top_menu_box' class='pg_block'>
+  <div id='top_menu'>
+    <form method='get' action="/site/search/">
+      <input class="search" name="q" type="text" value="" size='40'><input class="button" type="submit" value='Search'>
+    </form>
+    
+      
+    
+    <ul>
+      
+  <li id='tm_home' class='tm_leftmost'><a href="/">Home</a></li>
+  <li id='tm_browse'><a href="/Top/" class="dd_href">Browse Lectures</a></li>
+  <li id='tm_authors'><a href="/site/list/authors/">People</a></li>
+  <li id='tm_conferences'><a href="/conferences/">Conferences</a></li>
+  <li id='tm_academia'><a href="/academia/">Academic Organisations</a></li>
+  <li id='tm_eu_supported'><a href="/eu_supported/">EU Supported</a></li>
+  <li id='tm_about'><a href="/site/about/">About Us</a></li>
+  <li id='tm_blog'><a href="http://blog.videolectures.net/">Blog</a></li>
+
+    </ul>
+    <div style='clear:both;'></div>
+  </div>
+  </div>
+  
+  
+  
+  <div style='clear:both;'></div>
+  
+  <div class='drilldown_hmenu_bg pg_block'>
+  <div class='drilldown_hmenu'>
+  <div class='drilldown dd_bg' style='margin-right:0px;'>
+    <span class='drilldown_loc'>
+    
+      <span class='drilldown_hmenu_label'>Location:</span>
+      
+        
+          <a href='/eu_supported/'>EU Supported</a>
+        
+        &raquo;
+      
+        
+          <a href='/pascal/'>PASCAL - Pattern Analysis, Statistical Modelling and Computational Learning</a>
+        
+        &raquo;
+      
+        
+          <a href='/mlss05us_chicago/'>Machine Learning Summer School 2005 - Chicago</a>
+        
+        
+        
+      <br>
+    
+    </span>
+  </div>
+  </div>
+  </div>
+
+  
+  	
+
+  <div id="maincontainer" class="pg_block">
+    
+    
+	
+
+
+    <script type="text/javascript">$('#tm_browse').addClass('current');</script>
+   
+    
+      
+      <div id="content" class="content">
+        
+
+      
+
+<div id='drilldown_counts'></div>
+<div id="innerbox"><div id="drilldown_list" >
+  
+  
+  
+    <span id='vl_desc'>
+    
+      
+      
+      <div id='vl_event_thumb'>
+      <a href='/mlss05us_chicago/' OnClick="document.location.href='/mlss05us_chicago/';">
+        <div class='img_shadow'>
+          <img src="http://carbon.videolectures.net/v000/62/mlmbfhutqr2ks6dg2rql37uruqwblbx5.gif" style='border:1px solid #ccc; padding:0px;' alt='event thumbnail image'>
+        </div>
+        <span style='clear:right;'>
+        Machine Learning Summer School 2005 - Chicago
+        </span>
+      </a>
+      </div>
+      
+    
+    
+
+    
+    <h2>Trees for Regression and Classification</h2>
+    <div class='lec_data'>
+    
+      
+    
+    
+      
+        <span>author: </span><a href='/robert_nowak/'>Robert Nowak</a>, 
+              Department of Electrical and Computer Engineering, University of Wisconsin - Madison
+        <br>
+      
+    
+    
+      <span>published:</span> Feb. 25, 2007, &nbsp; 
+      
+        <span>recorded:</span> May 2005, &nbsp; 
+        <span>views:</span> 909<br />
+      
+    
+    
+  
+    
+    </div>
+
+    
+    
+    
+    
+    
+    
+
+
+  <fieldset id='categories'>
+  <legend>
+    Categories
+    
+  </legend>
+  <ul>
+  
+    <li>
+    <span clase='cat_path'><a href='/Top/'>Top</a>
+     &raquo; 
+    <a href='/Top/Computer_Science/'>Computer&nbsp;Science</a>
+     &raquo; 
+    <a href='/Top/Computer_Science/Machine_Learning/'>Machine&nbsp;Learning</a></span></li>
+  
+  </ul>
+  </fieldset>
+
+
+
+    
+    </span>
+  
+  
+ 
+
+
+
+  <div style='clear:both;'></div>
+  <span id="video_player_ajax" >
+  
+    
+
+
+
+
+  
+    
+      
+
+<div id='player_ctl_top'>
+  <div class='cinema_bg'><a class="cinema_switch" href="#">Turn off the lights</a></div>
+</div>
+<div id='video_player' style='width:508px;'>
+  <div id='video_border' style='' class='cinema_always_lit v_video'>
+	
+      
+      
+        
+          
+            <div id="video_embed" class="flv cinema_always_lit">
+            You might be experiencing some problems with Your Video player.<br/>
+            </div>
+          
+          
+<script>
+  var fpconfig = {
+    click_to_pause: false,
+    builtin_scrubbar: '', // ''/false, 'autohide', 'always'
+    flowplayer_swf: "http://staticcdn.viidea.com/player/lib/flowplayer.unlimited-3.2.7.swf",
+    //flowplayer_swf: "lib/flowplayer.unlimited-3.2.7.swf",
+    //flowplayer_swf: "lib/flowplayer.commercial-3.2.5.swf",
+    //flowplayer_swf: "lib/flowplayer-xfscommand.3.2.5-dev.swf",
+    flowplayer_controls: "flowplayer.controls-3.2.3.swf",
+    flowplayer_captions: "flowplayer.captions-3.2.3.swf",
+    flowplayer_audio: "flowplayer.audio-3.2.2.swf",
+    flowplayer_rtmp: "flowplayer.rtmp-3.2.3.swf",
+    flowplayer_bwcheck: "flowplayer.bwcheck-3.2.5.swf",
+    flowplayer_smil: "flowplayer.smil-3.2.2.swf",
+    flowplayer_swf_wrapper: "flowplayer.swfwrap.swf",
+    //flowplayer_multibuffering: "flowplayer.multibuffering.swf",
+    flowplayer_pseudostreaming: "flowplayer.pseudostreaming-3.2.7.swf",
+    flowplayer_content: "flowplayer.content-3.2.0.swf",
+    flowplayer_imgcontent: "http://media.videolectures.net/rel.1330267567/flowplayer/imgContent-3.2.5.swf",
+    //flash_version_required: [10,103],
+    flash_express_install: "http://media.videolectures.net/rel.1330267567/flowplayer/expressinstall.swf"
+  };
+  function getkeys() {
+    keys = [
+      '$#0bb40c8f9eed17e2e03', 
+      '$#bf85021a20c2a048c2b', 
+      '$#195f66f940e11167951', 
+      '$#b8a3dfe42289b462f5b', 
+      '$#c5bc3105f4b2017b938' 
+    ]
+    if (fpconfig.flowplayer_key) keys.push(config.flowplayer_key);
+    return keys;
+  };
+  var clip;
+  var attributes = {
+    id: "FlvPlayer"
+  };
+  var plugins = {
+    controls: {
+      url: fpconfig.flowplayer_controls,
+      autoHide: "fullscreen",
+      style: { 
+        zIndex:1
+      }
+    }
+  };
+  var params = {
+    // debug: true,
+    // log: {level:'info'},
+    // onError: function(code, msg) {alert('flowplayer error\n'+code+'\n'+msg);},
+    clip: {bufferLength: '5', scaling:'fit'},
+    keys: getkeys(),
+    plugins:plugins
+  };
+  
+  clip = {autoPlay:true};
+  playlist = [];
+  
+    
+      
+        
+          playlist.push({url:'http://carbon.videolectures.net/v000/60/mbshyk4q442fmevvpvsfqlzdxc2vw45h.jpg', scaling:'orig'});
+        
+      
+    
+  
+  playlist.push(clip);
+  
+  params.playlist = playlist;
+  
+  
+    
+      plugins.rtmp = { url: fpconfig.flowplayer_rtmp };
+      
+        clip.url = "flv:v000/67/m7kqcf7vrrbmuiqqsqsxzyfxkjpxyfaj";
+        clip.netConnectionUrl = "rtmp://oxy.videolectures.net/video";
+        clip.provider = 'rtmp';
+      
+    
+  
+  
+  
+  
+  var flash_config = {
+    src: fpconfig.flowplayer_swf,
+    width: 506,
+    height: 414, 
+    allowscriptaccess: 'always',
+    allowfullscreen: 'true',
+    wmode: 'window',
+    expressInstall: fpconfig.flash_express_install,
+    id: "FlvPlayer" // last line, no colon ',' !
+  };
+  
+  plugins.controls.autoHide="always";
+
+  
+
+  params.canvas = {backgroundColor: '#000000', backgroundGradient:'none'};
+  plugins.slides = {
+    url: fpconfig.flowplayer_imgcontent,
+    isDebug: false,
+    //display: 'none',
+    style: { zIndex:2 }
+  };    
+  fullscreenSlide = null;
+  slideUpdateTimeout = null;
+  function updateFullscreenSlide() {
+    slideUpdateTimeout = null;
+    if (fullscreenSlide) {
+      try {
+        var result = thePlayer.getPlugin("slides").show().loadImg(fullscreenSlide);
+        result.zIndex = 2;
+        //console.log('slide set to:', fullscreenSlide);
+        //thePlayer.getScreen().animate({width:'50%',left:0,top:0},0);
+      } catch (e) {
+        slideUpdateTimeout = setTimeout(updateFullscreenSlide,2000);
+      }
+    }
+  }
+  function setFullscreenSlide(slide_url) {
+   // if (!fullscreenSlide) {fullscreenSlide = 'http://carbon.videolectures.net/v00a/ff/76k2o4fw67ii4mkhp6b4yjiq6yq4k2tl.jpg';} else 
+    fullscreenSlide = slide_url;
+    if (slideUpdateTimeout) cancelTimeout(slideUpdateTimeout);
+    //if (thePlayer.isFullscreen()) 
+    updateFullscreenSlide();
+    //slideUpdateTimeout = setTimeout(updateFullscreenSlide,5000);
+  }
+  function onFullscreen() {
+   // thePlayer.getScreen().animate({width:'50%',left:0,top:0},0);
+   // var slides = thePlayer.getPlugin("slides").show().setWidth(.5);
+    updateFullscreenSlide();
+  }
+  function onFullscreenExit() {
+    //thePlayer.getScreen().animate({width:'100%'},0);
+    //thePlayer.getPlugin("slides").hide();
+  }
+  params.onFullscreen = onFullscreen;
+  params.onFullscreenExit = onFullscreenExit;
+  
+
+  function onError(code, message) {
+    //alert('Error \n'+ code + '\n'+message+'\n'+this.getClip().url + '\n' + playlist[0].url);
+    if (code==303 && this.getClip().url == playlist[0].url) {
+      // poster image doesn't exist: swap playlist items
+      playlist[1] = playlist[0];
+      playlist[0] = clip;
+      this.play(playlist);
+    }
+  }
+  params.onError = onError;
+  
+  function installFlowPlayer() {
+    document.getElementById("video_embed").innerHTML = '';
+    thePlayer = flowplayer(document.getElementById("video_embed"), flash_config, params);
+    $('#player_notice').html("");
+  }
+  
+  getScriptIf(typeof(flowplayer)==='undefined','http://media.videolectures.net/rel.1330267567/flowplayer/flowplayer.js',installFlowPlayer);
+  function playerSeek(time) { thePlayer.seek(time/1000.0); }
+  function playerTell() { return thePlayer.getTime()*1000.0; }
+
+
+</script>
+
+        
+      
+  
+  </div>
+  
+  
+  <script type="text/javascript">
+      var slides = {};
+      var syncs = null;
+      var sync={next:null};
+      var slide_order = [];
+      var hoverTime = 0;
+    
+      
+        slides[25760] = {id: 25760, idx: 0, src: "http://carbon.videolectures.net/v00b/9d/tuyky6ni57p2fujab2saib5ysfl37erj.jpg", title: "Learning with Trees", img:new Image()}; // |addslashes
+        slide_order.push(25760);
+      
+        slides[25761] = {id: 25761, idx: 1, src: "http://carbon.videolectures.net/v00b/0b/bohinhp6ikztprm5uleevbkxr54jm7bg.jpg", title: "Basic Problem: Partitioning", img:new Image()}; // |addslashes
+        slide_order.push(25761);
+      
+        slides[25762] = {id: 25762, idx: 2, src: "http://carbon.videolectures.net/v00b/e5/4xvcx2xeaigm57x3eumx2we4blozbx2r.jpg", title: "Classification", img:new Image()}; // |addslashes
+        slide_order.push(25762);
+      
+        slides[25763] = {id: 25763, idx: 3, src: "http://carbon.videolectures.net/v00b/c4/ytgljpkhl4eao3nrxfnwa5zmrp3rqwrm.jpg", title: "Signal and Image Processing", img:new Image()}; // |addslashes
+        slide_order.push(25763);
+      
+        slides[25764] = {id: 25764, idx: 4, src: "http://carbon.videolectures.net/v00b/f4/6tcknr22pjy7lwnwyuc4oqsrnwnrkoms.jpg", title: "Partitioning Schemes", img:new Image()}; // |addslashes
+        slide_order.push(25764);
+      
+        slides[25765] = {id: 25765, idx: 5, src: "http://carbon.videolectures.net/v00b/c7/y6t3dqsyshf2mmzc5qvud32htcchqbbn.jpg", title: "Why Trees ?", img:new Image()}; // |addslashes
+        slide_order.push(25765);
+      
+        slides[25766] = {id: 25766, idx: 6, src: "http://carbon.videolectures.net/v00b/3a/hkyv23rylx7qwjbqxmuizceuc77dmdn6.jpg", title: "Example: Gamma\u002DRay Burst Analysis", img:new Image()}; // |addslashes
+        slide_order.push(25766);
+      
+        slides[25767] = {id: 25767, idx: 7, src: "http://carbon.videolectures.net/v00b/dc/3qby67lfzy525ihgtmavtvyw2dwhhnpu.jpg", title: "Trees and Partitions", img:new Image()}; // |addslashes
+        slide_order.push(25767);
+      
+        slides[25768] = {id: 25768, idx: 8, src: "http://carbon.videolectures.net/v00b/94/ssbtooordi2sq2cbmusjnnisykmtpogb.jpg", title: "Estimation using Pruned Tree", img:new Image()}; // |addslashes
+        slide_order.push(25768);
+      
+        slides[25769] = {id: 25769, idx: 9, src: "http://carbon.videolectures.net/v00b/35/gxfxcgtzyc7wi6jgu2wp4yxo3zdjbxt7.jpg", title: "Gamma\u002DRay Burst 845", img:new Image()}; // |addslashes
+        slide_order.push(25769);
+      
+        slides[25770] = {id: 25770, idx: 10, src: "http://carbon.videolectures.net/v00b/05/aukri4p2xvviopfkmfiwodq4se7krbvq.jpg", title: "Recursive Partitions", img:new Image()}; // |addslashes
+        slide_order.push(25770);
+      
+        slides[25771] = {id: 25771, idx: 11, src: "http://carbon.videolectures.net/v00b/ba/xlqtfgkhzdzsrzwco5n25waae75pcvlz.jpg", title: "Adapted Partition", img:new Image()}; // |addslashes
+        slide_order.push(25771);
+      
+        slides[25772] = {id: 25772, idx: 12, src: "http://carbon.videolectures.net/v00b/49/jemqfikhskrjxqtwabdopnvwr5by54fd.jpg", title: "Image Denoising", img:new Image()}; // |addslashes
+        slide_order.push(25772);
+      
+        slides[25773] = {id: 25773, idx: 13, src: "http://carbon.videolectures.net/v00b/00/aa2glvcoswhhqavpu3s3yjm4wx7unosf.jpg", title: "Decision (Classification) Trees", img:new Image()}; // |addslashes
+        slide_order.push(25773);
+      
+        slides[25774] = {id: 25774, idx: 14, src: "http://carbon.videolectures.net/v00b/4c/jqvxlzjbgtvjs6jgubu2v7l3o5smikpc.jpg", title: "Classification", img:new Image()}; // |addslashes
+        slide_order.push(25774);
+      
+        slides[25775] = {id: 25775, idx: 15, src: "http://carbon.videolectures.net/v00b/9e/t34fmofovhthflhvkhetpevj3kuskv7w.jpg", title: "Image Partitions", img:new Image()}; // |addslashes
+        slide_order.push(25775);
+      
+        slides[25776] = {id: 25776, idx: 16, src: "http://carbon.videolectures.net/v00b/2c/ftospfcvzv4xsfpcyjwm52bqakjicjpv.jpg", title: "TITLE", img:new Image()}; // |addslashes
+        slide_order.push(25776);
+      
+        slides[25777] = {id: 25777, idx: 17, src: "http://carbon.videolectures.net/v00b/11/cevfhqxrlehq7mmssg76d6vrfg5zsngo.jpg", title: "Image Coding", img:new Image()}; // |addslashes
+        slide_order.push(25777);
+      
+        slides[25778] = {id: 25778, idx: 18, src: "http://carbon.videolectures.net/v00b/a1/ufrah46lvrrezzvvlnxvpoiugf7dipzk.jpg", title: "Probabilistic Framework", img:new Image()}; // |addslashes
+        slide_order.push(25778);
+      
+        slides[25779] = {id: 25779, idx: 19, src: "http://carbon.videolectures.net/v00b/fd/7wb524csbgqddvyzak5t6q6ciblpjv7g.jpg", title: "Prediction Problem", img:new Image()}; // |addslashes
+        slide_order.push(25779);
+      
+        slides[25780] = {id: 25780, idx: 20, src: "http://carbon.videolectures.net/v00b/83/qo6okt62q6y2vr5ialwz4y62ckf34kbf.jpg", title: "Challenge", img:new Image()}; // |addslashes
+        slide_order.push(25780);
+      
+        slides[25781] = {id: 25781, idx: 21, src: "http://carbon.videolectures.net/v00b/dd/3xse2zepwenme5f3ryig6tpxqwj73d3h.jpg", title: "Empirical Risk", img:new Image()}; // |addslashes
+        slide_order.push(25781);
+      
+        slides[25782] = {id: 25782, idx: 22, src: "http://carbon.videolectures.net/v00b/71/ofpbqgtx6t65pqjobk6ceyhn6ya2kyai.jpg", title: "Empirical Risk Minimization", img:new Image()}; // |addslashes
+        slide_order.push(25782);
+      
+        slides[25783] = {id: 25783, idx: 23, src: "http://carbon.videolectures.net/v00b/01/afak5fw6n5jqtaw32ebmez6yyqzbx7rp.jpg", title: "Classification and Regression Trees", img:new Image()}; // |addslashes
+        slide_order.push(25783);
+      
+        slides[25784] = {id: 25784, idx: 24, src: "http://carbon.videolectures.net/v00b/a2/uks34kzjwy2qcoetlzqb6ka7dcxgul4p.jpg", title: "Classification and Regression Trees", img:new Image()}; // |addslashes
+        slide_order.push(25784);
+      
+        slides[25785] = {id: 25785, idx: 25, src: "http://carbon.videolectures.net/v00b/4d/jv6i6crcnrop5cs4ff7v6b6mlz7usvpq.jpg", title: "Empirical Risk Minimization on Trees", img:new Image()}; // |addslashes
+        slide_order.push(25785);
+      
+        slides[25786] = {id: 25786, idx: 26, src: "http://carbon.videolectures.net/v00b/30/gccqeksvjj5dmulje3t3cptplfujotyc.jpg", title: "Overfitting Problem", img:new Image()}; // |addslashes
+        slide_order.push(25786);
+      
+        slides[25787] = {id: 25787, idx: 27, src: "http://carbon.videolectures.net/v00b/b2/wiqroog5qa5s72glrfvxhqwtjshmmmd4.jpg", title: "Bias/Variance Trade\u002Doff", img:new Image()}; // |addslashes
+        slide_order.push(25787);
+      
+        slides[25788] = {id: 25788, idx: 28, src: "http://carbon.videolectures.net/v00b/5a/lkec2o56n74fqp2i3lxbfrnaze4hf25b.jpg", title: "Estimation and Approximation Error", img:new Image()}; // |addslashes
+        slide_order.push(25788);
+      
+        slides[25789] = {id: 25789, idx: 29, src: "http://carbon.videolectures.net/v00b/f7/66z7zdbcmpynxoa5omd632rt2x6r5gfy.jpg", title: "Estimation Error in Regression", img:new Image()}; // |addslashes
+        slide_order.push(25789);
+      
+        slides[25790] = {id: 25790, idx: 30, src: "http://carbon.videolectures.net/v00b/e7/46m4iyqv275zwaevwbuhlcwvuq5inyxp.jpg", title: "Estimation Error in Classification", img:new Image()}; // |addslashes
+        slide_order.push(25790);
+      
+        slides[25791] = {id: 25791, idx: 31, src: "http://carbon.videolectures.net/v00b/d9/3eiarsl3x44v3mtpi4bwqwgtn5p2bhl5.jpg", title: "Partition Complexity and Overfitting", img:new Image()}; // |addslashes
+        slide_order.push(25791);
+      
+        slides[25792] = {id: 25792, idx: 32, src: "http://carbon.videolectures.net/v00b/a3/uocfdcezjtvb6jekyeosdf4brw7n4sx7.jpg", title: "Controlling Overfitting", img:new Image()}; // |addslashes
+        slide_order.push(25792);
+      
+        slides[25793] = {id: 25793, idx: 33, src: "http://carbon.videolectures.net/v00b/71/ohmzvtoixwy3zouerufqm4lz3z55amwt.jpg", title: "Complexity Regularization", img:new Image()}; // |addslashes
+        slide_order.push(25793);
+      
+        slides[25794] = {id: 25794, idx: 34, src: "http://carbon.videolectures.net/v00b/72/oipz2zjuitxrjtbvgam7diiayfo3juoy.jpg", title: "Per\u002DCell Variance Bounds: Regression", img:new Image()}; // |addslashes
+        slide_order.push(25794);
+      
+        slides[25795] = {id: 25795, idx: 35, src: "http://carbon.videolectures.net/v00b/4b/jnmvpbv4yuym3n4wfyatrfpdrk7igkzv.jpg", title: "Per\u002DCell Variance Bounds: Classification", img:new Image()}; // |addslashes
+        slide_order.push(25795);
+      
+        slides[25796] = {id: 25796, idx: 36, src: "http://carbon.videolectures.net/v00b/80/qbv6bcfvxcfm3of2lc45x453viwev7aa.jpg", title: "Variance Bounds", img:new Image()}; // |addslashes
+        slide_order.push(25796);
+      
+        slides[25797] = {id: 25797, idx: 37, src: "http://carbon.videolectures.net/v00b/c2/ykrvknr3zj3sya6r2ulwgo56gun3o22p.jpg", title: "A Slightly Weaker Variance Bound", img:new Image()}; // |addslashes
+        slide_order.push(25797);
+      
+        slides[25798] = {id: 25798, idx: 38, src: "http://carbon.videolectures.net/v00b/36/g2cyw7fofrxz2s7d3vsdwlq3w4ws3qyr.jpg", title: "Complexity Regularization", img:new Image()}; // |addslashes
+        slide_order.push(25798);
+      
+        slides[25799] = {id: 25799, idx: 39, src: "http://carbon.videolectures.net/v00b/41/igbur64i7euzdtvh4f56aqvhtfqbs2ih.jpg", title: "Example: Image Denoising", img:new Image()}; // |addslashes
+        slide_order.push(25799);
+      
+        slides[25800] = {id: 25800, idx: 40, src: "http://carbon.videolectures.net/v00b/f9/7f2aww2ahhnf3m7x626oc6ncfpqmcgbz.jpg", title: "Theory of Complexity Regularization", img:new Image()}; // |addslashes
+        slide_order.push(25800);
+      
+        slides[25801] = {id: 25801, idx: 41, src: "http://carbon.videolectures.net/v00b/89/rev26g5pzfete7b5y3vcrcstiv3dsnbr.jpg", title: "TITLE", img:new Image()}; // |addslashes
+        slide_order.push(25801);
+      
+        slides[25802] = {id: 25802, idx: 42, src: "http://carbon.videolectures.net/v00b/2b/foobqy7oyl2r6d3mukwtyo5eqskhmxqr.jpg", title: "Classification", img:new Image()}; // |addslashes
+        slide_order.push(25802);
+      
+        slides[25803] = {id: 25803, idx: 43, src: "http://carbon.videolectures.net/v00b/0d/bw3olxqikyfzvnspqjzrfc3y6n6kbsko.jpg", title: "Probabilistic Framework", img:new Image()}; // |addslashes
+        slide_order.push(25803);
+      
+        slides[25804] = {id: 25804, idx: 44, src: "http://carbon.videolectures.net/v00b/d5/2uo6vapymz3agts5kvxdmzn4v6s5az3e.jpg", title: "Learning from Data", img:new Image()}; // |addslashes
+        slide_order.push(25804);
+      
+        slides[25805] = {id: 25805, idx: 45, src: "http://carbon.videolectures.net/v00b/f1/6gtzot4xldyuozt7ptcp4cx6uq4b4qpq.jpg", title: "Approximation and Estimation", img:new Image()}; // |addslashes
+        slide_order.push(25805);
+      
+        slides[25806] = {id: 25806, idx: 46, src: "http://carbon.videolectures.net/v00b/a3/upa27xbs2zb6hdcz2nwl4nszsf3pnjbv.jpg", title: "Classifier Approximations", img:new Image()}; // |addslashes
+        slide_order.push(25806);
+      
+        slides[25807] = {id: 25807, idx: 47, src: "http://carbon.videolectures.net/v00b/69/neojdu3uermjajdbm2jyz5x4vvi5zxuy.jpg", title: "Approximation Error", img:new Image()}; // |addslashes
+        slide_order.push(25807);
+      
+        slides[25808] = {id: 25808, idx: 48, src: "http://carbon.videolectures.net/v00b/7a/pltmgbi7hpg6sb5h3c3x435ttn5nrnw2.jpg", title: "Approximation Error", img:new Image()}; // |addslashes
+        slide_order.push(25808);
+      
+        slides[25809] = {id: 25809, idx: 49, src: "http://carbon.videolectures.net/v00b/e0/4aoonzdwe2yrlnq4ju4t66q5sm3gvrc6.jpg", title: "Boundary Smoothness", img:new Image()}; // |addslashes
+        slide_order.push(25809);
+      
+        slides[25810] = {id: 25810, idx: 50, src: "http://carbon.videolectures.net/v00b/4a/jixu246qsjx7dt6jglre5obzpabfhssr.jpg", title: "Transition Smoothness", img:new Image()}; // |addslashes
+        slide_order.push(25810);
+      
+        slides[25811] = {id: 25811, idx: 51, src: "http://carbon.videolectures.net/v00b/c6/y2drrg5vbq3e3ak6f7lqxvbmeprq4vsf.jpg", title: "Transition Smoothness", img:new Image()}; // |addslashes
+        slide_order.push(25811);
+      
+        slides[25812] = {id: 25812, idx: 52, src: "http://carbon.videolectures.net/v00b/0b/bmvgxft3zdem6hkh26ffu4p2kst67jqz.jpg", title: "Fundamental Limit to Learning", img:new Image()}; // |addslashes
+        slide_order.push(25812);
+      
+        slides[25813] = {id: 25813, idx: 53, src: "http://carbon.videolectures.net/v00b/52/klmyttvydt3u3shauan4f6iq6me4radf.jpg", title: "Related Work", img:new Image()}; // |addslashes
+        slide_order.push(25813);
+      
+        slides[25814] = {id: 25814, idx: 54, src: "http://carbon.videolectures.net/v00b/e1/4e3w34dkvrnvu2vm2dbrfqpo6rfgtnzw.jpg", title: "Box\u002DCounting Class", img:new Image()}; // |addslashes
+        slide_order.push(25814);
+      
+        slides[25815] = {id: 25815, idx: 55, src: "http://carbon.videolectures.net/v00b/eb/5ocjbv74eht5l4vnpmjgrcwh2rmarkoh.jpg", title: "Box\u002DCounting Sub\u002DClasses", img:new Image()}; // |addslashes
+        slide_order.push(25815);
+      
+        slides[25816] = {id: 25816, idx: 56, src: "http://carbon.videolectures.net/v00b/fe/7z3yh2pyzevdp2i4rk7ethvxlbkphzjr.jpg", title: "Dyadic Decision Trees", img:new Image()}; // |addslashes
+        slide_order.push(25816);
+      
+        slides[25817] = {id: 25817, idx: 57, src: "http://carbon.videolectures.net/v00b/58/lcfyimjiiq6gauueariyoiziwmib5yfd.jpg", title: "Dyadic Decision Trees", img:new Image()}; // |addslashes
+        slide_order.push(25817);
+      
+        slides[25818] = {id: 25818, idx: 58, src: "http://carbon.videolectures.net/v00b/34/gtbsx3tcqvlpflmntrcdwykllr5mvpau.jpg", title: "The Classifier Learning Problem", img:new Image()}; // |addslashes
+        slide_order.push(25818);
+      
+        slides[25819] = {id: 25819, idx: 59, src: "http://carbon.videolectures.net/v00b/e7/44qsxomqvyp4ny4cd4egx24c5scttwhf.jpg", title: "Empirical Risk", img:new Image()}; // |addslashes
+        slide_order.push(25819);
+      
+        slides[25820] = {id: 25820, idx: 60, src: "http://carbon.videolectures.net/v00b/d6/23sm2xivlz2znw32ltf4pms6l2z7t7tc.jpg", title: "Chernoff’s Bound", img:new Image()}; // |addslashes
+        slide_order.push(25820);
+      
+        slides[25821] = {id: 25821, idx: 61, src: "http://carbon.videolectures.net/v00b/99/tg3voqaxvimkadyuu4z6kg3ea3ab3yen.jpg", title: "Chernoff’s Bound", img:new Image()}; // |addslashes
+        slide_order.push(25821);
+      
+        slides[25822] = {id: 25822, idx: 62, src: "http://carbon.videolectures.net/v00b/ba/xkawxvfmssdzpwq2ay6dqql2sbg4ldro.jpg", title: "Error Deviation Bounds", img:new Image()}; // |addslashes
+        slide_order.push(25822);
+      
+        slides[25823] = {id: 25823, idx: 63, src: "http://carbon.videolectures.net/v00b/c8/zdhfetnsnxwi5km3retgtkd2inz33vld.jpg", title: "Uniform Deviation Bound", img:new Image()}; // |addslashes
+        slide_order.push(25823);
+      
+        slides[25824] = {id: 25824, idx: 64, src: "http://carbon.videolectures.net/v00b/39/hftysicb4ooqugo5eseaelufyub5af4r.jpg", title: "Setting Penalties", img:new Image()}; // |addslashes
+        slide_order.push(25824);
+      
+        slides[25825] = {id: 25825, idx: 65, src: "http://carbon.videolectures.net/v00b/9c/try6losm2ji25dttbtztk4q32qky43z5.jpg", title: "Setting Penalties", img:new Image()}; // |addslashes
+        slide_order.push(25825);
+      
+        slides[25826] = {id: 25826, idx: 66, src: "http://carbon.videolectures.net/v00b/9d/txupcmrhkkpc6deuwfj7axlkcouewwgs.jpg", title: "Uniform Deviation Bound", img:new Image()}; // |addslashes
+        slide_order.push(25826);
+      
+        slides[25827] = {id: 25827, idx: 67, src: "http://carbon.videolectures.net/v00b/5a/lku6ieddzo2r5fsc2ju5q6oxwfcskpgf.jpg", title: "Decision Tree Selection", img:new Image()}; // |addslashes
+        slide_order.push(25827);
+      
+        slides[25828] = {id: 25828, idx: 68, src: "http://carbon.videolectures.net/v00b/f0/6bzuk44qkjhtko4366ch5gen5u5gpq3a.jpg", title: "Rate of Convergence", img:new Image()}; // |addslashes
+        slide_order.push(25828);
+      
+        slides[25829] = {id: 25829, idx: 69, src: "http://carbon.videolectures.net/v00b/98/tdggqqg6x4bfe3nopog3ejvg6ddaues7.jpg", title: "Balanced vs. Unbalanced Trees", img:new Image()}; // |addslashes
+        slide_order.push(25829);
+      
+        slides[25830] = {id: 25830, idx: 70, src: "http://carbon.videolectures.net/v00b/91/sglezpq6g73e66re7kqecu72jepinfpk.jpg", title: "Spatial Adaptation", img:new Image()}; // |addslashes
+        slide_order.push(25830);
+      
+        slides[25831] = {id: 25831, idx: 71, src: "http://carbon.videolectures.net/v00b/97/s7pyc2ueujstld65xfvjf4tuuehinhag.jpg", title: "Relative Chernoff Bound", img:new Image()}; // |addslashes
+        slide_order.push(25831);
+      
+        slides[25832] = {id: 25832, idx: 72, src: "http://carbon.videolectures.net/v00b/30/gaeu37gtpm56asc37dubaejepjsicpag.jpg", title: "Designing Leaf Penalties", img:new Image()}; // |addslashes
+        slide_order.push(25832);
+      
+        slides[25833] = {id: 25833, idx: 73, src: "http://carbon.videolectures.net/v00b/f0/6c4e7bwnof2yrsoicaivfhprvtngqesk.jpg", title: "Uniform Deviation Bound", img:new Image()}; // |addslashes
+        slide_order.push(25833);
+      
+      
+        sync=sync.next={time: 1366, slide: slides[25760], idx: 0, title: "", next:0};
+          syncs=sync;
+        sync=sync.next={time: 351790, slide: slides[25761], idx: 1, title: "", next:0};
+        sync=sync.next={time: 396638, slide: slides[25762], idx: 2, title: "", next:0};
+        sync=sync.next={time: 436775, slide: slides[25763], idx: 3, title: "", next:0};
+        sync=sync.next={time: 478059, slide: slides[25764], idx: 4, title: "", next:0};
+        sync=sync.next={time: 564951, slide: slides[25765], idx: 5, title: "", next:0};
+        sync=sync.next={time: 647468, slide: slides[25766], idx: 6, title: "", next:0};
+        sync=sync.next={time: 803719, slide: slides[25767], idx: 7, title: "", next:0};
+        sync=sync.next={time: 879740, slide: slides[25768], idx: 8, title: "", next:0};
+        sync=sync.next={time: 898850, slide: slides[25769], idx: 9, title: "", next:0};
+        sync=sync.next={time: 964703, slide: slides[25770], idx: 10, title: "", next:0};
+        sync=sync.next={time: 994586, slide: slides[25771], idx: 11, title: "", next:0};
+        sync=sync.next={time: 1010989, slide: slides[25772], idx: 12, title: "", next:0};
+        sync=sync.next={time: 1046351, slide: slides[25773], idx: 13, title: "", next:0};
+        sync=sync.next={time: 1116484, slide: slides[25774], idx: 14, title: "", next:0};
+        sync=sync.next={time: 1165049, slide: slides[25775], idx: 15, title: "", next:0};
+        sync=sync.next={time: 1199006, slide: slides[25776], idx: 16, title: "", next:0};
+        sync=sync.next={time: 1215200, slide: slides[25777], idx: 17, title: "", next:0};
+        sync=sync.next={time: 1274415, slide: slides[25778], idx: 18, title: "", next:0};
+        sync=sync.next={time: 1392381, slide: slides[25779], idx: 19, title: "", next:0};
+        sync=sync.next={time: 1467540, slide: slides[25780], idx: 20, title: "", next:0};
+        sync=sync.next={time: 1538152, slide: slides[25781], idx: 21, title: "", next:0};
+        sync=sync.next={time: 1585190, slide: slides[25782], idx: 22, title: "", next:0};
+        sync=sync.next={time: 1619236, slide: slides[25783], idx: 23, title: "", next:0};
+        sync=sync.next={time: 1677754, slide: slides[25784], idx: 24, title: "", next:0};
+        sync=sync.next={time: 1725766, slide: slides[25785], idx: 25, title: "", next:0};
+        sync=sync.next={time: 1800767, slide: slides[25786], idx: 26, title: "", next:0};
+        sync=sync.next={time: 1949404, slide: slides[25787], idx: 27, title: "", next:0};
+        sync=sync.next={time: 2002237, slide: slides[25788], idx: 28, title: "", next:0};
+        sync=sync.next={time: 2113524, slide: slides[25789], idx: 29, title: "", next:0};
+        sync=sync.next={time: 2160147, slide: slides[25790], idx: 30, title: "", next:0};
+        sync=sync.next={time: 2211978, slide: slides[25791], idx: 31, title: "", next:0};
+        sync=sync.next={time: 2302646, slide: slides[25792], idx: 32, title: "", next:0};
+        sync=sync.next={time: 2352314, slide: slides[25793], idx: 33, title: "", next:0};
+        sync=sync.next={time: 2397459, slide: slides[25794], idx: 34, title: "", next:0};
+        sync=sync.next={time: 2459311, slide: slides[25795], idx: 35, title: "", next:0};
+        sync=sync.next={time: 2504893, slide: slides[25796], idx: 36, title: "", next:0};
+        sync=sync.next={time: 2655776, slide: slides[25797], idx: 37, title: "", next:0};
+        sync=sync.next={time: 2691515, slide: slides[25798], idx: 38, title: "", next:0};
+        sync=sync.next={time: 2794769, slide: slides[25799], idx: 39, title: "", next:0};
+        sync=sync.next={time: 2854604, slide: slides[25800], idx: 40, title: "", next:0};
+        sync=sync.next={time: 2902441, slide: slides[25801], idx: 41, title: "", next:0};
+        sync=sync.next={time: 2985926, slide: slides[25802], idx: 42, title: "", next:0};
+        sync=sync.next={time: 3049893, slide: slides[25803], idx: 43, title: "", next:0};
+        sync=sync.next={time: 3080042, slide: slides[25804], idx: 44, title: "", next:0};
+        sync=sync.next={time: 3134466, slide: slides[25805], idx: 45, title: "", next:0};
+        sync=sync.next={time: 3192588, slide: slides[25806], idx: 46, title: "", next:0};
+        sync=sync.next={time: 3269135, slide: slides[25807], idx: 47, title: "", next:0};
+        sync=sync.next={time: 3345386, slide: slides[25808], idx: 48, title: "", next:0};
+        sync=sync.next={time: 3369583, slide: slides[25809], idx: 49, title: "", next:0};
+        sync=sync.next={time: 3410258, slide: slides[25810], idx: 50, title: "", next:0};
+        sync=sync.next={time: 3450679, slide: slides[25811], idx: 51, title: "", next:0};
+        sync=sync.next={time: 3500617, slide: slides[25812], idx: 52, title: "", next:0};
+        sync=sync.next={time: 3665291, slide: slides[25813], idx: 53, title: "", next:0};
+        sync=sync.next={time: 3791248, slide: slides[25814], idx: 54, title: "", next:0};
+        sync=sync.next={time: 3871651, slide: slides[25815], idx: 55, title: "", next:0};
+        sync=sync.next={time: 3986626, slide: slides[25816], idx: 56, title: "", next:0};
+        sync=sync.next={time: 4054444, slide: slides[25817], idx: 57, title: "", next:0};
+        sync=sync.next={time: 4190440, slide: slides[25818], idx: 58, title: "", next:0};
+        sync=sync.next={time: 4234011, slide: slides[25819], idx: 59, title: "", next:0};
+        sync=sync.next={time: 4312712, slide: slides[25820], idx: 60, title: "", next:0};
+        sync=sync.next={time: 4407439, slide: slides[25821], idx: 61, title: "", next:0};
+        sync=sync.next={time: 4481939, slide: slides[25822], idx: 62, title: "", next:0};
+        sync=sync.next={time: 4518437, slide: slides[25823], idx: 63, title: "", next:0};
+        sync=sync.next={time: 4589189, slide: slides[25824], idx: 64, title: "", next:0};
+        sync=sync.next={time: 4650640, slide: slides[25825], idx: 65, title: "", next:0};
+        sync=sync.next={time: 4760102, slide: slides[25826], idx: 66, title: "", next:0};
+        sync=sync.next={time: 4818421, slide: slides[25827], idx: 67, title: "", next:0};
+        sync=sync.next={time: 4934903, slide: slides[25828], idx: 68, title: "", next:0};
+        sync=sync.next={time: 5067624, slide: slides[25829], idx: 69, title: "", next:0};
+        sync=sync.next={time: 5122393, slide: slides[25830], idx: 70, title: "", next:0};
+        sync=sync.next={time: 5170153, slide: slides[25831], idx: 71, title: "", next:0};
+        sync=sync.next={time: 5235780, slide: slides[25832], idx: 72, title: "", next:0};
+        sync=sync.next={time: 5305968, slide: slides[25833], idx: 73, title: "", next:0};
+        
+      
+
+      function getPrev(cur) {
+        if (cur==syncs) return cur;
+        for (s=syncs; s.next && s.next!=cur; ) s=s.next;
+        return s;
+      }
+      function getSync(time) {
+        var s = (sync.time > time) ? syncs : sync;
+        while (s.next && s.next.time<=time) s=s.next;
+        return s;
+      }
+      function updateSlideWindowHeight() {
+        var min_height = $('#slide').height();
+        if (this.height > min_height) $('#slide').css('min-height',this.height);
+      }
+      function setSlideBySync(sync) {
+        if (!sync.slide.img.src && !sync.slide.img.height) {
+          sync.slide.img = new Image(480,360);
+          sync.slide.onload = updateSlideWindowHeight();
+          sync.slide.img.src = sync.slide.src;
+        } else {
+          updateSlideWindowHeight.call(sync.slide.img);
+        }
+        $('#current_slide').attr('src',sync.slide.src);
+        try {
+          setFullscreenSlide(sync.slide.src);
+        } catch (e) {};
+      }
+      function setAVTime(time,update_player) {
+        try { if (update_player) playerSeek(time); } catch (e) {alert(e);}
+        var s = sync;
+        try {
+            s = getSync(time);
+            if (s != sync) {
+              sync = s;
+              setSlideBySync(sync);
+              $(".slide_even").attr('style','background-color: white;');
+              $(".slide_odd").attr('style','background-color: #f0f0f0;');
+              $("#slide_"+sync.time).attr('style','background-color: #c0c0c0;');
+            }
+        } catch (e) {alert(e);}
+        return s;
+      }
+      function syncCheckTime(time) {
+        var delay = 3000;
+        var s = hoverTime ? sync : setAVTime(time);
+        if (s.next) delay = s.next.time - time + 1;
+        if (delay>3000) delay=3000;
+        return delay;
+      }
+      function preloadAllSlides() {
+        for (var s=syncs; s; s=s.next) {
+          if (!s.slide.img.src) {
+            s.slide.img.onload = updateSlideWindowHeight;
+            s.slide.img.src = s.slide.src;
+          }
+        }
+      }
+      function clickChooseSlide(time) {
+        hoverTime = 0;
+        lasttime = -1;
+        setAVTime(time,true);
+        return false;
+      }
+      function hoverSlide(time) {
+        hoverTime = time+1;
+        setAVTime(hoverTime);
+      }
+      function hoverSlideOut() {
+        hoverTime = 0;
+        lasttime = -1;
+        checkTime();
+        return false;
+      }
+
+      //$('#current_slide').html('<img src="'+sync.slide.src+'">');
+      $(document).ready(function() {
+        if (sync.slide) { $('#current_slide').attr('src',sync.slide.src); }
+        try { sync = syncs.next; setAVTime(0); } catch (e) {}
+      });
+  
+  
+    var lasttime=0;
+    var logcd=10;
+    function checkTime(time) {
+      if (typeof(time)=='undefined') {
+        try { 
+          time = playerTell(); 
+        } catch (e) {
+          time = 0.0;
+        }
+      }
+      var delay = 3000;
+      //alert('time: ' + time + ' -> ' + lasttime + ' | ' + delay + ',' + currentPosition);
+      if (time != lasttime && hoverTime==0) {
+        
+        try { 
+          delay = syncCheckTime(time); 
+          if (delay>3000) delay=3000;
+        } catch (e) {}
+        
+        if (lasttime!=-1) { // check if we didn't just get out of mouse-hovering
+          if (logcd && !--logcd) $.ajax({url:'/site/ajax/'+'log/video/542/62528/',cache:false,async:true});
+        }
+        lasttime = time;
+      }
+      return delay;
+    }
+    var loopTimer=0;
+    var loopCheckTime;
+    function loopCheckTime() {
+      var delay;
+      try { delay = checkTime(); } catch (e) { delay=5000;  }
+      try { loopTimer = setTimeout( loopCheckTime, delay); } catch (e) {}
+    }
+    function init_cinema_mode() {
+      $("#cinema_shadow").css("height", $(document).height()).hide();
+      $(".cinema_switch").click(function(){
+        $("#cinema_shadow").css("height", $(document).height()).toggle();
+        if ($("#cinema_shadow").is(":hidden")) {
+          $(this).html("Turn off the lights").removeClass("cinema_turned_off");
+        } else {
+          $(this).html("Turn on the lights").addClass("cinema_turned_off");
+        } 
+        return false;
+      });
+    }
+    function takeScreenshot() {
+      document.location = $(this).attr('href') + playerTell();
+      return false;  
+    }
+
+    $(document).ready( function() {
+       
+      $('#current_slide').css('display','block'); 
+      preloadAllSlides();
+      
+      loopCheckTime();
+      init_cinema_mode();
+      $('#take_screenshot').click(takeScreenshot);
+    });
+  </script>
+  
+  
+  <div id='player_ctl_bottom'>
+  
+  
+  
+  
+  </div>
+</div>
+
+    
+    
+
+
+  
+  </span>
+  
+  
+  <div id='slide'>
+    <img id="current_slide" class='cinema_always_lit' alt='slide' style='display:none;'>
+  </div>
+  
+  
+  <div class='lec_rbox'>
+    <div id='video_rbox'>
+<span id='video_rbox_top'>
+
+
+  
+<div id="syncs" class='mod_body'>
+  <h1 class='syncs_title'>Slides</h1>
+  <div>
+    <table id='sync_list'>
+      <tr class='syncs_title'><td colspan='2'>Slides</td></tr>
+      
+      <tr id='slide_1366' class='slide_odd' onClick='javascript:clickChooseSlide(1366);return false;' onMouseOver='javascript:hoverSlide(1366);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>0:01</a></th>
+      <td><a href='#'>Learning with Trees</a></td></tr>
+      
+      <tr id='slide_351790' class='slide_even' onClick='javascript:clickChooseSlide(351790);return false;' onMouseOver='javascript:hoverSlide(351790);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>5:51</a></th>
+      <td><a href='#'>Basic Problem: Partitioning</a></td></tr>
+      
+      <tr id='slide_396638' class='slide_odd' onClick='javascript:clickChooseSlide(396638);return false;' onMouseOver='javascript:hoverSlide(396638);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>6:36</a></th>
+      <td><a href='#'>Classification</a></td></tr>
+      
+      <tr id='slide_436775' class='slide_even' onClick='javascript:clickChooseSlide(436775);return false;' onMouseOver='javascript:hoverSlide(436775);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>7:16</a></th>
+      <td><a href='#'>Signal and Image Processing</a></td></tr>
+      
+      <tr id='slide_478059' class='slide_odd' onClick='javascript:clickChooseSlide(478059);return false;' onMouseOver='javascript:hoverSlide(478059);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>7:58</a></th>
+      <td><a href='#'>Partitioning Schemes</a></td></tr>
+      
+      <tr id='slide_564951' class='slide_even' onClick='javascript:clickChooseSlide(564951);return false;' onMouseOver='javascript:hoverSlide(564951);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>9:24</a></th>
+      <td><a href='#'>Why Trees ?</a></td></tr>
+      
+      <tr id='slide_647468' class='slide_odd' onClick='javascript:clickChooseSlide(647468);return false;' onMouseOver='javascript:hoverSlide(647468);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>10:47</a></th>
+      <td><a href='#'>Example: Gamma-Ray Burst Analysis</a></td></tr>
+      
+      <tr id='slide_803719' class='slide_even' onClick='javascript:clickChooseSlide(803719);return false;' onMouseOver='javascript:hoverSlide(803719);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>13:23</a></th>
+      <td><a href='#'>Trees and Partitions</a></td></tr>
+      
+      <tr id='slide_879740' class='slide_odd' onClick='javascript:clickChooseSlide(879740);return false;' onMouseOver='javascript:hoverSlide(879740);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>14:39</a></th>
+      <td><a href='#'>Estimation using Pruned Tree</a></td></tr>
+      
+      <tr id='slide_898850' class='slide_even' onClick='javascript:clickChooseSlide(898850);return false;' onMouseOver='javascript:hoverSlide(898850);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>14:58</a></th>
+      <td><a href='#'>Gamma-Ray Burst 845</a></td></tr>
+      
+      <tr id='slide_964703' class='slide_odd' onClick='javascript:clickChooseSlide(964703);return false;' onMouseOver='javascript:hoverSlide(964703);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>16:04</a></th>
+      <td><a href='#'>Recursive Partitions</a></td></tr>
+      
+      <tr id='slide_994586' class='slide_even' onClick='javascript:clickChooseSlide(994586);return false;' onMouseOver='javascript:hoverSlide(994586);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>16:34</a></th>
+      <td><a href='#'>Adapted Partition</a></td></tr>
+      
+      <tr id='slide_1010989' class='slide_odd' onClick='javascript:clickChooseSlide(1010989);return false;' onMouseOver='javascript:hoverSlide(1010989);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>16:50</a></th>
+      <td><a href='#'>Image Denoising</a></td></tr>
+      
+      <tr id='slide_1046351' class='slide_even' onClick='javascript:clickChooseSlide(1046351);return false;' onMouseOver='javascript:hoverSlide(1046351);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>17:26</a></th>
+      <td><a href='#'>Decision (Classification) Trees</a></td></tr>
+      
+      <tr id='slide_1116484' class='slide_odd' onClick='javascript:clickChooseSlide(1116484);return false;' onMouseOver='javascript:hoverSlide(1116484);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>18:36</a></th>
+      <td><a href='#'>Classification</a></td></tr>
+      
+      <tr id='slide_1165049' class='slide_even' onClick='javascript:clickChooseSlide(1165049);return false;' onMouseOver='javascript:hoverSlide(1165049);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>19:25</a></th>
+      <td><a href='#'>Image Partitions</a></td></tr>
+      
+      <tr id='slide_1199006' class='slide_odd' onClick='javascript:clickChooseSlide(1199006);return false;' onMouseOver='javascript:hoverSlide(1199006);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>19:59</a></th>
+      <td><a href='#'>TITLE</a></td></tr>
+      
+      <tr id='slide_1215200' class='slide_even' onClick='javascript:clickChooseSlide(1215200);return false;' onMouseOver='javascript:hoverSlide(1215200);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>20:15</a></th>
+      <td><a href='#'>Image Coding</a></td></tr>
+      
+      <tr id='slide_1274415' class='slide_odd' onClick='javascript:clickChooseSlide(1274415);return false;' onMouseOver='javascript:hoverSlide(1274415);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>21:14</a></th>
+      <td><a href='#'>Probabilistic Framework</a></td></tr>
+      
+      <tr id='slide_1392381' class='slide_even' onClick='javascript:clickChooseSlide(1392381);return false;' onMouseOver='javascript:hoverSlide(1392381);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>23:12</a></th>
+      <td><a href='#'>Prediction Problem</a></td></tr>
+      
+      <tr id='slide_1467540' class='slide_odd' onClick='javascript:clickChooseSlide(1467540);return false;' onMouseOver='javascript:hoverSlide(1467540);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>24:27</a></th>
+      <td><a href='#'>Challenge</a></td></tr>
+      
+      <tr id='slide_1538152' class='slide_even' onClick='javascript:clickChooseSlide(1538152);return false;' onMouseOver='javascript:hoverSlide(1538152);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>25:38</a></th>
+      <td><a href='#'>Empirical Risk</a></td></tr>
+      
+      <tr id='slide_1585190' class='slide_odd' onClick='javascript:clickChooseSlide(1585190);return false;' onMouseOver='javascript:hoverSlide(1585190);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>26:25</a></th>
+      <td><a href='#'>Empirical Risk Minimization</a></td></tr>
+      
+      <tr id='slide_1619236' class='slide_even' onClick='javascript:clickChooseSlide(1619236);return false;' onMouseOver='javascript:hoverSlide(1619236);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>26:59</a></th>
+      <td><a href='#'>Classification and Regression Trees</a></td></tr>
+      
+      <tr id='slide_1677754' class='slide_odd' onClick='javascript:clickChooseSlide(1677754);return false;' onMouseOver='javascript:hoverSlide(1677754);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>27:57</a></th>
+      <td><a href='#'>Classification and Regression Trees</a></td></tr>
+      
+      <tr id='slide_1725766' class='slide_even' onClick='javascript:clickChooseSlide(1725766);return false;' onMouseOver='javascript:hoverSlide(1725766);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>28:45</a></th>
+      <td><a href='#'>Empirical Risk Minimization on Trees</a></td></tr>
+      
+      <tr id='slide_1800767' class='slide_odd' onClick='javascript:clickChooseSlide(1800767);return false;' onMouseOver='javascript:hoverSlide(1800767);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>30:00</a></th>
+      <td><a href='#'>Overfitting Problem</a></td></tr>
+      
+      <tr id='slide_1949404' class='slide_even' onClick='javascript:clickChooseSlide(1949404);return false;' onMouseOver='javascript:hoverSlide(1949404);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>32:29</a></th>
+      <td><a href='#'>Bias/Variance Trade-off</a></td></tr>
+      
+      <tr id='slide_2002237' class='slide_odd' onClick='javascript:clickChooseSlide(2002237);return false;' onMouseOver='javascript:hoverSlide(2002237);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>33:22</a></th>
+      <td><a href='#'>Estimation and Approximation Error</a></td></tr>
+      
+      <tr id='slide_2113524' class='slide_even' onClick='javascript:clickChooseSlide(2113524);return false;' onMouseOver='javascript:hoverSlide(2113524);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>35:13</a></th>
+      <td><a href='#'>Estimation Error in Regression</a></td></tr>
+      
+      <tr id='slide_2160147' class='slide_odd' onClick='javascript:clickChooseSlide(2160147);return false;' onMouseOver='javascript:hoverSlide(2160147);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>36:00</a></th>
+      <td><a href='#'>Estimation Error in Classification</a></td></tr>
+      
+      <tr id='slide_2211978' class='slide_even' onClick='javascript:clickChooseSlide(2211978);return false;' onMouseOver='javascript:hoverSlide(2211978);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>36:51</a></th>
+      <td><a href='#'>Partition Complexity and Overfitting</a></td></tr>
+      
+      <tr id='slide_2302646' class='slide_odd' onClick='javascript:clickChooseSlide(2302646);return false;' onMouseOver='javascript:hoverSlide(2302646);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>38:22</a></th>
+      <td><a href='#'>Controlling Overfitting</a></td></tr>
+      
+      <tr id='slide_2352314' class='slide_even' onClick='javascript:clickChooseSlide(2352314);return false;' onMouseOver='javascript:hoverSlide(2352314);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>39:12</a></th>
+      <td><a href='#'>Complexity Regularization</a></td></tr>
+      
+      <tr id='slide_2397459' class='slide_odd' onClick='javascript:clickChooseSlide(2397459);return false;' onMouseOver='javascript:hoverSlide(2397459);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>39:57</a></th>
+      <td><a href='#'>Per-Cell Variance Bounds: Regression</a></td></tr>
+      
+      <tr id='slide_2459311' class='slide_even' onClick='javascript:clickChooseSlide(2459311);return false;' onMouseOver='javascript:hoverSlide(2459311);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>40:59</a></th>
+      <td><a href='#'>Per-Cell Variance Bounds: Classification</a></td></tr>
+      
+      <tr id='slide_2504893' class='slide_odd' onClick='javascript:clickChooseSlide(2504893);return false;' onMouseOver='javascript:hoverSlide(2504893);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>41:44</a></th>
+      <td><a href='#'>Variance Bounds</a></td></tr>
+      
+      <tr id='slide_2655776' class='slide_even' onClick='javascript:clickChooseSlide(2655776);return false;' onMouseOver='javascript:hoverSlide(2655776);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>44:15</a></th>
+      <td><a href='#'>A Slightly Weaker Variance Bound</a></td></tr>
+      
+      <tr id='slide_2691515' class='slide_odd' onClick='javascript:clickChooseSlide(2691515);return false;' onMouseOver='javascript:hoverSlide(2691515);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>44:51</a></th>
+      <td><a href='#'>Complexity Regularization</a></td></tr>
+      
+      <tr id='slide_2794769' class='slide_even' onClick='javascript:clickChooseSlide(2794769);return false;' onMouseOver='javascript:hoverSlide(2794769);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>46:34</a></th>
+      <td><a href='#'>Example: Image Denoising</a></td></tr>
+      
+      <tr id='slide_2854604' class='slide_odd' onClick='javascript:clickChooseSlide(2854604);return false;' onMouseOver='javascript:hoverSlide(2854604);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>47:34</a></th>
+      <td><a href='#'>Theory of Complexity Regularization</a></td></tr>
+      
+      <tr id='slide_2902441' class='slide_even' onClick='javascript:clickChooseSlide(2902441);return false;' onMouseOver='javascript:hoverSlide(2902441);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>48:22</a></th>
+      <td><a href='#'>TITLE</a></td></tr>
+      
+      <tr id='slide_2985926' class='slide_odd' onClick='javascript:clickChooseSlide(2985926);return false;' onMouseOver='javascript:hoverSlide(2985926);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>49:45</a></th>
+      <td><a href='#'>Classification</a></td></tr>
+      
+      <tr id='slide_3049893' class='slide_even' onClick='javascript:clickChooseSlide(3049893);return false;' onMouseOver='javascript:hoverSlide(3049893);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>50:49</a></th>
+      <td><a href='#'>Probabilistic Framework</a></td></tr>
+      
+      <tr id='slide_3080042' class='slide_odd' onClick='javascript:clickChooseSlide(3080042);return false;' onMouseOver='javascript:hoverSlide(3080042);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>51:20</a></th>
+      <td><a href='#'>Learning from Data</a></td></tr>
+      
+      <tr id='slide_3134466' class='slide_even' onClick='javascript:clickChooseSlide(3134466);return false;' onMouseOver='javascript:hoverSlide(3134466);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>52:14</a></th>
+      <td><a href='#'>Approximation and Estimation</a></td></tr>
+      
+      <tr id='slide_3192588' class='slide_odd' onClick='javascript:clickChooseSlide(3192588);return false;' onMouseOver='javascript:hoverSlide(3192588);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>53:12</a></th>
+      <td><a href='#'>Classifier Approximations</a></td></tr>
+      
+      <tr id='slide_3269135' class='slide_even' onClick='javascript:clickChooseSlide(3269135);return false;' onMouseOver='javascript:hoverSlide(3269135);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>54:29</a></th>
+      <td><a href='#'>Approximation Error</a></td></tr>
+      
+      <tr id='slide_3345386' class='slide_odd' onClick='javascript:clickChooseSlide(3345386);return false;' onMouseOver='javascript:hoverSlide(3345386);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>55:45</a></th>
+      <td><a href='#'>Approximation Error</a></td></tr>
+      
+      <tr id='slide_3369583' class='slide_even' onClick='javascript:clickChooseSlide(3369583);return false;' onMouseOver='javascript:hoverSlide(3369583);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>56:09</a></th>
+      <td><a href='#'>Boundary Smoothness</a></td></tr>
+      
+      <tr id='slide_3410258' class='slide_odd' onClick='javascript:clickChooseSlide(3410258);return false;' onMouseOver='javascript:hoverSlide(3410258);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>56:50</a></th>
+      <td><a href='#'>Transition Smoothness</a></td></tr>
+      
+      <tr id='slide_3450679' class='slide_even' onClick='javascript:clickChooseSlide(3450679);return false;' onMouseOver='javascript:hoverSlide(3450679);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>57:30</a></th>
+      <td><a href='#'>Transition Smoothness</a></td></tr>
+      
+      <tr id='slide_3500617' class='slide_odd' onClick='javascript:clickChooseSlide(3500617);return false;' onMouseOver='javascript:hoverSlide(3500617);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>58:20</a></th>
+      <td><a href='#'>Fundamental Limit to Learning</a></td></tr>
+      
+      <tr id='slide_3665291' class='slide_even' onClick='javascript:clickChooseSlide(3665291);return false;' onMouseOver='javascript:hoverSlide(3665291);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>61:05</a></th>
+      <td><a href='#'>Related Work</a></td></tr>
+      
+      <tr id='slide_3791248' class='slide_odd' onClick='javascript:clickChooseSlide(3791248);return false;' onMouseOver='javascript:hoverSlide(3791248);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>63:11</a></th>
+      <td><a href='#'>Box-Counting Class</a></td></tr>
+      
+      <tr id='slide_3871651' class='slide_even' onClick='javascript:clickChooseSlide(3871651);return false;' onMouseOver='javascript:hoverSlide(3871651);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>64:31</a></th>
+      <td><a href='#'>Box-Counting Sub-Classes</a></td></tr>
+      
+      <tr id='slide_3986626' class='slide_odd' onClick='javascript:clickChooseSlide(3986626);return false;' onMouseOver='javascript:hoverSlide(3986626);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>66:26</a></th>
+      <td><a href='#'>Dyadic Decision Trees</a></td></tr>
+      
+      <tr id='slide_4054444' class='slide_even' onClick='javascript:clickChooseSlide(4054444);return false;' onMouseOver='javascript:hoverSlide(4054444);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>67:34</a></th>
+      <td><a href='#'>Dyadic Decision Trees</a></td></tr>
+      
+      <tr id='slide_4190440' class='slide_odd' onClick='javascript:clickChooseSlide(4190440);return false;' onMouseOver='javascript:hoverSlide(4190440);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>69:50</a></th>
+      <td><a href='#'>The Classifier Learning Problem</a></td></tr>
+      
+      <tr id='slide_4234011' class='slide_even' onClick='javascript:clickChooseSlide(4234011);return false;' onMouseOver='javascript:hoverSlide(4234011);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>70:34</a></th>
+      <td><a href='#'>Empirical Risk</a></td></tr>
+      
+      <tr id='slide_4312712' class='slide_odd' onClick='javascript:clickChooseSlide(4312712);return false;' onMouseOver='javascript:hoverSlide(4312712);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>71:52</a></th>
+      <td><a href='#'>Chernoff’s Bound</a></td></tr>
+      
+      <tr id='slide_4407439' class='slide_even' onClick='javascript:clickChooseSlide(4407439);return false;' onMouseOver='javascript:hoverSlide(4407439);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>73:27</a></th>
+      <td><a href='#'>Chernoff’s Bound</a></td></tr>
+      
+      <tr id='slide_4481939' class='slide_odd' onClick='javascript:clickChooseSlide(4481939);return false;' onMouseOver='javascript:hoverSlide(4481939);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>74:41</a></th>
+      <td><a href='#'>Error Deviation Bounds</a></td></tr>
+      
+      <tr id='slide_4518437' class='slide_even' onClick='javascript:clickChooseSlide(4518437);return false;' onMouseOver='javascript:hoverSlide(4518437);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>75:18</a></th>
+      <td><a href='#'>Uniform Deviation Bound</a></td></tr>
+      
+      <tr id='slide_4589189' class='slide_odd' onClick='javascript:clickChooseSlide(4589189);return false;' onMouseOver='javascript:hoverSlide(4589189);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>76:29</a></th>
+      <td><a href='#'>Setting Penalties</a></td></tr>
+      
+      <tr id='slide_4650640' class='slide_even' onClick='javascript:clickChooseSlide(4650640);return false;' onMouseOver='javascript:hoverSlide(4650640);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>77:30</a></th>
+      <td><a href='#'>Setting Penalties</a></td></tr>
+      
+      <tr id='slide_4760102' class='slide_odd' onClick='javascript:clickChooseSlide(4760102);return false;' onMouseOver='javascript:hoverSlide(4760102);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>79:20</a></th>
+      <td><a href='#'>Uniform Deviation Bound</a></td></tr>
+      
+      <tr id='slide_4818421' class='slide_even' onClick='javascript:clickChooseSlide(4818421);return false;' onMouseOver='javascript:hoverSlide(4818421);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>80:18</a></th>
+      <td><a href='#'>Decision Tree Selection</a></td></tr>
+      
+      <tr id='slide_4934903' class='slide_odd' onClick='javascript:clickChooseSlide(4934903);return false;' onMouseOver='javascript:hoverSlide(4934903);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>82:14</a></th>
+      <td><a href='#'>Rate of Convergence</a></td></tr>
+      
+      <tr id='slide_5067624' class='slide_even' onClick='javascript:clickChooseSlide(5067624);return false;' onMouseOver='javascript:hoverSlide(5067624);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>84:27</a></th>
+      <td><a href='#'>Balanced vs. Unbalanced Trees</a></td></tr>
+      
+      <tr id='slide_5122393' class='slide_odd' onClick='javascript:clickChooseSlide(5122393);return false;' onMouseOver='javascript:hoverSlide(5122393);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>85:22</a></th>
+      <td><a href='#'>Spatial Adaptation</a></td></tr>
+      
+      <tr id='slide_5170153' class='slide_even' onClick='javascript:clickChooseSlide(5170153);return false;' onMouseOver='javascript:hoverSlide(5170153);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>86:10</a></th>
+      <td><a href='#'>Relative Chernoff Bound</a></td></tr>
+      
+      <tr id='slide_5235780' class='slide_odd' onClick='javascript:clickChooseSlide(5235780);return false;' onMouseOver='javascript:hoverSlide(5235780);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>87:15</a></th>
+      <td><a href='#'>Designing Leaf Penalties</a></td></tr>
+      
+      <tr id='slide_5305968' class='slide_even' onClick='javascript:clickChooseSlide(5305968);return false;' onMouseOver='javascript:hoverSlide(5305968);' onMouseOut='javascript:hoverSlideOut();'>
+      <th><a href='#'>88:25</a></th>
+      <td><a href='#'>Uniform Deviation Bound</a></td></tr>
+      
+    </table>
+  </div>
+</div>
+
+
+</span>
+
+
+
+
+
+
+  <div class='mod_body' id='vl_hints'>
+    <h1>Related content</h1>
+    
+<div id='hintdiv'>
+
+  <script>
+    $('#hintdiv').load('hints/see_also/');
+  </script>
+    
+</div>
+
+
+
+  </div>
+
+
+
+
+
+  <div class='mod_body' id='vl_tickets'>
+    <h1>Report a problem or upload files</h1>
+    
+    <small> 
+If you have found a problem with this lecture or would like to send us extra material, articles, exercises, etc., please use our <b><u><a href='/trac/newticket?summary=mlss05us_nowak_trc:%20&amp;milestone=Lectures&amp;description=%0adescribe%20your%20request%20here...%0a%0a%0a%0a%0a%0a%0a%0aWiki%20link%20back%20to%20lecture:%20[/mlss05us_nowak_trc/%20/mlss05us_nowak_trc/]' rel='nofollow'>ticket system</a></u></b> to describe your request and upload the data.
+<br><i>Enter your e-mail into the 'Cc' field, and we will keep you updated with your request's status.</i>
+    </small>
+  </div>
+
+</div>
+  </div>
+  
+  <div class='lec_lbox'>
+    <div id='player_notice'></div>
+    <div id='video_lbox'>
+      
+
+
+<div id='votes'><span>Lecture popularity:</span><span class="rating" title="" action="/mlss05us_nowak_trc/votes/?g=" enabled='False' value="05.0"></span><span></span><span>    You need to <a href='/site/accounts/login/?next=/mlss05us_nowak_trc/' rel='nofollow'>login</a> to cast your vote.  </span><div style='clear:both; padding:0 10px 0 10px'><div style='float:right; padding-top:2px;'>  <!-- ADDTHIS BUTTON BEGIN -->    <script type="text/javascript">      addthis_url    = "http://videolectures.net/mlss05us_nowak_trc/";      addthis_title  = "Trees for Regression and Classification";      addthis_pub    = 'pkese';           addthis_brand  = 'VideoLectures.net'      addthis_options= 'favorites, email, digg, delicious, myspace, facebook, google, live, more';    </script>    <a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16" border="0" alt="" /></a>    <script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js" defer="defer"></script>  <!-- ADDTHIS BUTTON END -->  <a href="http://www.mendeley.com/import/?url=http%3A%2F%2Fvideolectures.net/mlss05us_nowak_trc/" title="Add to Mendeley" target="_new"><img src="http://media.videolectures.net/rel.1330267567/custom/icon_mendeley_16x16.gif" alt="Bibliography"></a></div><iframe   src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fvideolectures.net/mlss05us_nowak_trc/&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80"   scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:330px; height:26px;" allowTransparency="true"></iframe></div><div style='clear:both'></div><script type="text/JavaScript">$(document).ready( function() {  $('span.rating').rating();});</script></div>
+
+
+  
+
+  <div class='mod_body' id='vl_partlist'>
+    <h1>&nbsp;Watch videos:
+        &nbsp; <small><i>(click on thumbnail to launch)</i></small>
+    </h1>
+    <div class='partlist_line'>
+    
+      <div class='partlist_thumb now_playing'>
+        
+          <a href='#' rel='nofollow' OnClick="return setvideo('/mlss05us_nowak_trc/video/1/');">
+            <img src="http://carbon.videolectures.net/v000/60/mbshyk4q442fmevvpvsfqlzdxc2vw45h.jpg" alt="Watch Part 1" />
+          </a>
+        
+        <br>
+        <small>
+          
+          Part&nbsp;1
+           1:28:59 
+        </small>
+        <span class='partlist_icons'>
+        
+          
+            <!---->
+            
+            
+            
+            
+            
+            
+        
+          
+            <!---->
+            
+            
+            
+            
+            
+            
+        
+            
+        
+            
+        
+            
+        
+        </span>
+        <div style='clear:both;'>
+          
+           
+              <span class="now_playing">!NOW PLAYING</span>
+          
+        </div>
+        <div style='clear:both;'></div>
+      </div>
+    
+    
+      <div class='partlist_thumb '>
+        
+          <a href='#' rel='nofollow' OnClick="return setvideo('/mlss05us_nowak_trc/video/2/');">
+            <img src="http://carbon.videolectures.net/v000/6e/n3dpnpvu7qu6e4radk7jhar2jdsnadsq.jpg" alt="Watch Part 2" />
+          </a>
+        
+        <br>
+        <small>
+          
+          Part&nbsp;2
+           0:21:24 
+        </small>
+        <span class='partlist_icons'>
+        
+          
+            <!---->
+            
+            
+            
+            
+            
+            
+        
+          
+            <!---->
+            
+            
+            
+            
+            
+            
+        
+            
+        
+        </span>
+        <div style='clear:both;'>
+          
+          
+        </div>
+        <div style='clear:both;'></div>
+      </div>
+    
+    
+    </div>
+    <div style='clear:both;'></div>
+    
+    
+  </div>
+
+
+
+
+
+
+
+  <div class='mod_body justified' id='description'>
+  <h1>Description</h1>
+  
+
+
+  <div class='wiki' id="lec_desc_edit">
+  <p>Tree models are widely used for regression and classification problems, with interpretability and ease of implementation being among their chief attributes. Despite the widespread use tree models, a comprehensive theoretical analysis of their performance has only begun to emerge in recent years. </p>
+<p> This lecture provides an overview of tree modeling theory and methods, with an emphasis on risk bounds, oracle inequalities, approximation theory, and rates of convergence, in a variety of contexts. Special attention is devoted to decision trees and wavelet-based regression methods, two of the most well-known examples of tree models. The choice of loss function (squared error, absolute error, 0/1 error) plays a pivotal role in both theory and methods. </p>
+<p> In particular, optimal tree selection rules vary dramatically depending on the loss function employed. Despite these differences, suitable tree-based models coupled with appropriate selection rules can provide fast algorithms and near-minimax optimal performance in a very broad range of regression and classification problems. Examples from image reconstruction and pattern classification will demonstrate the effectiveness of trees in practice.</p>
+
+  
+  <div class='height5' style='clear:both;'></div>
+  </div>
+  
+
+
+
+  </div>
+
+
+
+  
+
+  <div class='mod_body' id='vl_seealso'>
+    <h1>See Also:</h1>
+
+	
+	  
+	
+	  
+	
+	  
+	
+	  <p><img alt="Launch Windows Media Player" src="http://media.videolectures.net/rel.1330267567/icons/icons_win_sm.gif" /><a href="mms://velblod2.ijs.si:80/v000/60/mbo3enqngn72qai7v4m76ycgvdtlkupg.wmv" rel='nofollow'>Launch in a standalone WM Player</a><br /></p><p><img alt="WMedia Player" src="http://media.videolectures.net/rel.1330267567/icons/icons_win_sm.gif" /><a href='.' rel='nofollow' OnClick="return setvideo('/mlss05us_nowak_trc/video/1/','wmv');">Switch to Windows Media Player</a></p>
+	
+	  <p><img alt="Download slides icon" src="http://media.videolectures.net/rel.1330267567/icons/powerpoint.png" />
+        Download slides: 
+        <a href="/site/normal_dl/tag=10946/Decision_Trees_for_Regression_and_Classification.ppt" rel='nofollow'>Decision_Trees_for_Regression_and_Classification.ppt</a>&nbsp;<small>(9.3 MB)</small></p>
+	
+	  
+	
+       
+    
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+    
+    
+    
+    
+    <p>
+  		<img alt="View slides" src="http://media.videolectures.net/rel.1330267567/icons/sync_video.png" />
+      <a href="/mlss05us_nowak_trc/video/1/slides/" onclick="NewWindow(this.href,'slidewin','630','500','yes','right');return false" onfocus="this.blur()" rel='nofollow'> View slides</a><br />
+    </p>
+      
+    
+
+    
+  <hr />
+  <p>
+    <img alt="Help icon" src="http://media.videolectures.net/rel.1330267567/icons/help.png" />
+    <a href='/site/help/'>Streaming Video Help</a>
+  </p>
+  <p>
+    <img alt="WebLink icon" src="http://media.videolectures.net/rel.1330267567/icons/link.png" />
+    <a href='http://port25.technet.com/pages/windows-media-player-firefox-plugin-download.aspx' rel='nofollow'>Windows Media Player Firefox Plugin - Download</a>
+  </p>
+
+  </div>
+
+
+
+
+
+<div class="mod_body" id='vl_openstudy'>
+  <h1><img src="http://media.videolectures.net/rel.1330267567/custom/openstudy/favicon.ico"/> &nbsp; Join a Study Group</h1>
+  <div style='float:right; margin-left:10px;'>
+    <script id="openstudy-widget-loader" type="text/javascript" src="http://widget.openstudy.com/javascripts/load.js?type=button&studygroup=computer%20science"></script>
+  </div>
+  <a href="http://www.openstudy.com">
+    <img align="left" width="115px" alt="OpenStudy logo" src="http://media.videolectures.net/rel.1330267567/custom/openstudy/logo.jpg" style="margin-right: 5px; margin-left: -5px;" />
+  </a>
+  <p style='font-size:8pt;'>
+    You reached a lecture within the PASCAL NoE project video collection.
+    Click on the logo and go to the Computer Science classroom on OpenStudy.
+    Through this classroom, you can meet other students
+    interested in the same problems and work together on assignments,
+    ask each other questions or just discuss the topics of the lecture.
+  </p>
+  <div style='clear:both;'></div>
+</div>
+
+
+<div class="mod_body" id='vl_addthis' style='margin-top:-20px;'>
+<h1>Link this page</h1>
+<p/>
+Would you like to put a link to this lecture on your homepage?<br />
+Go ahead! Copy the <a href='snippet/' rel='nofollow'>HTML snippet </a>!
+</div>
+
+<div id='comments'>
+  
+
+
+
+
+  
+  <!--
+    <b>Added on </b> 
+    <a href="/mlss05us_nowak_trc/#comments"> Comment</a>
+  -->  
+  
+  
+  <div class='mod_body'>
+    <h1>Write your own review or comment:</h1>
+    
+      
+  
+  <form action="/site/comments/post/" method="post" class='comment_form'><div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='26b9143c93621d116a47e4e97b18e4e0' /></div>
+    
+      
+    
+
+    <table>
+    
+      
+        <input type="hidden" name="content_type" value="vl.lecture" id="id_content_type" />
+      
+    
+      
+        <input type="hidden" name="object_pk" value="542" id="id_object_pk" />
+      
+    
+      
+        <input type="hidden" name="timestamp" value="1331379689" id="id_timestamp" />
+      
+    
+      
+        <input type="hidden" name="security_hash" value="49c4846b0c1cfd5c220679402878cad99f6d5b1b" id="id_security_hash" />
+      
+    
+      
+      
+        <tr >
+        <th ><label for="id_name">Name</label></th>
+        
+          <td width='100%'>
+        
+        <input id="id_name" type="text" name="name" maxlength="50" />
+        
+        </td></tr>
+      
+      
+    
+      
+      
+        <tr >
+        <th ><label for="id_email">Email address</label></th>
+        
+          <td width='100%'>
+        
+        <input type="text" name="email" id="id_email" />
+        
+        </td></tr>
+      
+      
+    
+      
+      
+        <tr >
+        <th ><label for="id_url">URL</label></th>
+        
+          <td width='100%'>
+        
+        <input type="text" name="url" id="id_url" />
+        
+        </td></tr>
+      
+      
+    
+      
+      
+        <tr >
+        <th ><label for="id_comment">Comment</label></th>
+        
+          </tr><td colspan='2'>
+        
+        <textarea id="id_comment" rows="10" cols="40" name="comment"></textarea>
+        
+        </td></tr>
+      
+      
+    
+      
+      
+        <tr style='display:none;'><td>make sure you have javascript enabled or clear this field:</td><td><input name="honeypot" id="honeypot" value="/site/comments/post/"></td><tr>
+      
+      
+    
+    </table>
+    <script type="text/javascript" defer="DEFER">$(document).ready(function() {$('#hon'+'eypot').val('');});</script>
+
+    <p class="submit">
+    
+    <input type="submit" name="preview" class="submit-preview" value="Preview" />
+    </p>
+  </form>
+
+  </div>
+
+</div>
+
+
+
+
+    </div>
+  </div>
+  
+ 
+
+
+</div></div>
+
+
+
+      <div style='clear:both;'></div>
+      </div>
+    
+  
+    
+  </div> 
+
+
+
+  
+  <div id="footer">
+    <div id='ftr' class='pg_block'>
+    
+      
+        
+          <div class="footer_wiki"><div class='wrapped_block'><h2>EDITOR’S PICKS</h2>
+<ul><li><a href='/mitworld_chomsky_blf/'>
+The Biology of the Language Faculty: Its Perfection, Past and Future
+
+-  Noam Chomsky 
+
+
+</a>
+</li><li><a href='/nipsworkshops2011_williamson_machine/'>
+Relations Betweeen Machine Learning Problems
+
+-  Robert C. Williamson 
+
+
+</a>
+</li><li><a href='/nipsworkshops2011_boyd_multipliers/'>
+Alternating Direction Method of Multipliers
+
+-  Stephen P. Boyd 
+
+
+</a>
+</li><li><a href='/mitworld_minsky_emoticon/'>
+Emotion Machine: Commonsense Thinking, Artificial Intelligence, and the Future of the Human Mind
+
+-  Marvin Minsky 
+
+
+</a>
+</li><li><a href='/mitworld_niyogi_cnl/'>
+The Computational Nature of Language Learning
+
+-  Partha Niyogi 
+
+
+</a>
+</li></ul>
+</div><div class='wrapped_block'><h2>FRESH EVENTS</h2>
+<ul><li><a href='/mitworld_syntax/'>
+MIT World Series: Where Does Syntax Come From? Have We All Been Wrong?
+
+</a>
+</li><li><a href='/nips2011_granada/'>
+Twenty-Fifth Annual Conference on Neural Information Processing Systems (NIPS) 2011
+
+</a>
+</li><li><a href='/nipsworkshops2011_sierranevada/'>
+NIPS 2011 Workshops
+
+</a>
+</li><li><a href='/pms2012_ljubljana/'>
+Prirodoslovni muzej Slovenije predstavlja Cikel predavanj 2012  - Ljubljana
+
+</a>
+</li><li><a href='/xlike_kickoff2012_bled/'>
+XLike - Cross-Lingual Knowledge Extraction Kickoff Meeting 2012, Bled
+
+</a>
+</li></ul>
+</div><div class='wrapped_block'><h2>RECENT BLOGS</h2>
+<ul><li><a href="http://blog.videolectures.net/videolectures-a-case-study-in-european-research-projects/">VideoLectures.NET a case study for EU research projects</a>
+</li><li><a href="http://blog.videolectures.net/five-questions-with-saatviga-sudhahar/">Five questions with Saatviga Sudhahar</a>
+</li><li><a href="http://blog.videolectures.net/day1-winter-school-on-knowledge-technologies-for-complex-business-environments/">Winter School on Knowledge Technologies for Complex Business Environments</a>
+</li><li><a href="http://blogslo.videolectures.net/motivacija-3-0-in-zakaj-managerji-razmsljajo-binarno-01/">“Motivacija 3.0″ in zakaj managerji razmšljajo binarno 0/1?</a>
+</li></ul>
+</div><div class='wrapped_block'><h2>INFO</h2>
+<p>E-mail:<br />
+<a href="mailto:info@videolectures.net">info@videolectures.net</a></p>
+<p>Phone:<br />
++386 1 477 31 48</p>
+<table><tr><td><a href="http://www.facebook.com/pages/Ljubljana-Slovenia/VideoLecturesNET/181913865931?v=info#!/pages/Ljubljana-Slovenia/VideoLecturesNET/181913865931?v=wall/"><img src="/site/media/custom/facebook.png" alt="Facebook" title="Facebook" /></a></td><td><a href="http://twitter.com/videolectures/"><img src="/site/media/custom/twitter.png" alt="Twitter" title="Twitter" /></a></td><td><a href="http://blog.videolectures.net/"><img src="/site/media/custom/blog.png" alt="Blog" title="Blog" /></a></td><td><a href="/site/rss/"><img src="/site/media/custom/rss.png" alt="RSS Feed" title="RSS Feed" /></a></td></tr>
+</table>
+</div></div>
+        
+      
+    
+    <div style='float:right; margin-top:40px;'>
+      <a href='http://www.ijs.si/' style='display:block; float:right;'><img src="http://media.videolectures.net/rel.1330267567/custom/IJS_logo.png" style='margin-left:-6px;'/></a>
+      <a href='http://ailab.ijs.si/' style='display:block; float:right;'><img src="http://media.videolectures.net/rel.1330267567/custom/AiLabIcon.png"/></a>
+      <div style='padding-top:10px; float:right; margin-right:6px;'>Powered by</div>
+      <br style='clear:right;' />
+    </div>
+    <div id="cc"> 
+      <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+        <img src="http://media.videolectures.net/rel.1330267567/custom/cc.png" width="88" height="31" hspace="5" vspace="5" align="absmiddle" />
+      </a>
+      Copyright &copy; 2010 VideoLectures.Net<br>
+      Unless otherwise noted, all content is released under the<br>
+      Creative Commons Attribution-Noncommercial-No Derivative Works 3.0
+    </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+<!-- START: google analytics -->
+<script type="text/javascript" defer='defer'>
+var _gaq = _gaq || [];
+(function() {
+  // get user login info...
+  var track_user = '';
+  
+    track_user = 'anon';
+  
+
+  // track system default account
+  _gaq.push(['_setAccount', 'UA-353712-6']);
+  _gaq.push(['_setCustomVar',1,'User',track_user,1]);
+  _gaq.push(['_trackPageview','/lecture/eu_supported/pascal/mlss05us_chicago/mlss05us_nowak_trc/']);
+  
+  // track project specifiv account
+  var alt_analytics_trackers = {
+    "mit_ocw": "UA-353712-10",
+    "mit_world": "UA-353712-11",
+    "yale_oyc": "UA-353712-15",
+    "cern": "UA-353712-16",
+    "pascal": "UA-353712-17",
+    "k4a": "UA-353712-19",
+    "planetdata": "UA-353712-20"
+  }
+  var tracker_id = alt_analytics_trackers["pascal"];
+  if (tracker_id) {
+    _gaq.push(['_setAccount', tracker_id]);
+    _gaq.push(['_setCustomVar',1,'User',track_user,1]);
+    _gaq.push(['_trackPageview','/lecture/eu_supported/pascal/mlss05us_chicago/mlss05us_nowak_trc/']);
+  }
+
+  // load the tracker javascript asynchronously
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<!-- END: google analytics -->
+
+<!-- START: Quint-Miner -->
+<script type="text/javascript" defer="defer">
+$(window).load(function() {
+  $.ajax({
+      url: "http://log2.quintelligence.com/qlog.js", type: 'get', dataType: 'script', cache: true,
+      success: function() { setTimeout(function() {quintTracker(3);},100); }
+  });
+});
+</script>
+<!-- end Quint-Miner -->
+
+<!-- LiveNetLife BEGIN -->
+<script type='text/javascript'>
+(function () {var lnl = document.createElement('script');lnl.type = 'text/javascript';lnl.async = true;lnl.src = 'http://bin.livenetlife.com/?CodeId=6c8847e6-d31f-6914-78b2-605053acbf82';lnl.id='LiveNetLife';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(lnl, s);})();
+</script>
+<!-- LiveNetLife END -->
+
+ 
+
+
+<div id="cinema_shadow"></div> 
+
+
+
+</body>
+</html>

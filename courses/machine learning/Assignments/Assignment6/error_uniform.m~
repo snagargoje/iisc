@@ -1,0 +1,7 @@
+function[theta] = error_uniform(u,w)
+norm_u = sqrtu*u';
+norm_w = w*w';
+w = (1/norm_w)*w ;
+theta = acos(u*w')/(norm_u*norm_w*pi) ; % this is the probability of misclassification
+
+end
